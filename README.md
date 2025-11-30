@@ -130,9 +130,19 @@ import { Icon } from 'lucide-astro';
 />
 ```
 
-## 📄 Licencia
+## License
 
-© 2025 . Todos los derechos reservados.
+### Code
+
+The **source code** of this project is licensed under the **MIT License**.  
+See the [`LICENSE`](./LICENSE) file for details.
+
+### Educational content
+
+The **educational content** (texts, explanations, case studies, diagrams, etc.)
+is licensed under **Creative Commons Attribution 4.0 International (CC BY 4.0)**.  
+See [`LICENSE-CONTENT.md`](./LICENSE-CONTENT.md) for details.
+
 
 ## 🤝 Créditos
 
