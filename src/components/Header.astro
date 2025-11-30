@@ -1,7 +1,6 @@
 ---
 const base = import.meta.env.BASE_URL;
 
-
 const navItems = [
   { href: '', label: 'Inicio' },
   { href: 'fundamentos', label: 'Fundamentos' },
@@ -24,10 +23,11 @@ const currentPath = Astro.url.pathname;
 
     <a href={base} class="logo">
       <div class="logo-bg">
-        <img src={`${base}logo_base.png`} alt="" />
+        <img src={`${base}logo_base.png`} alt="Logo" />
       </div>
     </a>
 
+    <!-- Navegación de escritorio -->
     <nav class="nav-desktop">
       {navItems.map((item) => (
         <a 
@@ -39,8 +39,24 @@ const currentPath = Astro.url.pathname;
       ))}
     </nav>
 
-    <!-- ... botón móvil ... -->
+    <!-- ESTO ES LO QUE FALTABA: Botón Menú Hamburguesa -->
+    <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Abrir menú">
+      <!-- Icono Hamburguesa (visible por defecto) -->
+      <svg class="menu-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="3" y1="12" x2="21" y2="12"></line>
+        <line x1="3" y1="6" x2="21" y2="6"></line>
+        <line x1="3" y1="18" x2="21" y2="18"></line>
+      </svg>
+      <!-- Icono Cerrar X (visible cuando está activo) -->
+      <svg class="close-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="18" y1="6" x2="6" y2="18"></line>
+        <line x1="6" y1="6" x2="18" y2="18"></line>
+      </svg>
+    </button>
 
+  </div>
+
+  <!-- Navegación Móvil (Fuera del container para ocupar ancho completo si se desea, o dentro según diseño) -->
   <nav class="nav-mobile" id="mobileNav">
     {navItems.map((item) => (
       <a 
@@ -52,7 +68,6 @@ const currentPath = Astro.url.pathname;
     ))}
   </nav>
 </header>
-
 
 <style>
   .header {
@@ -88,7 +103,7 @@ const currentPath = Astro.url.pathname;
     gap: 0.75rem;
     text-decoration: none;
     transition: var(--transition-base);
-    flex-shrink: 0; /* Ensure logo never shrinks */
+    flex-shrink: 0;
     z-index: 10;
   }
 
@@ -114,14 +129,14 @@ const currentPath = Astro.url.pathname;
   /* Desktop Navigation */
   .nav-desktop {
     display: flex;
-    gap: 0.25rem; /* Reduced gap */
+    gap: 0.25rem;
     align-items: center;
     flex-wrap: nowrap;
   }
 
   .nav-link {
-    padding: 0.5rem 0.75rem; /* Reduced padding */
-    font-size: 0.9rem; /* Slightly smaller font */
+    padding: 0.5rem 0.75rem;
+    font-size: 0.9rem;
     font-weight: 600;
     color: var(--gray-600);
     text-decoration: none;
@@ -160,20 +175,22 @@ const currentPath = Astro.url.pathname;
     display: none;
   }
 
-  /* Mobile Menu Button */
+  /* Mobile Menu Button - Styles */
   .mobile-menu-btn {
-    display: none;
+    display: none; /* Oculto en escritorio */
     background: none;
     border: none;
     cursor: pointer;
     padding: 0.5rem;
     color: var(--primary);
+    z-index: 20; /* Asegurar que esté por encima */
   }
 
   .close-icon {
     display: none;
   }
 
+  /* Cuando el botón tiene clase 'active', alternar iconos */
   .mobile-menu-btn.active .menu-icon {
     display: none;
   }
@@ -182,7 +199,7 @@ const currentPath = Astro.url.pathname;
     display: block;
   }
 
-  /* Mobile Navigation */
+  /* Mobile Navigation Container */
   .nav-mobile {
     display: none;
     flex-direction: column;
@@ -191,11 +208,13 @@ const currentPath = Astro.url.pathname;
     border-top: 1px solid var(--gray-300);
     max-height: 0;
     overflow: hidden;
-    transition: max-height var(--transition-base);
+    transition: max-height 0.4s ease-in-out; /* Suavizar transición */
+    width: 100%;
   }
 
   .nav-mobile.active {
-    max-height: 600px; /* Increased height */
+    max-height: 100vh; /* Altura suficiente para mostrar todo */
+    box-shadow: 0 10px 10px -5px rgba(0,0,0,0.1);
   }
 
   .nav-link-mobile {
@@ -219,32 +238,34 @@ const currentPath = Astro.url.pathname;
     color: var(--secondary);
   }
 
-  /* Responsive - Hide items progressively */
+  /* Responsive Logic */
+  
+  /* Ocultar elementos progresivamente */
   @media (max-width: 1400px) {
-    .nav-link:nth-last-child(1) { display: none; } /* Hide Nosotros */
+    .nav-link:nth-last-child(1) { display: none; } 
   }
   @media (max-width: 1350px) {
-    .nav-link:nth-last-child(2) { display: none; } /* Hide Contacto */
+    .nav-link:nth-last-child(2) { display: none; } 
   }
   @media (max-width: 1300px) {
-    .nav-link:nth-last-child(3) { display: none; } /* Hide Recursos */
+    .nav-link:nth-last-child(3) { display: none; } 
   }
   @media (max-width: 1250px) {
-    .nav-link:nth-last-child(4) { display: none; } /* Hide Innovación */
+    .nav-link:nth-last-child(4) { display: none; } 
   }
 
-  /* Switch to Mobile Menu earlier */
+  /* Switch to Mobile Mode */
   @media (max-width: 1200px) {
     .nav-desktop {
-      display: none;
+      display: none; /* Ocultar menú escritorio */
     }
 
     .mobile-menu-btn {
-      display: block;
+      display: block; /* Mostrar botón hamburguesa */
     }
 
     .nav-mobile {
-      display: flex;
+      display: flex; /* Preparar el contenedor (aunque esté colapsado por max-height) */
     }
 
     .header-container {
@@ -262,7 +283,7 @@ const currentPath = Astro.url.pathname;
 <script>
   // Scroll effect
   const header = document.querySelector('.header');
-  
+
   window.addEventListener('scroll', () => {
     if (window.scrollY > 50) {
       header?.classList.add('scrolled');
@@ -271,21 +292,23 @@ const currentPath = Astro.url.pathname;
     }
   });
 
-  // Mobile menu toggle
+  // Mobile menu toggle logic
   const mobileMenuBtn = document.getElementById('mobileMenuBtn');
   const mobileNav = document.getElementById('mobileNav');
 
-  mobileMenuBtn?.addEventListener('click', () => {
-    mobileMenuBtn.classList.toggle('active');
-    mobileNav?.classList.toggle('active');
-  });
-
-  // Close mobile menu when clicking on a link
-  const mobileLinks = mobileNav?.querySelectorAll('.nav-link-mobile');
-  mobileLinks?.forEach(link => {
-    link.addEventListener('click', () => {
-      mobileMenuBtn?.classList.remove('active');
-      mobileNav?.classList.remove('active');
+  if (mobileMenuBtn && mobileNav) {
+    mobileMenuBtn.addEventListener('click', () => {
+      mobileMenuBtn.classList.toggle('active');
+      mobileNav.classList.toggle('active');
     });
-  });
+
+    // Close mobile menu when clicking on a link
+    const mobileLinks = mobileNav.querySelectorAll('.nav-link-mobile');
+    mobileLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenuBtn.classList.remove('active');
+        mobileNav.classList.remove('active');
+      });
+    });
+  }
 </script>
