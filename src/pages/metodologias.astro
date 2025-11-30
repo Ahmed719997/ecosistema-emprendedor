@@ -1,0 +1,839 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Hero from '../components/Hero.astro';
+import ContentBox from '../components/ContentBox.astro';
+const base = import.meta.env.BASE_URL;
+
+---
+
+<Layout title="Metodologías de Medición">
+  <Hero 
+    title="Metodologías de Medición"
+    subtitle="Herramientas y marcos para diagnosticar, medir y comparar el desempeño de los ecosistemas de emprendimiento e innovación."
+    image={`${base}metodologias.jpg`}
+    cta={{
+      primary: { text: 'Ver Indicadores', href: '#indicadores' },
+      secondary: { text: 'Metodología GEM', href: '#gem' }
+    }}
+  />
+
+  <section class="section">
+    <div class="container">
+      
+      <!-- Desafíos -->
+      <div class="intro-section observe">
+        <h2 class="section-title">Desafíos de la Medición</h2>
+        <p class="section-lead">La medición de ecosistemas enfrenta desafíos metodológicos significativos derivados de su naturaleza compleja, multidimensional y contextual.</p>
+        
+        <ContentBox type="warning">
+          <h4><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display: inline; vertical-align: middle; margin-right: 8px;"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>Desafío Central</h4>
+          <p><em>"Debido a su heterogeneidad y complejidad, los ecosistemas presentan desafíos considerables cuando se intenta medirlos. No existe un modelo de medición o reporte estándar para poder medir y comparar ecosistemas de emprendimiento."</em></p>
+
+        </ContentBox>
+      </div>
+
+      <!-- Tipos de Indicadores -->
+      <div id="indicadores" class="indicators-section observe">
+        <h2 class="section-title">Tipos de Indicadores</h2>
+        <div class="indicators-grid">
+          
+          <!-- Inputs -->
+          <div class="indicator-card input">
+            <div class="card-header">
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s 9-1.34 9-3V5"/></svg>
+              <h3>Indicadores de Inputs (Insumos)</h3>
+            </div>
+            <p class="card-desc"><strong>Miden:</strong> Recursos, capacidades y condiciones disponibles que facilitan el emprendimiento.</p>
+            
+            <div class="card-content">
+              <h4>Categorías MIT REAP:</h4>
+              <ul>
+                <li>Capital Humano</li>
+                <li>Financiamiento</li>
+                <li>Infraestructura</li>
+                <li>Demanda</li>
+                <li>Cultura e Incentivos</li>
+              </ul>
+
+              <h4>Ejemplos:</h4>
+              <ul>
+                <li>% población con educación terciaria</li>
+                <li>Graduados STEM per cápita</li>
+                <li>Capital de riesgo disponible</li>
+                <li>Espacios de coworking por 100k hab.</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Procesos -->
+          <div class="indicator-card process">
+            <div class="card-header">
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
+              <h3>Indicadores de Procesos</h3>
+            </div>
+            <p class="card-desc"><strong>Miden:</strong> Interacciones, vínculos y colaboraciones entre actores.</p>
+            
+            <div class="card-content">
+              <h4>Ejemplos:</h4>
+              <ul>
+                <li>Proyectos universidad-empresa</li>
+                <li>Densidad de redes formales</li>
+                <li>Frecuencia de eventos networking</li>
+                <li>Colaboraciones triple hélice</li>
+                <li>Intensidad de vínculos (SNA)</li>
+                <li>Presencia de organizaciones backbone</li>
+              </ul>
+              
+              <div class="quote-box">
+                <p>"Las conexiones entre emprendedores exitosos y nuevos fundadores son críticas"</p>
+                <span>(Endeavor Insight, 2014)</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Outputs -->
+          <div class="indicator-card output">
+            <div class="card-header">
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg>
+              <h3>Indicadores de Outputs (Resultados)</h3>
+            </div>
+            <p class="card-desc"><strong>Miden:</strong> Actividad emprendedora y sus características.</p>
+            
+            <div class="card-content">
+              <h4>Creación empresarial:</h4>
+              <ul>
+                <li>Tasa de creación de empresas</li>
+                <li>Supervivencia a 3 y 5 años</li>
+                <li>TEA (Total Early-stage Activity)</li>
+              </ul>
+
+              <h4>Emprendimientos dinámicos:</h4>
+              <ul>
+                <li>Startups (criterios OCDE)</li>
+                <li>Scaleups (≥20% crecimiento)</li>
+                <li>EBCTs (Base Científico-Tecnológica)</li>
+              </ul>
+
+              <h4>Impacto:</h4>
+              <ul>
+                <li>Empleo generado</li>
+                <li>Contribución al PIB</li>
+                <li>Exportaciones</li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- GEM -->
+      <div id="gem" class="gem-section observe">
+        <h2 class="section-title">Metodología GEM (Global Entrepreneurship Monitor)</h2>
+        <p class="section-lead">El estudio comparativo más representativo a nivel mundial. Desde 1997, ha medido sistemáticamente emprendimiento en más de 100 países.</p>
+
+        <div class="gem-instruments">
+          <div class="gem-card">
+            <div class="gem-icon"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+            <h3>APS - Adult Population Survey</h3>
+            <p class="gem-subtitle">Encuesta a Población Adulta</p>
+            <ul>
+              <li>Mínimo 2,000 adultos (18-64 años)</li>
+              <li>Muestra representativa nacional</li>
+              <li>Mide ciclo de vida emprendedor</li>
+              <li>TEA (actividad emprendedora temprana)</li>
+              <li>Motivaciones (oportunidad vs. necesidad)</li>
+            </ul>
+          </div>
+
+          <div class="gem-card">
+            <div class="gem-icon"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg></div>
+            <h3>NES - National Expert Survey</h3>
+            <p class="gem-subtitle">Encuesta Nacional de Expertos</p>
+            <ul>
+              <li>Mínimo 36 expertos por país</li>
+              <li>Diferentes áreas del ecosistema</li>
+              <li>Evalúan condiciones marco</li>
+              <li>Escalas Likert cuantificables</li>
+              <li>Percepción de barreras y facilitadores</li>
+            </ul>
+          </div>
+        </div>
+
+        <ContentBox type="highlight">
+          <h4><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display: inline; vertical-align: middle; margin-right: 8px;"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>Fortalezas Metodológicas GEM</h4>
+          <ul>
+            <li><strong>Rigor estadístico:</strong> Muestras representativas con procedimientos sofisticados.</li>
+            <li><strong>Comparabilidad:</strong> Cuestionario estandarizado internacionalmente.</li>
+            <li><strong>Perspectiva dual:</strong> Combina datos poblacionales (APS) con expertos (NES).</li>
+            <li><strong>Trayectoria:</strong> 23+ años de datos longitudinales.</li>
+          </ul>
+        </ContentBox>
+      </div>
+
+      <!-- Fuentes de Datos -->
+      <div class="sources-section observe">
+        <h2 class="section-title">Fuentes de Datos</h2>
+        <div class="sources-grid">
+          <div class="source-item">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M18 17V9"/><path d="M13 17V5"/><path d="M8 17v-3"/></svg>
+            <h5>Estadísticas Oficiales</h5>
+            <p>Censos, registros tributarios (SII), datos educación (MINEDUC)</p>
+          </div>
+          <div class="source-item">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18Z"/><path d="M6 12H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2"/><path d="M18 9h2a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-2"/><path d="M10 6h4"/><path d="M10 10h4"/><path d="M10 14h4"/><path d="M10 18h4"/></svg>
+            <h5>Registros Administrativos</h5>
+            <p>Adjudicaciones CORFO, proyectos I+D, patentes (INAPI)</p>
+          </div>
+          <div class="source-item">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+            <h5>Encuestas Primarias</h5>
+            <p>Encuestas a emprendedores, entrevistas, focus groups</p>
+          </div>
+          <div class="source-item">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s 9-1.34 9-3V5"/></svg>
+            <h5>Bases Privadas</h5>
+            <p>Fondos VC, Lavca, Crunchbase, PitchBook</p>
+          </div>
+          <div class="source-item">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+            <h5>Indicadores Internacionales</h5>
+            <p>Doing Business, WEF, Transparency Int., UNESCO</p>
+          </div>
+          <div class="source-item">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+            <h5>Publicaciones Científicas</h5>
+            <p>Web of Science, Scopus, producción regional</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Proceso Diagnóstico -->
+      <div class="process-section observe">
+        <h2 class="section-title">Proceso de Diagnóstico (Metodología GEIAL)</h2>
+        <div class="process-steps">
+          <div class="step">
+            <div class="step-num">1</div>
+            <div class="step-info">
+              <h4>Diseño Metodológico</h4>
+              <p>Definición de dimensiones, selección de indicadores, identificación de fuentes.</p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-num">2</div>
+            <div class="step-info">
+              <h4>Recolección de Datos Secundarios</h4>
+              <p>Estadísticas oficiales, registros administrativos, bases internacionales.</p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-num">3</div>
+            <div class="step-info">
+              <h4>Levantamiento Primario</h4>
+              <p>Encuestas a emprendedores, entrevistas a actores clave, análisis de redes.</p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-num">4</div>
+            <div class="step-info">
+              <h4>Procesamiento</h4>
+              <p>Normalización de indicadores, construcción de índices, validación cruzada.</p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-num">5</div>
+            <div class="step-info">
+              <h4>Análisis y Triangulación</h4>
+              <p>Análisis cuanti-cualitativo, contraste de fuentes, identificación de brechas.</p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-num">6</div>
+            <div class="step-info">
+              <h4>Benchmarking</h4>
+              <p>Comparación con territorios similares, posicionamiento relativo.</p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-num">7</div>
+            <div class="step-info">
+              <h4>Diagnóstico Integrado</h4>
+              <p>Síntesis de fortalezas/debilidades, identificación de cuellos de botella.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mapeo de Redes -->
+      <div class="sna-section observe">
+        <h2 class="section-title">Mapeo de Redes (SNA)</h2>
+        <p class="section-lead">Metodologías para comprender las relaciones entre actores del ecosistema.</p>
+        
+        <div class="sna-grid">
+          <div class="sna-card">
+            <h4>Metodología Endeavor</h4>
+            <p class="sna-focus"><strong>Enfoque:</strong> Evolución temporal en sectores</p>
+            <ul>
+              <li>Énfasis en emprendedores</li>
+              <li>Muestra evolución de actores</li>
+              <li>Estrategia cualitativa</li>
+              <li>Devela relaciones clave</li>
+            </ul>
+          </div>
+
+          <div class="sna-card">
+            <h4>Metodología Kauffman</h4>
+            <p class="sna-focus"><strong>Enfoque:</strong> Métricas cuantitativas de actividad</p>
+            <ul>
+              <li>Naturaleza de relaciones</li>
+              <li>Densidad, fluidez, conectividad</li>
+              <li>Análisis cuantitativo</li>
+              <li>Clasificación de roles</li>
+            </ul>
+          </div>
+
+          <div class="sna-card">
+            <h4>Metodología BID - Lima</h4>
+            <p class="sna-focus"><strong>Enfoque:</strong> Unificación y adaptación</p>
+            <ul>
+              <li>Caracteriza actores</li>
+              <li>Mide intensidad/utilidad</li>
+              <li>Define roles objetivos</li>
+              <li>Cuantifica evolución</li>
+            </ul>
+          </div>
+        </div>
+
+        <ContentBox type="info">
+          <h4><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display: inline; vertical-align: middle; margin-right: 8px;"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>Mejores Prácticas en SNA</h4>
+          <ul>
+            <li>Identificar "dealmakers" que conectan recursos.</li>
+            <li>Mapear vínculos formales e informales.</li>
+            <li>Distinguir entre vínculos fuertes (bonding) y débiles (bridging).</li>
+            <li>Medir conectividad local y extra-local.</li>
+          </ul>
+        </ContentBox>
+      </div>
+
+      <!-- Desafíos Específicos -->
+      <div class="challenges-grid observe">
+        <div class="challenge-item">
+          <h4>🎯 Identificación de Emprendimientos Dinámicos</h4>
+          <p>No existe consenso único. OCDE, Clayton y CORFO tienen criterios distintos sobre crecimiento y antigüedad.</p>
+          <p><strong>Solución:</strong> Triangulación de fuentes (SII, CORFO, VC, validación).</p>
+        </div>
+
+        <div class="challenge-item">
+          <h4>⚖️ Comparabilidad entre Territorios</h4>
+          <p>Diferencias en tamaño y estructura económica dificultan la comparación directa.</p>
+          <p><strong>Solución:</strong> Normalización (per cápita, PIB), benchmarking con pares similares.</p>
+        </div>
+
+        <div class="challenge-item">
+          <h4>📊 Agregación de Indicadores</h4>
+          <p>¿Cómo sintetizar múltiples métricas?</p>
+          <p><strong>Solución:</strong> Índices compuestos (GEDI, GEIAL) o dashboards multidimensionales (MEEI).</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Metodología Mixta -->
+  <section class="section" style="background: var(--gray-50);">
+    <div class="container">
+      <h2 class="section-title text-center">Metodología Mixta: Complementariedad Cuanti-Cuali</h2>
+      <p class="section-lead">GEIAL y otros marcos avanzados enfatizan la importancia de combinar datos objetivos con percepciones de actores.</p>
+
+      <ContentBox type="highlight" class="observe">
+        <h4><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display: inline; vertical-align: middle; margin-right: 8px;"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>Valor de la Metodología Mixta</h4>
+        <p><em>"Estos datos objetivos son considerados de suma importancia ya que nos arrojan una vista sin sesgo del estado de nuestro entorno emprendedor. Asimismo, los puntos de vista de los emprendedores y actores claves dentro del entorno nos ayudan a resaltar la naturaleza única del ecosistema, ya que las personas toman decisiones de acuerdo a su percepción personal de la región."</em></p>
+        <p class="citation">(Bosma & Stam, 2012)</p>
+      </ContentBox>
+
+      <div class="table-wrapper observe" style="margin-top: 2rem;">
+        <table class="comparison-table">
+          <thead>
+            <tr>
+              <th>Datos Cuantitativos</th>
+              <th>Datos Cualitativos</th>
+              <th>Valor Complementario</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Objetivos, verificables</td>
+              <td>Capturan percepciones, narrativas</td>
+              <td>Triangulación reduce sesgos</td>
+            </tr>
+            <tr>
+              <td>Permiten comparaciones estadísticas</td>
+              <td>Explican mecanismos causales</td>
+              <td>Qué + Por qué</td>
+            </tr>
+            <tr>
+              <td>Cobertura censal posible</td>
+              <td>Profundidad en casos específicos</td>
+              <td>Amplitud + Profundidad</td>
+            </tr>
+            <tr>
+              <td>Históricos, tendencias temporales</td>
+              <td>Contexto actual, dinámicas emergentes</td>
+              <td>Pasado + Presente</td>
+            </tr>
+            <tr>
+              <td>Inputs y outputs medibles</td>
+              <td>Procesos y calidad de relaciones</td>
+              <td>Estructura + Dinámica</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- Referencias -->
+  <section class="section-sm references-section">
+    <div class="container">
+      <div class="references-container observe">
+        <div class="references-header" onclick="this.parentElement.classList.toggle('expanded')">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+          <h3>Referencias Bibliográficas</h3>
+          <span class="toggle-icon">▼</span>
+        </div>
+        <div class="references-list">
+          <p>Bosma, N., & Stam, E. (2012). Local policies for high-employment growth enterprises. In OECD, <em>High-growth enterprises: What governments can do to make a difference</em> (pp. 155-178). OECD Publishing.</p>
+          <p>Clayton, P., Feldman, M., & Lowe, N. (2013). <em>Behind the numbers: U.S. high-growth firms</em>. Small Business Administration Office of Advocacy.</p>
+          <p>Feldman, M., & Zoller, T. D. (2012). Dealmakers in place: Social capital connections in regional entrepreneurial economies. <em>Regional Studies, 46</em>(1), 23-37.</p>
+          <p>Global Entrepreneurship Monitor. (2022). <em>Methodology Global Entrepreneurship Monitor</em>. https://www.gemconsortium.org/wiki/1599</p>
+          <p>Goñi Pacchioni, E. A., & Reyes, S. (2022). <em>Cómo mapear y medir ecosistemas de emprendimiento innovador: Aplicación de metodologías de análisis de redes al ecosistema de Lima</em>. Banco Interamericano de Desarrollo.</p>
+          <p>Stangler, D., & Bell-Masterson, J. (2015). <em>Measuring an entrepreneurial ecosystem</em>. Kauffman Foundation Research Series on City, Metro, and Regional Entrepreneurship.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .section-title {
+    font-size: clamp(1.75rem, 3vw, 2.5rem);
+    font-weight: 800;
+    color: var(--primary);
+    margin-bottom: var(--spacing-lg);
+    text-align: center;
+  }
+
+  .section-lead {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto var(--spacing-xl);
+    font-size: 1.1rem;
+    color: var(--gray-600);
+  }
+
+  .citation {
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+    opacity: 0.8;
+  }
+
+  /* Intro Section */
+  .intro-section {
+    margin-bottom: var(--spacing-3xl);
+  }
+
+  /* Indicators Grid */
+  .indicators-section {
+    margin-bottom: var(--spacing-3xl);
+  }
+
+  .indicators-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--spacing-lg);
+  }
+
+  .indicator-card {
+    background: var(--white);
+    border-radius: var(--radius-md);
+    padding: var(--spacing-lg);
+    box-shadow: var(--shadow-sm);
+    border-top: 4px solid transparent;
+    transition: transform 0.3s ease;
+  }
+
+  .indicator-card:hover {
+    transform: translateY(-5px);
+  }
+
+  .indicator-card.input { border-top-color: var(--primary); }
+  .indicator-card.process { border-top-color: var(--accent-green); }
+  .indicator-card.output { border-top-color: var(--accent-yellow); }
+
+  .card-header {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    margin-bottom: var(--spacing-md);
+    color: var(--gray-900);
+  }
+
+  .indicator-card.input .card-header { color: var(--primary); }
+  .indicator-card.process .card-header { color: var(--accent-green); }
+  .indicator-card.output .card-header { color: #d4a017; }
+
+  .card-header h3 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin: 0;
+  }
+
+  .card-desc {
+    margin-bottom: var(--spacing-md);
+    font-size: 0.95rem;
+  }
+
+  .card-content h4 {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--gray-800);
+    margin: var(--spacing-md) 0 0.5rem;
+  }
+
+  .card-content ul {
+    padding-left: 1.25rem;
+    margin: 0;
+    font-size: 0.9rem;
+    color: var(--gray-700);
+  }
+
+  .card-content li {
+    margin-bottom: 0.25rem;
+  }
+
+  .quote-box {
+    margin-top: var(--spacing-md);
+    padding: var(--spacing-sm);
+    background: var(--gray-50);
+    border-radius: var(--radius-sm);
+    font-style: italic;
+    font-size: 0.9rem;
+    text-align: center;
+  }
+
+  .quote-box span {
+    display: block;
+    margin-top: 0.25rem;
+    font-size: 0.8rem;
+    font-style: normal;
+    color: var(--gray-500);
+  }
+
+  /* GEM Section */
+  .gem-section {
+    margin-bottom: var(--spacing-3xl);
+    background: var(--gray-50);
+    padding: var(--spacing-xl);
+    border-radius: var(--radius-lg);
+  }
+
+  .gem-instruments {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--spacing-lg);
+    margin-bottom: var(--spacing-xl);
+  }
+
+  .gem-card {
+    background: var(--white);
+    padding: var(--spacing-xl);
+    border-radius: var(--radius-md);
+    text-align: center;
+    box-shadow: var(--shadow-sm);
+  }
+
+  .gem-icon {
+    color: var(--primary);
+    margin-bottom: var(--spacing-md);
+  }
+
+  .gem-card h3 {
+    font-size: 1.25rem;
+    font-weight: 800;
+    color: var(--primary);
+    margin-bottom: 0.25rem;
+  }
+
+  .gem-subtitle {
+    color: var(--gray-500);
+    font-weight: 600;
+    margin-bottom: var(--spacing-md);
+    font-size: 0.9rem;
+  }
+
+  .gem-card ul {
+    text-align: left;
+    padding-left: 1.5rem;
+    font-size: 0.95rem;
+    color: var(--gray-700);
+  }
+
+  .gem-card li {
+    margin-bottom: 0.5rem;
+  }
+
+  /* Sources Section */
+  .sources-section {
+    margin-bottom: var(--spacing-3xl);
+  }
+
+  .sources-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: var(--spacing-md);
+  }
+
+  .source-item {
+    background: var(--white);
+    border: 1px solid var(--gray-200);
+    padding: var(--spacing-lg);
+    border-radius: var(--radius-md);
+    text-align: center;
+    transition: all 0.3s ease;
+  }
+
+  .source-item:hover {
+    border-color: var(--primary);
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-md);
+  }
+
+  .source-item :global(svg) {
+    color: var(--primary);
+    margin-bottom: var(--spacing-sm);
+  }
+
+  .source-item h5 {
+    font-weight: 700;
+    color: var(--gray-900);
+    margin-bottom: 0.5rem;
+  }
+
+  .source-item p {
+    font-size: 0.85rem;
+    color: var(--gray-600);
+    line-height: 1.4;
+  }
+
+  /* Process Section */
+  .process-section {
+    margin-bottom: var(--spacing-3xl);
+  }
+
+  .process-steps {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .step {
+    display: flex;
+    gap: var(--spacing-md);
+    background: var(--gray-50);
+    padding: var(--spacing-md);
+    border-radius: var(--radius-md);
+    align-items: flex-start;
+  }
+
+  .step-num {
+    background: var(--primary);
+    color: var(--white);
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+    flex-shrink: 0;
+  }
+
+  .step-info h4 {
+    font-weight: 700;
+    color: var(--primary);
+    margin-bottom: 0.25rem;
+  }
+
+  .step-info p {
+    font-size: 0.95rem;
+    color: var(--gray-700);
+  }
+
+  /* SNA Section */
+  .sna-section {
+    margin-bottom: var(--spacing-3xl);
+  }
+
+  .sna-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--spacing-lg);
+    margin-bottom: var(--spacing-lg);
+  }
+
+  .sna-card {
+    background: var(--white);
+    border: 1px solid var(--gray-200);
+    padding: var(--spacing-lg);
+    border-radius: var(--radius-md);
+  }
+
+  .sna-card h4 {
+    color: var(--primary);
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+  }
+
+  .sna-focus {
+    font-size: 0.9rem;
+    color: var(--gray-600);
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--gray-100);
+  }
+
+  .sna-card ul {
+    padding-left: 1.25rem;
+    font-size: 0.9rem;
+    color: var(--gray-700);
+  }
+
+  .sna-card li {
+    margin-bottom: 0.25rem;
+  }
+
+  /* Challenges Grid */
+  .challenges-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--spacing-lg);
+  }
+
+  .challenge-item {
+    background: rgba(241, 196, 15, 0.05);
+    border-left: 4px solid var(--accent-yellow);
+    padding: var(--spacing-lg);
+    border-radius: var(--radius-sm);
+  }
+
+  .challenge-item h4 {
+    color: #d4a017;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+  }
+
+  .challenge-item p {
+    font-size: 0.95rem;
+    color: var(--gray-800);
+    margin-bottom: 0.5rem;
+  }
+
+  /* Responsive */
+  @media (max-width: 768px) {
+    .indicators-grid,
+    .gem-instruments,
+    .sna-grid,
+    .challenges-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+  /* Table */
+  .table-wrapper {
+    overflow-x: auto;
+    margin-top: var(--spacing-md);
+  }
+
+  .comparison-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--white);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    font-size: 0.9375rem;
+    box-shadow: var(--shadow-sm);
+  }
+
+  .comparison-table thead {
+    background: var(--primary);
+    color: var(--secondary);
+  }
+
+  .comparison-table th {
+    padding: var(--spacing-md);
+    text-align: left;
+    font-weight: 700;
+  }
+
+  .comparison-table td {
+    padding: var(--spacing-md);
+    border-bottom: 1px solid var(--gray-200);
+    color: var(--gray-900);
+    vertical-align: top;
+  }
+
+  .comparison-table tbody tr:hover {
+    background: var(--gray-50);
+  }
+
+  /* References */
+  .references-container {
+    background: var(--gray-50);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+  }
+
+  .references-header {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    padding: var(--spacing-md);
+    background: var(--gray-100);
+    cursor: pointer;
+    user-select: none;
+  }
+
+  .references-header h3 {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--gray-700);
+    margin: 0;
+    flex-grow: 1;
+  }
+
+  .toggle-icon {
+    font-size: 0.8rem;
+    transition: transform 0.3s ease;
+  }
+
+  .references-container.expanded .toggle-icon {
+    transform: rotate(180deg);
+  }
+
+  .references-list {
+    padding: var(--spacing-md);
+    display: none;
+    font-size: 0.85rem;
+    color: var(--gray-600);
+  }
+
+  .references-container.expanded .references-list {
+    display: block;
+  }
+
+  .references-list p {
+    margin-bottom: 0.5rem;
+  }
+</style>

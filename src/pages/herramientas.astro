@@ -1,0 +1,745 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Hero from '../components/Hero.astro';
+const base = import.meta.env.BASE_URL;
+
+
+---
+
+<Layout title="Herramientas Prácticas">
+  <Hero 
+    title="Herramientas Prácticas"
+    subtitle="Instrumentos concretos para diagnosticar, planificar e implementar iniciativas de fortalecimiento de ecosistemas"
+    image={`${base}herramientas.jpg`}
+    cta={{
+      primary: { text: 'Ver Herramientas', href: '#herramientas' }
+    }}
+  />
+
+  <section class="section" id="herramientas">
+    <div class="container">
+      
+      <!-- HERRAMIENTA 1: CHECKLIST -->
+      <div class="tool-card observe">
+        <div class="tool-header">
+          <div class="tool-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="8" height="4" x="8" y="2" rx="1" ry="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><path d="m9 14 2 2 4-4"/></svg>
+          </div>
+          <h2>Herramienta 1: Checklist de Diagnóstico Rápido</h2>
+        </div>
+        <p class="tool-intro">Utiliza esta lista para hacer un diagnóstico preliminar del estado de tu ecosistema. Marca las afirmaciones que son verdaderas para tu territorio.</p>
+
+        <div class="checklist-container">
+          <div class="checklist-group">
+            <h3>Capital Humano y Cultura</h3>
+            <label class="checklist-item">
+              <input type="checkbox" />
+              <span>Existe disponibilidad de profesionales con formación técnica avanzada (STEM)</span>
+            </label>
+            <label class="checklist-item">
+              <input type="checkbox" />
+              <span>El emprendimiento es valorado socialmente y visto como carrera deseable</span>
+            </label>
+            <label class="checklist-item">
+              <input type="checkbox" />
+              <span>Existen emprendedores exitosos visibles que actúan como modelos de rol</span>
+            </label>
+            <label class="checklist-item">
+              <input type="checkbox" />
+              <span>La tasa de emigración de talento joven es baja o está disminuyendo</span>
+            </label>
+          </div>
+
+          <div class="checklist-group">
+            <h3>Formación y Capacitación</h3>
+            <label class="checklist-item">
+              <input type="checkbox" />
+              <span>Las universidades locales ofrecen programas de emprendimiento de calidad</span>
+            </label>
+            <label class="checklist-item">
+              <input type="checkbox" />
+              <span>Existen programas de capacitación especializada (bootcamps, talleres) regularmente</span>
+            </label>
+            <label class="checklist-item">
+              <input type="checkbox" />
+              <span>Hay vinculación efectiva entre formación académica y necesidades empresariales</span>
+            </label>
+          </div>
+
+          <div class="checklist-group">
+            <h3>Financiamiento</h3>
+            <label class="checklist-item">
+              <input type="checkbox" />
+              <span>Existe capital semilla disponible localmente (familia, amigos, ángeles)</span>
+            </label>
+            <label class="checklist-item">
+              <input type="checkbox" />
+              <span>Hay fondos de inversión (VC o similares) operando en el territorio</span>
+            </label>
+            <label class="checklist-item">
+              <input type="checkbox" />
+              <span>Los emprendimientos pueden acceder a financiamiento público</span>
+            </label>
+            <label class="checklist-item">
+              <input type="checkbox" />
+              <span>Existe capital disponible para escalamiento (growth capital)</span>
+            </label>
+          </div>
+
+          <div class="checklist-group">
+            <h3>Infraestructura</h3>
+            <label class="checklist-item">
+              <input type="checkbox" />
+              <span>Hay espacios de coworking accesibles y de calidad</span>
+            </label>
+            <label class="checklist-item">
+              <input type="checkbox" />
+              <span>Existe al menos una incubadora o aceleradora operativa</span>
+            </label>
+            <label class="checklist-item">
+              <input type="checkbox" />
+              <span>La conectividad digital (banda ancha) es confiable y accesible</span>
+            </label>
+          </div>
+
+          <div class="checklist-group">
+            <h3>Demanda y Mercados</h3>
+            <label class="checklist-item">
+              <input type="checkbox" />
+              <span>El mercado local es suficientemente grande para validar productos/servicios</span>
+            </label>
+            <label class="checklist-item">
+              <input type="checkbox" />
+              <span>Grandes empresas locales están abiertas a trabajar con startups</span>
+            </label>
+            <label class="checklist-item">
+              <input type="checkbox" />
+              <span>Hay acceso facilitado a mercados nacionales o internacionales</span>
+            </label>
+          </div>
+
+          <div class="checklist-group">
+            <h3>Redes y Articulación</h3>
+            <label class="checklist-item">
+              <input type="checkbox" />
+              <span>Ocurren eventos de networking regularmente (al menos mensual)</span>
+            </label>
+            <label class="checklist-item">
+              <input type="checkbox" />
+              <span>Los actores clave del ecosistema se conocen entre sí</span>
+            </label>
+            <label class="checklist-item">
+              <input type="checkbox" />
+              <span>Existe una organización que articula y coordina el ecosistema</span>
+            </label>
+            <label class="checklist-item">
+              <input type="checkbox" />
+              <span>Hay conexiones activas con ecosistemas externos (nacionales/internacionales)</span>
+            </label>
+          </div>
+
+          <div class="checklist-group">
+            <h3>Marco Regulatorio</h3>
+            <label class="checklist-item">
+              <input type="checkbox" />
+              <span>Crear y formalizar una empresa toma menos de 10 días</span>
+            </label>
+            <label class="checklist-item">
+              <input type="checkbox" />
+              <span>Existen incentivos tributarios para I+D o emprendimiento innovador</span>
+            </label>
+            <label class="checklist-item">
+              <input type="checkbox" />
+              <span>La regulación laboral permite flexibilidad para empresas en crecimiento</span>
+            </label>
+          </div>
+
+
+        </div>
+      </div>
+
+      <!-- HERRAMIENTA 2: FODA -->
+      <div class="tool-card observe" style="border-left-color: var(--accent-green);">
+        <div class="tool-header">
+          <div class="tool-icon" style="background: var(--accent-green);">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M3 9h18"/><path d="M9 21V3"/></svg>
+          </div>
+          <h2>Herramienta 2: Matriz FODA para Ecosistemas</h2>
+        </div>
+        <p class="tool-intro">Análisis estratégico de Fortalezas, Oportunidades, Debilidades y Amenazas específico para ecosistemas.</p>
+
+        <div class="swot-grid">
+          <div class="swot-box strength">
+            <div class="swot-header">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+              <h4>FORTALEZAS (Internas +)</h4>
+            </div>
+            <ul>
+              <li>Universidades de prestigio</li>
+              <li>Talento técnico disponible</li>
+              <li>Sectores productivos consolidados</li>
+              <li>Cultura emprendedora positiva</li>
+            </ul>
+          </div>
+
+          <div class="swot-box weakness">
+            <div class="swot-header">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+              <h4>DEBILIDADES (Internas -)</h4>
+            </div>
+            <ul>
+              <li>Escasez de capital de riesgo</li>
+              <li>Fuga de talento (brain drain)</li>
+              <li>Mercado local pequeño</li>
+              <li>Desarticulación entre actores</li>
+            </ul>
+          </div>
+
+          <div class="swot-box opportunity">
+            <div class="swot-header">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-1 1.5-2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5"/><path d="M9 18h6"/><path d="M10 22h4"/></svg>
+              <h4>OPORTUNIDADES (Externas +)</h4>
+            </div>
+            <ul>
+              <li>Programas nacionales de fomento</li>
+              <li>Tendencias globales favorables</li>
+              <li>Nichos de mercado desatendidos</li>
+              <li>Interés de inversionistas externos</li>
+            </ul>
+          </div>
+
+          <div class="swot-box threat">
+            <div class="swot-header">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              <h4>AMENAZAS (Externas -)</h4>
+            </div>
+            <ul>
+              <li>Competencia de ecosistemas vecinos</li>
+              <li>Inestabilidad económica/política</li>
+              <li>Cambios tecnológicos disruptivos</li>
+              <li>Reducción presupuesto público</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="strategies-box">
+          <h4>🎯 Puntos a Considerar</h4>
+          <ul>
+            <li><strong>FO (Fortalezas-Oportunidades):</strong> ¿Cómo usar nuestras fortalezas para aprovechar las oportunidades del entorno?</li>
+            <li><strong>FA (Fortalezas-Amenazas):</strong> ¿Cómo usar nuestras fortalezas para protegernos de las amenazas externas?</li>
+            <li><strong>DO (Debilidades-Oportunidades):</strong> ¿Qué debilidades debemos corregir para no perder oportunidades clave?</li>
+            <li><strong>DA (Debilidades-Amenazas):</strong> ¿Cómo minimizamos nuestras debilidades para evitar ser vulnerables a las amenazas?</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- HERRAMIENTA 3: CANVAS -->
+      <div class="tool-card observe" style="border-left-color: var(--accent-blue);">
+        <div class="tool-header">
+          <div class="tool-icon" style="background: var(--accent-blue);">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="7" height="9" x="3" y="3" rx="1"/><rect width="7" height="5" x="14" y="3" rx="1"/><rect width="7" height="9" x="14" y="12" rx="1"/><rect width="7" height="5" x="3" y="16" rx="1"/></svg>
+          </div>
+          <h2>Herramienta 3: Canvas del Ecosistema</h2>
+        </div>
+        <p class="tool-intro">Herramienta visual para mapear de forma holística los componentes clave de tu ecosistema.</p>
+
+        <div class="canvas-grid" id="canvasGrid">
+          <div class="canvas-item">
+            <h4>🎯 Visión Compartida</h4>
+            <p>¿Hacia dónde queremos ir?</p>
+            <textarea placeholder="Ej: Ser líder en AgTech 2030..."></textarea>
+          </div>
+          <div class="canvas-item">
+            <h4>👥 Actores Clave</h4>
+            <p>5 stakeholders + otros</p>
+            <textarea placeholder="Universidades, Gobierno..."></textarea>
+          </div>
+          <div class="canvas-item">
+            <h4>💪 Ventajas Comparativas</h4>
+            <p>¿Qué nos hace únicos?</p>
+            <textarea placeholder="Ubicación, clima, industria..."></textarea>
+          </div>
+          <div class="canvas-item">
+            <h4>📊 Recursos Disponibles</h4>
+            <p>Capital, infra, talento</p>
+            <textarea placeholder="3 Universidades, Fondos..."></textarea>
+          </div>
+          <div class="canvas-item">
+            <h4>🚧 Brechas Críticas</h4>
+            <p>¿Qué nos falta?</p>
+            <textarea placeholder="Capital riesgo, mentores..."></textarea>
+          </div>
+          <div class="canvas-item">
+            <h4>📈 Indicadores Éxito</h4>
+            <p>¿Cómo medimos?</p>
+            <textarea placeholder="N° Startups, Empleos..."></textarea>
+          </div>
+        </div>
+        
+        <button class="action-btn" id="downloadCanvasBtn">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg> Descargar Plantilla Canvas
+        </button>
+      </div>
+
+      <!-- HERRAMIENTA 4: PLAN DE ACCIÓN -->
+      <div class="tool-card observe" style="border-left-color: var(--accent-yellow);">
+        <div class="tool-header">
+          <div class="tool-icon" style="background: var(--accent-yellow);">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="4" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+          </div>
+          <h2>Herramienta 4: Plan de Acción (MWB)</h2>
+        </div>
+        <p class="tool-intro">Identifica las "Must-Win Battles": iniciativas críticas con responsables y plazos.</p>
+
+        <div class="table-wrapper" id="actionPlanTable">
+          <table class="action-table">
+            <thead>
+              <tr>
+                <th>Iniciativa</th>
+                <th>Responsable</th>
+                <th>Plazo</th>
+                <th>Prioridad</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><input type="text" placeholder="Ej: Crear fondo ángel regional" /></td>
+                <td><input type="text" placeholder="GORE + Privados" /></td>
+                <td><input type="text" placeholder="12 meses" /></td>
+                <td>
+                  <select>
+                    <option value="ALTA">ALTA</option>
+                    <option value="MEDIA">MEDIA</option>
+                    <option value="BAJA">BAJA</option>
+                  </select>
+                </td>
+              </tr>
+              <tr>
+                <td><input type="text" placeholder="Ej: Programa aceleración AgTech" /></td>
+                <td><input type="text" placeholder="Universidad + CORFO" /></td>
+                <td><input type="text" placeholder="6 meses" /></td>
+                <td>
+                  <select>
+                    <option value="ALTA">ALTA</option>
+                    <option value="MEDIA">MEDIA</option>
+                    <option value="BAJA">BAJA</option>
+                  </select>
+                </td>
+              </tr>
+              <tr>
+                <td><input type="text" placeholder="Ej: Mesa de coordinación" /></td>
+                <td><input type="text" placeholder="Gobernanza" /></td>
+                <td><input type="text" placeholder="3 meses" /></td>
+                <td>
+                  <select>
+                    <option value="ALTA">ALTA</option>
+                    <option value="MEDIA" selected>MEDIA</option>
+                    <option value="BAJA">BAJA</option>
+                  </select>
+                </td>
+              </tr>
+              <tr>
+                <td><input type="text" placeholder="Nueva iniciativa..." /></td>
+                <td><input type="text" placeholder="Responsable..." /></td>
+                <td><input type="text" placeholder="Plazo..." /></td>
+                <td>
+                  <select>
+                    <option value="ALTA">ALTA</option>
+                    <option value="MEDIA">MEDIA</option>
+                    <option value="BAJA">BAJA</option>
+                  </select>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <button class="action-btn" id="downloadActionPlanBtn" style="margin-top: 1rem;">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg> Descargar Plan de Acción
+        </button>
+
+        <div class="prioritization-box">
+          <h4>💡 Criterios para Priorizar Iniciativas</h4>
+          <ul>
+            <li><strong>Impacto potencial:</strong> ¿Afecta a múltiples dimensiones del ecosistema?</li>
+            <li><strong>Factibilidad:</strong> ¿Tenemos recursos y capacidades para ejecutar?</li>
+            <li><strong>Urgencia:</strong> ¿Es pre-requisito para otras iniciativas?</li>
+            <li><strong>Consenso:</strong> ¿Hay acuerdo entre stakeholders sobre su importancia?</li>
+            <li><strong>Sostenibilidad:</strong> ¿Puede auto-mantenerse en el tiempo?</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- HERRAMIENTA 5: DASHBOARD -->
+      <div class="tool-card observe" style="border-left-color: var(--primary-light);">
+        <div class="tool-header">
+          <div class="tool-icon" style="background: var(--primary-light);">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+          </div>
+          <h2>Herramienta 5: Dashboard de Indicadores</h2>
+        </div>
+        <p class="tool-intro">Panel de control con indicadores clave para monitorear el progreso.</p>
+
+        <div class="table-wrapper">
+          <table class="action-table">
+            <thead>
+              <tr>
+                <th>Indicador</th>
+                <th>Meta</th>
+                <th>Actual</th>
+                <th>Tendencia</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Graduados STEM / 100k hab</td>
+                <td>500</td>
+                <td>320</td>
+                <td class="trend-up">↗️ Mejorando</td>
+              </tr>
+              <tr>
+                <td>Capital VC disponible (M$)</td>
+                <td>50</td>
+                <td>12</td>
+                <td class="trend-down">↘️ Deteriorando</td>
+              </tr>
+              <tr>
+                <td>Startups activas</td>
+                <td>100</td>
+                <td>45</td>
+                <td class="trend-up">↗️ Mejorando</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+    </div>
+  </section>
+</Layout>
+
+<script>
+  // Canvas Download Logic
+  const downloadCanvasBtn = document.getElementById('downloadCanvasBtn');
+  if (downloadCanvasBtn) {
+    downloadCanvasBtn.addEventListener('click', () => {
+      const items = document.querySelectorAll('.canvas-item');
+      let content = "CANVAS DEL ECOSISTEMA\n=====================\n\n";
+      
+      items.forEach(item => {
+        const title = item.querySelector('h4')?.textContent || '';
+        const text = item.querySelector('textarea')?.value || '';
+        content += `${title}:\n${text}\n\n-------------------\n\n`;
+      });
+
+      downloadFile('canvas_ecosistema.txt', content);
+    });
+  }
+
+  // Action Plan Download Logic
+  const downloadActionPlanBtn = document.getElementById('downloadActionPlanBtn');
+  if (downloadActionPlanBtn) {
+    downloadActionPlanBtn.addEventListener('click', () => {
+      const rows = document.querySelectorAll('#actionPlanTable tbody tr');
+      let content = "PLAN DE ACCIÓN (MWB)\n====================\n\n";
+      
+      rows.forEach((row, index) => {
+        const inputs = row.querySelectorAll('input');
+        const select = row.querySelector('select');
+        
+        if (inputs.length >= 3 && select) {
+          const iniciativa = inputs[0].value || '(Sin iniciativa)';
+          const responsable = inputs[1].value || '(Sin responsable)';
+          const plazo = inputs[2].value || '(Sin plazo)';
+          const prioridad = select.value;
+
+          content += `Iniciativa ${index + 1}: ${iniciativa}\n`;
+          content += `Responsable: ${responsable}\n`;
+          content += `Plazo: ${plazo}\n`;
+          content += `Prioridad: ${prioridad}\n`;
+          content += `\n-------------------\n\n`;
+        }
+      });
+
+      downloadFile('plan_accion.txt', content);
+    });
+  }
+
+  // Helper function to download file
+  function downloadFile(filename: string, content: string) {
+    const element = document.createElement('a');
+    element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(content));
+    element.setAttribute('download', filename);
+
+    element.style.display = 'none';
+    document.body.appendChild(element);
+
+    element.click();
+
+    document.body.removeChild(element);
+  }
+</script>
+
+<style>
+  .tool-card {
+    background: var(--white);
+    border-radius: var(--radius-lg);
+    padding: var(--spacing-xl);
+    margin-bottom: var(--spacing-3xl);
+    box-shadow: var(--shadow-md);
+    border-left: 6px solid var(--primary);
+  }
+
+  .tool-header {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-md);
+  }
+
+  .tool-icon {
+    width: 56px;
+    height: 56px;
+    background: var(--primary);
+    color: var(--white);
+    border-radius: var(--radius-md);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  .tool-card h2 {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--primary);
+    margin: 0;
+  }
+
+  .tool-intro {
+    color: var(--gray-600);
+    margin-bottom: var(--spacing-lg);
+    font-size: 1.05rem;
+  }
+
+  /* Checklist */
+  .checklist-container {
+    background: var(--gray-50);
+    padding: var(--spacing-lg);
+    border-radius: var(--radius-md);
+  }
+
+  .checklist-group {
+    margin-bottom: var(--spacing-lg);
+  }
+
+  .checklist-group h3 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--primary);
+    margin-bottom: var(--spacing-sm);
+  }
+
+  .checklist-item {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--spacing-sm);
+    padding: var(--spacing-sm);
+    background: var(--white);
+    margin-bottom: 0.5rem;
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--gray-200);
+    cursor: pointer;
+  }
+
+  .checklist-item input {
+    margin-top: 0.25rem;
+  }
+
+  .results-box {
+    background: rgba(52, 152, 219, 0.1);
+    padding: var(--spacing-md);
+    border-radius: var(--radius-sm);
+    margin-top: var(--spacing-lg);
+  }
+
+  .results-box h4 {
+    color: var(--accent-blue);
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+  }
+
+  .strategies-box {
+    background: var(--light);
+    padding: var(--spacing-md);
+    border-radius: var(--radius-sm);
+    margin-top: var(--spacing-lg);
+  }
+
+  .strategies-box h4 {
+    color: var(--primary);
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+  }
+
+  .strategies-box ul {
+    padding-left: 1.25rem;
+    font-size: 0.9rem;
+    color: var(--gray-800);
+  }
+
+  .prioritization-box {
+    background: var(--light);
+    padding: var(--spacing-md);
+    border-radius: var(--radius-sm);
+    margin-top: var(--spacing-lg);
+  }
+
+  .prioritization-box h4 {
+    color: var(--primary);
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+  }
+
+  .prioritization-box ul {
+    padding-left: 1.25rem;
+    font-size: 0.9rem;
+    color: var(--gray-800);
+  }
+
+  /* SWOT Grid */
+  .swot-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--spacing-md);
+  }
+
+  .swot-box {
+    background: var(--gray-50);
+    padding: var(--spacing-md);
+    border-radius: var(--radius-sm);
+    border-top: 4px solid;
+  }
+
+  .swot-box.strength { border-color: var(--accent-green); }
+  .swot-box.weakness { border-color: #e74c3c; }
+  .swot-box.opportunity { border-color: var(--accent-blue); }
+  .swot-box.threat { border-color: var(--accent-yellow); }
+
+  .swot-header {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+  }
+
+  .strength .swot-header { color: var(--accent-green); }
+  .weakness .swot-header { color: #e74c3c; }
+  .opportunity .swot-header { color: var(--accent-blue); }
+  .threat .swot-header { color: var(--accent-yellow); }
+
+  .swot-box ul {
+    padding-left: 1.25rem;
+    margin: 0;
+    font-size: 0.9rem;
+  }
+
+  /* Canvas Grid */
+  .canvas-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-lg);
+  }
+
+  .canvas-item {
+    background: var(--gray-50);
+    padding: var(--spacing-md);
+    border-radius: var(--radius-sm);
+    border: 1px dashed var(--gray-400);
+  }
+
+  .canvas-item h4 {
+    color: var(--primary);
+    font-weight: 700;
+    font-size: 0.95rem;
+    margin-bottom: 0.25rem;
+  }
+
+  .canvas-item p {
+    font-size: 0.8rem;
+    color: var(--gray-500);
+    margin-bottom: 0.5rem;
+  }
+
+  .fake-input {
+    background: var(--white);
+    border: 1px solid var(--gray-300);
+    padding: 0.5rem;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    color: var(--gray-500);
+    font-style: italic;
+  }
+
+  /* Tables */
+  .table-wrapper {
+    overflow-x: auto;
+  }
+
+  .action-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.95rem;
+  }
+
+  .action-table th, .action-table td {
+    padding: 0.75rem;
+    border-bottom: 1px solid var(--gray-200);
+    text-align: left;
+  }
+
+  .action-table th {
+    background: var(--gray-50);
+    font-weight: 700;
+    color: var(--gray-700);
+  }
+
+  .badge {
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    font-weight: 700;
+  }
+
+  .badge.high { background: rgba(231, 76, 60, 0.1); color: #c0392b; }
+  .badge.medium { background: rgba(241, 196, 15, 0.1); color: #d68910; }
+
+  .trend-up { color: var(--accent-green); font-weight: 600; }
+  .trend-down { color: #e74c3c; font-weight: 600; }
+
+  .action-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: var(--accent-green);
+    color: var(--white);
+    padding: 0.75rem 1.5rem;
+    border-radius: var(--radius-md);
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+
+  .action-btn:hover {
+    background: #27ae60;
+  }
+
+  @media (max-width: 768px) {
+    .swot-grid, .canvas-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

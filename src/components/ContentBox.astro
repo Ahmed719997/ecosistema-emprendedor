@@ -1,0 +1,152 @@
+---
+/**
+ * COMPONENTES INTERNOS UNIFICADOS
+ * Sistema de diseño simple y coherente
+ * Solo 3 tipos de componentes para mantener consistencia visual
+ */
+interface Props {
+  type?: 'default' | 'highlight' | 'info' | 'warning';
+  title?: string;
+  class?: string;
+}
+
+const { type = 'default', title, class: className } = Astro.props;
+---
+
+<div class={`content-box content-box-${type} ${className || ''}`}>
+  {title && <h4 class="content-box-title">{title}</h4>}
+  <div class="content-box-body">
+    <slot />
+  </div>
+</div>
+
+<style>
+  /* ===================================
+     COMPONENTE BASE
+     Diseño minimalista y limpio
+     ================================== */
+  
+  .content-box {
+    background: var(--secondary);
+    padding: var(--spacing-lg);
+    border-radius: var(--radius-md);
+    margin: var(--spacing-md) 0;
+    border: 1px solid var(--gray-300);
+    transition: all var(--transition-base);
+  }
+
+  .content-box-title {
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: var(--primary);
+    margin-bottom: var(--spacing-md);
+    font-family: var(--font-display);
+  }
+
+  .content-box-body {
+    color: var(--gray-900);
+    line-height: 1.7;
+  }
+
+  .content-box-body :global(p) {
+    margin-bottom: var(--spacing-sm);
+  }
+
+  .content-box-body :global(ul),
+  .content-box-body :global(ol) {
+    margin-left: 1.5rem;
+    margin-bottom: var(--spacing-sm);
+  }
+
+  .content-box-body :global(li) {
+    margin-bottom: 0.5rem;
+    line-height: 1.6;
+  }
+
+  /* ===================================
+     VARIANTE: DEFAULT
+     Fondo blanco, borde gris sutil
+     ================================== */
+  
+  .content-box-default {
+    background: var(--secondary);
+    border-color: var(--gray-300);
+  }
+
+  .content-box-default:hover {
+    border-color: var(--gray-600);
+  }
+
+  /* ===================================
+     VARIANTE: HIGHLIGHT
+     Para destacar contenido importante
+     Fondo gris claro, borde naranja
+     ================================== */
+  
+  .content-box-highlight {
+    background: var(--gray-50);
+    border-left: 2px solid var(--accent);
+    border-top: none;
+    border-right: none;
+    border-bottom: none;
+    padding-left: var(--spacing-lg);
+  }
+
+  .content-box-highlight .content-box-title {
+    color: var(--accent);
+  }
+
+  /* ===================================
+     VARIANTE: INFO
+     Para información adicional
+     Fondo gris claro, borde azul
+     ================================== */
+  
+  .content-box-info {
+    background: var(--gray-50);
+    border-left: 2px solid var(--accent-secondary);
+    border-top: none;
+    border-right: none;
+    border-bottom: none;
+    padding-left: var(--spacing-lg);
+  }
+
+  .content-box-info .content-box-title {
+    color: var(--accent-secondary);
+  }
+
+  /* ===================================
+     VARIANTE: WARNING
+     Para advertencias o críticas
+     Fondo gris claro, borde amarillo/rojo
+     ================================== */
+  
+  .content-box-warning {
+    background: #fff9e6; /* Light yellow background */
+    border-left: 2px solid #f1c40f; /* Yellow border */
+    border-top: none;
+    border-right: none;
+    border-bottom: none;
+    padding-left: var(--spacing-lg);
+  }
+
+  .content-box-warning .content-box-title {
+    color: #d35400; /* Darker orange/red for title */
+  }
+
+  /* ===================================
+     RESPONSIVE
+     ================================== */
+  
+  @media (max-width: 768px) {
+    .content-box {
+      padding: var(--spacing-md);
+    }
+
+    .content-box-highlight,
+    .content-box-info,
+    .content-box-warning {
+      padding-left: var(--spacing-md);
+    }
+  }
+</style>

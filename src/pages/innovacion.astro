@@ -1,0 +1,589 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Hero from '../components/Hero.astro';
+import ContentBox from '../components/ContentBox.astro';
+const base = import.meta.env.BASE_URL;
+
+---
+
+<Layout title="Innovación y Tecnología">
+  <Hero 
+    title="Innovación y Tecnología"
+    subtitle="Profundiza en Triple, Cuádruple y Quíntuple Hélice, Open Innovation, transferencia tecnológica e I+D+i"
+    image={`${base}innovacion.jpg`}
+    cta={{
+      primary: { text: 'Explorar Contenido', href: '#contenido' }
+    }}
+  />
+
+  <section class="section" id="contenido">
+    <div class="container">
+      
+      <!-- TRIPLE HÉLICE -->
+      <ContentBox type="highlight" class="observe">
+        <h2 class="section-title">Triple Hélice: Fundamento de la Colaboración</h2>
+        <p>
+          El modelo de Triple Hélice (Etzkowitz & Leydesdorff) enfatiza las interacciones dinámicas entre tres esferas institucionales fundamentales para la innovación.
+        </p>
+      </ContentBox>
+
+      <div class="helices-grid observe">
+        <div class="helix-card">
+          <div class="helix-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+          </div>
+          <h3>Universidad</h3>
+          <p class="helix-role">Generación de conocimiento y talento. Rol emprendedor: spin-offs, patentes.</p>
+        </div>
+        <div class="helix-card">
+          <div class="helix-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18Z"/><path d="M6 12H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2"/><path d="M18 9h2a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-2"/><path d="M10 6h4"/><path d="M10 10h4"/><path d="M10 14h4"/><path d="M10 18h4"/></svg>
+          </div>
+          <h3>Empresa</h3>
+          <p class="helix-role">Producción de bienes, empleo. Rol innovador: I+D, comercialización.</p>
+        </div>
+        <div class="helix-card">
+          <div class="helix-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </div>
+          <h3>Gobierno</h3>
+          <p class="helix-role">Regulación y financiamiento. Rol facilitador: políticas de innovación.</p>
+        </div>
+      </div>
+
+      <div class="timeline-section observe">
+        <h3>Evolución del Concepto</h3>
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-year">Triple Hélice I</div>
+            <div class="timeline-content">
+              <strong>Modelo Estatista:</strong> El Estado dirige y controla tanto universidad como empresa. Rigidez y baja capacidad de respuesta.
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-year">Triple Hélice II</div>
+            <div class="timeline-content">
+              <strong>Modelo Laissez-faire:</strong> Separación institucional fuerte. El mercado coordina. Sub-inversión en I+D básica.
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-year">Triple Hélice III</div>
+            <div class="timeline-content">
+              <strong>Modelo de Redes Superpuestas (Vigente):</strong> Traslapamiento de funciones. Generación de "espacios de consenso" y sinergias.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <ContentBox type="highlight" class="observe">
+        <h4>✅ Espacios de Consenso e Innovación</h4>
+        <p>En el modelo Triple Hélice III emergen organizaciones híbridas:</p>
+        <ul>
+          <li><strong>Incubadoras universitarias:</strong> Universidad (infra) + Gobierno (subsidio) + Empresas (mentoring).</li>
+          <li><strong>Parques tecnológicos:</strong> Infraestructura compartida y proximidad física.</li>
+          <li><strong>Centros de I+D colaborativos:</strong> Proyectos conjuntos (ej: Fraunhofer).</li>
+          <li><strong>Oficinas de Transferencia Tecnológica (OTTs):</strong> Interface comercialización.</li>
+        </ul>
+      </ContentBox>
+
+      <!-- CUÁDRUPLE HÉLICE -->
+      <div class="section-divider observe">
+        <h2 class="section-title">Cuádruple Hélice: Sociedad Civil</h2>
+        <p class="section-description">Incorpora a la sociedad civil y usuarios como co-creadores activos ("Innovación centrada en el usuario").</p>
+      </div>
+
+      <div class="helix-card full-width observe" style="border-left: 4px solid var(--primary);">
+        <div class="helix-content">
+          <div class="helix-icon" style="background: var(--primary);">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </div>
+          <div>
+            <h3>4ta Hélice: Sociedad Civil & Usuarios</h3>
+            <p>Aporta contexto real, legitimación social y necesidades no evidentes. Ejemplos:</p>
+            <ul class="examples-list">
+              <li><strong>Living Labs:</strong> Co-creación en entornos reales (ej: Amsterdam Smart City).</li>
+              <li><strong>Ciencia Ciudadana:</strong> Participación masiva en recolección de datos (ej: eBird).</li>
+              <li><strong>Hackathons Cívicos:</strong> Colaboración para resolver problemas públicos.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="rationale-box observe">
+        <h3>¿Por Qué Incorporar la Sociedad Civil?</h3>
+        <ul>
+          <li><strong>Innovación centrada en el usuario:</strong> Evita "soluciones en busca de problemas".</li>
+          <li><strong>Legitimación social:</strong> Evita rechazo a tecnologías (ej: transgénicos).</li>
+          <li><strong>Co-creación efectiva:</strong> Usuarios sofisticados ("lead users") contribuyen al diseño.</li>
+          <li><strong>Innovación social:</strong> Soluciones sostenibles a problemas complejos.</li>
+          <li><strong>Democracia en innovación:</strong> Incorpora diversidad de valores.</li>
+        </ul>
+      </div>
+
+      <ContentBox type="info" class="observe">
+        <h4>💡 Ejemplos de Cuádruple Hélice en Acción</h4>
+        <ul>
+          <li><strong>Living Labs:</strong> Espacios de co-creación en entornos reales (ej: Amsterdam Smart City).</li>
+          <li><strong>Ciencia Ciudadana:</strong> Participación masiva en investigación (ej: eBird, Galaxy Zoo).</li>
+          <li><strong>Innovación Inclusiva:</strong> Co-desarrollo con comunidades marginadas.</li>
+          <li><strong>Hackathons Cívicos:</strong> Colaboración para resolver problemas urbanos (ej: Code for America).</li>
+        </ul>
+      </ContentBox>
+
+      <!-- QUÍNTUPLE HÉLICE -->
+      <div class="section-divider observe">
+        <h2 class="section-title">Quíntuple Hélice: Medio Ambiente</h2>
+        <p class="section-description">Añade el entorno natural como quinta hélice, reconociendo los límites ecológicos planetarios.</p>
+      </div>
+
+      <div class="helix-card full-width observe" style="border-left: 4px solid var(--accent-green);">
+        <div class="helix-content">
+          <div class="helix-icon" style="background: var(--accent-green);">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg>
+          </div>
+          <div>
+            <h3>5ta Hélice: Entorno Natural</h3>
+            <p>Impulsa la innovación hacia la sostenibilidad y transición ecológica. Aplicaciones:</p>
+            <ul class="examples-list">
+              <li><strong>Economía Circular:</strong> Diseño para reutilización y regeneración.</li>
+              <li><strong>Transición Energética:</strong> Renovables y eficiencia energética.</li>
+              <li><strong>Bioeconomía:</strong> Uso sostenible de recursos biológicos.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="rationale-box observe">
+        <h3>Cinco Dimensiones Interconectadas</h3>
+        <ul>
+          <li><strong>Economía del Conocimiento:</strong> Generación de valor económico mediante conocimiento.</li>
+          <li><strong>Sociedad del Conocimiento:</strong> Producción y distribución de conocimiento equitativa.</li>
+          <li><strong>Democracia del Conocimiento:</strong> Participación amplia en generación y uso de conocimiento.</li>
+          <li><strong>Medio Ambiente Natural:</strong> Contexto ecológico que habilita y limita.</li>
+          <li><strong>Ecología Social:</strong> Integración de desarrollo social con sostenibilidad.</li>
+        </ul>
+      </div>
+
+      <ContentBox type="highlight" class="observe">
+        <h4>🌍 Aplicaciones Contemporáneas</h4>
+        <ul>
+          <li><strong>Economía Circular:</strong> Diseño para reutilización y regeneración (ej: upcycling).</li>
+          <li><strong>Transición Energética:</strong> Coordinación de 5 hélices para renovables.</li>
+          <li><strong>AgTech Sostenible:</strong> Productividad sin degradación ambiental.</li>
+          <li><strong>Ciudades Inteligentes Verdes:</strong> Smart cities con criterios de sostenibilidad.</li>
+          <li><strong>Blue Economy:</strong> Innovación en economía oceánica sostenible.</li>
+          <li><strong>Bioeconomía:</strong> Uso sostenible de recursos biológicos.</li>
+        </ul>
+      </ContentBox>
+
+      <!-- OPEN INNOVATION -->
+      <div class="section-divider observe">
+        <h2 class="section-title">Open Innovation (Innovación Abierta)</h2>
+        <p class="section-description">
+          Paradigma que asume que las empresas pueden y deben usar ideas externas e internas para innovar (Henry Chesbrough).
+        </p>
+      </div>
+
+      <div class="comparison-table-wrapper observe">
+        <table class="comparison-table">
+          <thead>
+            <tr>
+              <th>Dimensión</th>
+              <th>Closed Innovation (Cerrada)</th>
+              <th>Open Innovation (Abierta)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Fuente de Ideas</strong></td>
+              <td>Solo internas (I+D propio)</td>
+              <td>Internas y Externas (Startups, Univ)</td>
+            </tr>
+            <tr>
+              <td><strong>Propiedad Intelectual</strong></td>
+              <td>Proteger todo, secreto total</td>
+              <td>Licenciar, compartir, comprar IP</td>
+            </tr>
+            <tr>
+              <td><strong>Filosofía</strong></td>
+              <td>"El talento trabaja para nosotros"</td>
+              <td>"Trabajamos con los mejores, donde estén"</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="flows-section observe">
+        <h3>Tres Flujos de Innovación Abierta</h3>
+        <div class="flow-item">
+          <h4>📥 Inbound (Outside-In)</h4>
+          <p>Integración de conocimiento externo:</p>
+          <ul>
+            <li>Scouting tecnológico</li>
+            <li>Licenciamiento in</li>
+            <li>Crowdsourcing (ej: InnoCentive)</li>
+            <li>Co-desarrollo con usuarios lead</li>
+          </ul>
+        </div>
+        <div class="flow-item">
+          <h4>📤 Outbound (Inside-Out)</h4>
+          <p>Comercialización externa de innovación interna:</p>
+          <ul>
+            <li>Licenciamiento out</li>
+            <li>Spin-offs corporativos</li>
+            <li>Venta de patentes</li>
+            <li>Corporate venturing</li>
+          </ul>
+        </div>
+        <div class="flow-item">
+          <h4>🔄 Coupled (Acoplada)</h4>
+          <p>Flujo bidireccional y alianzas:</p>
+          <ul>
+            <li>Joint ventures tecnológicas</li>
+            <li>Consorcios de innovación</li>
+            <li>Ecosistemas de plataforma (ej: Android)</li>
+          </ul>
+        </div>
+      </div>
+
+      <ContentBox type="info" class="observe">
+        <h4>🏢 Casos Corporativos Emblemáticos</h4>
+        <ul>
+          <li><strong>P&G "Connect + Develop":</strong> Transformación estratégica para lograr 50% de innovación externa. Reducción 20% costos I+D.</li>
+          <li><strong>IBM Open Source:</strong> Liberó 500+ patentes y $1B en Linux para crear ecosistema enterprise.</li>
+          <li><strong>LEGO Ideas:</strong> Plataforma de co-creación donde usuarios diseñan sets comerciales (ej: NASA Apollo).</li>
+          <li><strong>Telefónica Open Future:</strong> Aceleradora global (400+ startups) para integrar innovación externa.</li>
+        </ul>
+      </ContentBox>
+
+      <!-- I+D+i y VALLE DE LA MUERTE -->
+      <div class="section-divider observe">
+        <h2 class="section-title">I+D+i y el "Valle de la Muerte"</h2>
+      </div>
+
+      <div class="idi-chain observe">
+        <div class="idi-stage">
+          <h3>Investigación (I)</h3>
+          <p><strong>Básica:</strong> Generación de conocimiento sin aplicación inmediata (ej: estructura ADN).</p>
+          <p><strong>Aplicada:</strong> Resolución de problemas específicos (ej: vacuna COVID).</p>
+        </div>
+        <div class="idi-arrow">→</div>
+        <div class="idi-stage">
+          <h3>Desarrollo (D)</h3>
+          <p>Uso de conocimiento para producir nuevos materiales, productos o procesos.</p>
+          <ul>
+            <li>Prototipado</li>
+            <li>Pruebas de concepto (TRL 3-6)</li>
+            <li>Escalamiento piloto</li>
+          </ul>
+        </div>
+        <div class="idi-arrow">→</div>
+        <div class="idi-stage warning">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+          <h3>Valle de la Muerte</h3>
+          <p>Brecha crítica entre prototipo técnico y éxito comercial.</p>
+          <ul>
+            <li>Riesgo alto para bancos</li>
+            <li>Demasiado aplicado para academia</li>
+            <li>Tasa de falla 70-90%</li>
+          </ul>
+        </div>
+        <div class="idi-arrow">→</div>
+        <div class="idi-stage success">
+          <h3>Innovación (i)</h3>
+          <p>Implementación de producto/proceso nuevo o mejorado.</p>
+          <ul>
+            <li>Producto, Proceso, Marketing, Organizacional</li>
+            <li>Requiere adopción real</li>
+          </ul>
+        </div>
+      </div>
+
+      <ContentBox type="highlight" class="observe">
+        <h3>🌉 Estrategias para Cruzar el Valle de la Muerte</h3>
+        <p>Cómo financiar la transición de prototipo a producto comercial:</p>
+        <ul class="strategies-list">
+          <li><strong>Fondos "Proof of Concept":</strong> Subsidios para validación comercial (ej: CORFO, NSF I-Corps).</li>
+          <li><strong>SBIR/STTR:</strong> Compras públicas de innovación (modelo USA) para financiar I+D en startups.</li>
+          <li><strong>Corporate Venture Capital (CVC):</strong> Inversión estratégica de empresas que toleran riesgo técnico.</li>
+          <li><strong>Inversionistas Ángeles Especializados:</strong> Expertos (ex-CTOs) que entienden y apoyan deep tech.</li>
+          <li><strong>Alianzas Universidad-Empresa:</strong> Co-desarrollo para reducir riesgo y acelerar time-to-market.</li>
+        </ul>
+      </ContentBox>
+
+      <!-- REFERENCIAS -->
+      <div class="references-section observe">
+        <h3>Referencias Bibliográficas</h3>
+        <p>Carayannis, E. G., & Campbell, D. F. (2009). 'Mode 3' and 'Quadruple Helix': Toward a 21st century fractal innovation ecosystem. <em>International Journal of Technology Management, 46</em>(3/4), 201-234.</p>
+        <p>Carayannis, E. G., Barth, T. D., & Campbell, D. F. (2012). The Quintuple Helix innovation model: Global warming as a challenge and driver for innovation. <em>Journal of Innovation and Entrepreneurship, 1</em>(1), 1-12.</p>
+        <p>Chesbrough, H. W. (2003). <em>Open innovation: The new imperative for creating and profiting from technology</em>. Harvard Business School Press.</p>
+        <p>Chesbrough, H. W. (2006). Open innovation: A new paradigm for understanding industrial innovation. In H. W. Chesbrough, W. Vanhaverbeke, & J. West (Eds.), <em>Open innovation: Researching a new paradigm</em> (pp. 1-12). Oxford University Press.</p>
+        <p>Etzkowitz, H., & Leydesdorff, L. (2000). The dynamics of innovation: From national systems and "Mode 2" to a Triple Helix of university-industry-government relations. <em>Research Policy, 29</em>(2), 109-123.</p>
+        <p>OECD. (2018). <em>Oslo Manual 2018: Guidelines for collecting, reporting and using data on innovation</em> (4th ed.). OECD Publishing.</p>
+        <p>Von Hippel, E. (2005). <em>Democratizing innovation</em>. MIT Press.</p>
+      </div>
+
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .section-title {
+    font-size: clamp(1.75rem, 3vw, 2.5rem);
+    font-weight: 800;
+    color: var(--primary);
+    margin-bottom: var(--spacing-md);
+  }
+
+  .section-description {
+    font-size: 1.1rem;
+    color: var(--gray-600);
+    margin-bottom: var(--spacing-lg);
+  }
+
+  .section-divider {
+    margin: var(--spacing-3xl) 0 var(--spacing-lg);
+    border-top: 1px solid var(--gray-200);
+    padding-top: var(--spacing-xl);
+  }
+
+  /* Helices */
+  .helices-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--spacing-lg);
+  }
+
+  .helix-card {
+    background: var(--white);
+    padding: var(--spacing-lg);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--gray-200);
+  }
+
+  .helix-card.full-width {
+    display: flex;
+    align-items: center;
+    background: var(--gray-50);
+  }
+
+  .helix-content {
+    display: flex;
+    gap: var(--spacing-lg);
+    align-items: flex-start;
+  }
+
+  .helix-icon {
+    width: 56px;
+    height: 56px;
+    background: var(--primary);
+    color: var(--white);
+    border-radius: var(--radius-md);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  .helix-icon svg {
+    color: var(--white);
+  }
+
+  .helix-card h3 {
+    color: var(--primary);
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+  }
+
+  .examples-list {
+    margin-top: 0.5rem;
+    padding-left: 1.2rem;
+    font-size: 0.95rem;
+    color: var(--gray-700);
+  }
+
+  /* Comparison Table */
+  .comparison-table-wrapper {
+    overflow-x: auto;
+    margin-bottom: var(--spacing-lg);
+  }
+
+  .comparison-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--white);
+  }
+
+  .comparison-table th, .comparison-table td {
+    padding: 1rem;
+    border: 1px solid var(--gray-200);
+    text-align: left;
+  }
+
+  .comparison-table th {
+    background: var(--gray-100);
+    color: var(--primary);
+  }
+
+  /* I+D+i Chain */
+  .idi-chain {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin: var(--spacing-xl) 0;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .idi-stage {
+    background: var(--white);
+    border: 1px solid var(--gray-300);
+    padding: 1rem;
+    border-radius: var(--radius-md);
+    text-align: center;
+    flex: 1;
+    min-width: 150px;
+  }
+
+  .idi-stage.warning {
+    border-color: #e74c3c;
+    background: #fdf2f2;
+    color: #c0392b;
+  }
+
+  .idi-stage.success {
+    border-color: var(--accent-green);
+    background: #f0fdf4;
+  }
+
+  .idi-arrow {
+    font-size: 1.5rem;
+    color: var(--gray-400);
+    font-weight: 700;
+  }
+
+  .strategies-list {
+    margin-top: 1rem;
+    padding-left: 1.2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 0.5rem;
+  }
+
+  .references-section {
+    margin-top: var(--spacing-3xl);
+    padding-top: var(--spacing-xl);
+    border-top: 1px solid var(--gray-300);
+    font-size: 0.9rem;
+    color: var(--gray-600);
+  }
+
+  .references-section h3 {
+    margin-bottom: 1rem;
+    color: var(--primary);
+  }
+
+  /* Timeline */
+  .timeline-section {
+    margin: var(--spacing-xl) 0;
+  }
+
+  .timeline {
+    position: relative;
+    padding: 1rem 0;
+  }
+
+  .timeline-item {
+    display: flex;
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-md);
+    align-items: flex-start;
+  }
+
+  .timeline-year {
+    background: var(--primary);
+    color: var(--white);
+    padding: 0.5rem 1rem;
+    border-radius: var(--radius-full);
+    font-weight: 700;
+    font-size: 0.85rem;
+    min-width: 140px;
+    text-align: center;
+    flex-shrink: 0;
+  }
+
+  .timeline-content {
+    background: var(--gray-50);
+    padding: var(--spacing-md);
+    border-radius: var(--radius-sm);
+    flex: 1;
+    font-size: 0.95rem;
+  }
+
+  /* Rationale Box */
+  .rationale-box {
+    background: var(--white);
+    padding: var(--spacing-lg);
+    border-radius: var(--radius-md);
+    border: 1px solid var(--gray-200);
+    margin: var(--spacing-lg) 0;
+  }
+
+  .rationale-box h3 {
+    color: var(--primary);
+    font-weight: 700;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+  }
+
+  .rationale-box ul {
+    padding-left: 1.25rem;
+    font-size: 0.95rem;
+    color: var(--gray-800);
+  }
+
+  /* Flows Section */
+  .flows-section {
+    margin: var(--spacing-xl) 0;
+  }
+
+  .flows-section h3 {
+    color: var(--primary);
+    font-weight: 700;
+    margin-bottom: var(--spacing-lg);
+  }
+
+  .flow-item {
+    background: var(--gray-50);
+    padding: var(--spacing-md);
+    border-radius: var(--radius-sm);
+    margin-bottom: var(--spacing-md);
+    border-left: 4px solid var(--accent-blue);
+  }
+
+  .flow-item h4 {
+    color: var(--accent-blue);
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+  }
+
+  .flow-item ul {
+    padding-left: 1.25rem;
+    font-size: 0.9rem;
+    color: var(--gray-800);
+    margin-top: 0.5rem;
+  }
+
+  @media (max-width: 768px) {
+    .idi-chain {
+      flex-direction: column;
+    }
+    .idi-arrow {
+      transform: rotate(90deg);
+    }
+    .helix-content {
+      flex-direction: column;
+    }
+  }
+</style>

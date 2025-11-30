@@ -1,0 +1,759 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Hero from '../components/Hero.astro';
+import ContentBox from '../components/ContentBox.astro';
+const base = import.meta.env.BASE_URL;
+
+---
+
+<Layout title="Componentes del Ecosistema">
+  <Hero 
+    title="Componentes y Pilares"
+    subtitle="Las 11 dimensiones estructurales que configuran un ecosistema de emprendimiento e innovación dinámico"
+    image={`${base}componentes.jpg`}
+  />
+
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Modelo Conceptual</h2>
+        <p class="section-description">
+          Nuestro enfoque se basa en una integración de los modelos más reconocidos a nivel mundial (MIT REAP, Babson, World Bank), adaptados a la realidad latinoamericana.
+        </p>
+      </div>
+
+      <!-- Conceptual Model -->
+      <div class="conceptual-model">
+        <h3 class="model-title">Niveles de Intervención</h3>
+        
+        <div class="level-card">
+          <h4>Nivel 1: Actores (Micro)</h4>
+          <p>Individuos y organizaciones que interactúan directamente: Emprendedores, Inversionistas, Universidades, Gobierno, Corporativos.</p>
+        </div>
+
+        <div class="level-arrow">↓</div>
+
+        <div class="level-card">
+          <h4>Nivel 2: Entorno (Meso)</h4>
+          <p>Condiciones estructurales y habilitantes: Infraestructura, Políticas Públicas, Cultura, Capital Social.</p>
+        </div>
+
+        <div class="level-arrow">↓</div>
+
+        <div class="level-card">
+          <h4>Nivel 3: Resultados (Macro)</h4>
+          <p>Impacto en el desarrollo económico: Creación de empleo, Diversificación económica, Bienestar social.</p>
+        </div>
+      </div>
+
+      <!-- Dimensions Grid -->
+      <h3 class="section-title" style="text-align: center; margin-top: var(--spacing-3xl);">11 Dimensiones Clave</h3>
+      <div class="dimensions-grid">
+        <!-- 1. Capital Humano -->
+        <div class="dimension-card">
+          <span class="dimension-number">01</span>
+          <div class="dimension-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </div>
+          <h3>Capital Humano Emprendedor</h3>
+          <p>El talento humano apropiado con educación, entrenamiento y experiencia relevante para innovación o emprendimiento.</p>
+          
+          <p><strong>Componentes clave:</strong></p>
+          <ul>
+            <li><strong>Competencias técnicas:</strong> Formación profesional pertinente (STEM)</li>
+            <li><strong>Competencias emprendedoras:</strong> Identificación de oportunidades</li>
+            <li><strong>Aspiraciones:</strong> Motivación por crecimiento</li>
+            <li><strong>Experiencia previa:</strong> Emprendedores seriales</li>
+          </ul>
+
+          <div class="key-indicators">
+            <h4>Indicadores:</h4>
+            <ul>
+              <li>% población con educación terciaria</li>
+              <li>Graduados STEM per cápita</li>
+              <li>% emprendedores con experiencia previa</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- 2. Cultura -->
+        <div class="dimension-card">
+          <span class="dimension-number">02</span>
+          <div class="dimension-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12h5"/><path d="M17 12h5"/><path d="M9 12h6"/><path d="M12 2v5"/><path d="M12 17v5"/><path d="M12 12m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0"/></svg>
+          </div>
+          <h3>Cultura Emprendedora</h3>
+          <p>La naturaleza de los modelos de rol celebrados y las normas sociales que dan forma a elecciones de carrera.</p>
+          
+          <p><strong>Componentes clave:</strong></p>
+          <ul>
+            <li><strong>Valoración social:</strong> Estatus y prestigio</li>
+            <li><strong>Modelos de rol:</strong> Emprendedores exitosos visibles</li>
+            <li><strong>Tolerancia al fracaso:</strong> Aprendizaje del error</li>
+          </ul>
+
+          <div class="key-indicators">
+            <h4>Indicadores:</h4>
+            <ul>
+              <li>Valoración social del emprendimiento</li>
+              <li>Miedo al fracaso (GEM)</li>
+              <li>Número de modelos de rol visibles</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- 3. Formación -->
+        <div class="dimension-card">
+          <span class="dimension-number">03</span>
+          <div class="dimension-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+          </div>
+          <h3>Formación Emprendedora</h3>
+          <p>La contribución del sistema educativo al desarrollo de competencias emprendedoras.</p>
+          
+          <p><strong>Componentes clave:</strong></p>
+          <ul>
+            <li><strong>Educación formal:</strong> Cursos en educación superior</li>
+            <li><strong>Programas especializados:</strong> Bootcamps, pre-incubación</li>
+            <li><strong>Capacitación continua:</strong> Desarrollo de habilidades</li>
+          </ul>
+
+          <div class="key-indicators">
+            <h4>Indicadores:</h4>
+            <ul>
+              <li>Programas de emprendimiento en universidades</li>
+              <li>Estudiantes matriculados</li>
+              <li>Calidad percibida de formación</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- 4. Financiamiento -->
+        <div class="dimension-card">
+          <span class="dimension-number">04</span>
+          <div class="dimension-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+          </div>
+          <h3>Financiamiento</h3>
+          <p>Variedad de tipos de capital que apoyan la innovación y el emprendimiento.</p>
+          
+          <p><strong>La Escalera del Capital:</strong></p>
+          <ul>
+            <li><strong>Pre-seed/Semilla:</strong> Ahorros, familia, fondos semilla</li>
+            <li><strong>Seed/Arranque:</strong> Ángeles, fondos públicos</li>
+            <li><strong>Early Growth:</strong> Capital de riesgo temprano</li>
+            <li><strong>Scale-up:</strong> VC crecimiento, private equity</li>
+          </ul>
+
+          <div class="key-indicators">
+            <h4>Indicadores:</h4>
+            <ul>
+              <li>Monto inversión ángel per cápita</li>
+              <li>Capital de riesgo disponible</li>
+              <li>Fondos públicos destinados</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- 5. Infraestructura -->
+        <div class="dimension-card">
+          <span class="dimension-number">05</span>
+          <div class="dimension-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+          </div>
+          <h3>Infraestructura</h3>
+          <p>Infraestructura física y digital necesaria para apoyar la innovación.</p>
+          
+          <p><strong>Componentes clave:</strong></p>
+          <ul>
+            <li><strong>Espacios especializados:</strong> Coworking, maker spaces</li>
+            <li><strong>Infraestructura digital:</strong> Banda ancha, 4G/5G</li>
+            <li><strong>Infraestructura básica:</strong> Conectividad, servicios</li>
+          </ul>
+
+          <div class="key-indicators">
+            <h4>Indicadores:</h4>
+            <ul>
+              <li>Espacios de coworking por habitantes</li>
+              <li>Cobertura de banda ancha (%)</li>
+              <li>Calidad de infraestructura logística</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- 6. Demanda y Mercados -->
+        <div class="dimension-card">
+          <span class="dimension-number">06</span>
+          <div class="dimension-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+          </div>
+          <h3>Demanda y Mercados</h3>
+          <p>Nivel y naturaleza de la demanda especializada.</p>
+          
+          <p><strong>Fuentes de oportunidades:</strong></p>
+          <ul>
+            <li><strong>Consumo local:</strong> Tamaño del mercado</li>
+            <li><strong>Empresas locales:</strong> Open innovation</li>
+            <li><strong>Demandas extra-locales:</strong> Exportaciones</li>
+          </ul>
+
+          <div class="key-indicators">
+            <h4>Indicadores:</h4>
+            <ul>
+              <li>Tamaño del mercado local</li>
+              <li>Compras públicas innovadoras</li>
+              <li>Exportaciones per cápita</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- 7. Plataforma CTI -->
+        <div class="dimension-card">
+          <span class="dimension-number">07</span>
+          <div class="dimension-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 2v7.31"/><path d="M14 9.3V1.99"/><path d="M8.5 2h7"/><path d="M14 9.3a6.5 6.5 0 1 1-4 0"/><path d="M5.52 16h12.96"/></svg>
+          </div>
+          <h3>Plataforma CTI</h3>
+          <p>Capacidades científicas y tecnológicas que generan conocimiento comercializable.</p>
+          
+          <p><strong>Componentes clave:</strong></p>
+          <ul>
+            <li><strong>Producción científica:</strong> Publicaciones</li>
+            <li><strong>Gasto en I+D:</strong> Inversión pública y privada</li>
+            <li><strong>Transferencia:</strong> Patentes, spin-offs</li>
+          </ul>
+
+          <div class="key-indicators">
+            <h4>Indicadores:</h4>
+            <ul>
+              <li>Publicaciones científicas</li>
+              <li>Gasto en I+D / PIB</li>
+              <li>Patentes generadas</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- 8. Redes -->
+        <div class="dimension-card">
+          <span class="dimension-number">08</span>
+          <div class="dimension-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </div>
+          <h3>Redes y Capital Social</h3>
+          <p>Confianza, normas y redes que facilitan acciones coordinadas.</p>
+          
+          <p><strong>Componentes clave:</strong></p>
+          <ul>
+            <li><strong>Vínculos fuertes:</strong> Familia, socios (bonding)</li>
+            <li><strong>Vínculos débiles:</strong> Puentes entre grupos (bridging)</li>
+            <li><strong>Redes formales:</strong> Asociaciones</li>
+          </ul>
+
+          <div class="key-indicators">
+            <h4>Indicadores:</h4>
+            <ul>
+              <li>Densidad de redes formales</li>
+              <li>Eventos de networking</li>
+              <li>Presencia de "dealmakers"</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- 9. Apoyo Institucional -->
+        <div class="dimension-card">
+          <span class="dimension-number">09</span>
+          <div class="dimension-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"/><path d="M5 21V7l8-4 8 4v14"/><path d="M17 21v-8.5a1.5 1.5 0 0 0-1.5-1.5h-7a1.5 1.5 0 0 0-1.5 1.5V21"/><path d="M9 21v-5a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v5"/></svg>
+          </div>
+          <h3>Apoyo Institucional</h3>
+          <p>Organizaciones que proveen servicios y recursos a emprendedores.</p>
+          
+          <p><strong>Componentes clave:</strong></p>
+          <ul>
+            <li><strong>Incubadoras:</strong> Etapas tempranas</li>
+            <li><strong>Aceleradoras:</strong> Startups con tracción</li>
+            <li><strong>Programas públicos:</strong> CORFO, SERCOTEC</li>
+          </ul>
+
+          <div class="key-indicators">
+            <h4>Indicadores:</h4>
+            <ul>
+              <li>Incubadoras/aceleradoras operativas</li>
+              <li>Cobertura por etapa</li>
+              <li>Calidad de servicios</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- 10. Marco Regulatorio -->
+        <div class="dimension-card">
+          <span class="dimension-number">10</span>
+          <div class="dimension-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <h3>Marco Regulatorio</h3>
+          <p>Reglas y normas que aseguran la protección de inversiones.</p>
+          
+          <p><strong>Componentes clave:</strong></p>
+          <ul>
+            <li><strong>Facilidad negocios:</strong> Tiempos, costos</li>
+            <li><strong>Propiedad Intelectual:</strong> Patentes</li>
+            <li><strong>Tributación:</strong> Incentivos I+D</li>
+          </ul>
+
+          <div class="key-indicators">
+            <h4>Indicadores:</h4>
+            <ul>
+              <li>Días para abrir empresa</li>
+              <li>Costos de formalización</li>
+              <li>Índice Doing Business</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- 11. Gobernanza -->
+        <div class="dimension-card">
+          <span class="dimension-number">11</span>
+          <div class="dimension-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M22 12h-4"/><path d="M6 12H2"/><path d="M12 6V2"/><path d="M12 22v-4"/></svg>
+          </div>
+          <h3>Gobernanza y Articulación</h3>
+          <p>Mecanismos de coordinación y toma de decisiones colectivas.</p>
+          
+          <p><strong>Componentes clave:</strong></p>
+          <ul>
+            <li><strong>Liderazgo distribuido:</strong> Múltiples actores</li>
+            <li><strong>Visión compartida:</strong> Objetivos comunes</li>
+            <li><strong>Organizaciones backbone:</strong> Facilitación</li>
+          </ul>
+
+          <div class="key-indicators">
+            <h4>Indicadores:</h4>
+            <ul>
+              <li>Organización backbone activa</li>
+              <li>Nivel de alineación</li>
+              <li>Encuentros multi-actor</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Pillars Section -->
+      <div class="pillar-section">
+        <h2 style="text-align: center; margin-bottom: 2rem; color: var(--primary);">Los 5 Pilares según Literatura Tradicional</h2>
+        <div class="pillars-grid">
+          <div class="pillar-card">
+            <h4>1. Ambiente Regulatorio</h4>
+            <p>Regulaciones, políticas públicas, facilidad para hacer negocios.</p>
+            <ul>
+              <li>Creación de empresas</li>
+              <li>Finanzas y crédito</li>
+              <li>Protección de inversionistas</li>
+            </ul>
+          </div>
+
+          <div class="pillar-card">
+            <h4>2. Infraestructura de Soporte</h4>
+            <p>Física, digital, organizacional.</p>
+            <ul>
+              <li>Incubadoras y aceleradoras</li>
+              <li>Conectividad digital</li>
+              <li>Servicios especializados</li>
+            </ul>
+          </div>
+
+          <div class="pillar-card">
+            <h4>3. Acceso a Capital</h4>
+            <p>Financiamiento en todas las etapas.</p>
+            <ul>
+              <li>Inversionistas ángel</li>
+              <li>Capital de riesgo</li>
+              <li>Fondos públicos</li>
+            </ul>
+          </div>
+
+          <div class="pillar-card">
+            <h4>4. Capital Humano</h4>
+            <p>Talento y cultura.</p>
+            <ul>
+              <li>Educación emprendedora</li>
+              <li>Cultura y normas sociales</li>
+              <li>Capital humano calificado</li>
+            </ul>
+          </div>
+
+          <div class="pillar-card">
+            <h4>5. Mercados</h4>
+            <p>Acceso a clientes.</p>
+            <ul>
+              <li>Redes de distribución</li>
+              <li>Primeros clientes</li>
+              <li>Internacionalización</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Comparison Table -->
+      <div class="table-wrapper">
+        <h3 class="section-title">Comparativa de Modelos</h3>
+        <table class="comparison-table">
+          <thead>
+            <tr>
+              <th>Dimensión</th>
+              <th>Babson (Isenberg)</th>
+              <th>MIT REAP</th>
+              <th>World Bank</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Capital Humano</td>
+              <td>Talento</td>
+              <td>Capital Humano</td>
+              <td>Capital Humano</td>
+            </tr>
+            <tr>
+              <td>Financiamiento</td>
+              <td>Finanzas</td>
+              <td>Financiamiento</td>
+              <td>Finanzas</td>
+            </tr>
+            <tr>
+              <td>Mercados</td>
+              <td>Mercados</td>
+              <td>Demanda</td>
+              <td>Mercados</td>
+            </tr>
+            <tr>
+              <td>Soporte</td>
+              <td>Soportes</td>
+              <td>Infraestructura</td>
+              <td>Sistemas de Apoyo</td>
+            </tr>
+            <tr>
+              <td>Política</td>
+              <td>Política</td>
+              <td>Gobierno</td>
+              <td>Marco Regulatorio</td>
+            </tr>
+            <tr>
+              <td>Cultura</td>
+              <td>Cultura</td>
+              <td>Cultura</td>
+              <td>Cultura</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- References -->
+      <div class="references-section" style="margin-top: var(--spacing-3xl);">
+        <h3 class="section-title">Referencias Bibliográficas</h3>
+        <div class="references-accordion">
+          <details class="reference-item">
+            <summary>Isenberg, D. (2011)</summary>
+            <p>Isenberg, D. (2011). <em>The Entrepreneurship Ecosystem Strategy as a New Paradigm for Economic Policy: Principles for Cultivating Entrepreneurship</em>. Babson Entrepreneurship Ecosystem Project.</p>
+          </details>
+          <details class="reference-item">
+            <summary>Budden, P., & Murray, F. (2019)</summary>
+            <p>Budden, P., & Murray, F. (2019). <em>MIT's Stakeholder Framework for Building & Accelerating Innovation Ecosystems</em>. MIT Lab for Innovation Science and Policy.</p>
+          </details>
+          <details class="reference-item">
+            <summary>World Bank. (2020)</summary>
+            <p>World Bank. (2020). <em>Tech Startup Ecosystem Coverage: Country-Level Analysis</em>. World Bank Group.</p>
+          </details>
+        </div>
+      </div>
+
+    </div>
+  </section>
+</Layout>
+<style>
+  .section-title {
+    font-size: clamp(1.75rem, 3vw, 2.5rem);
+    font-weight: 800;
+    color: var(--primary);
+    margin-bottom: var(--spacing-md);
+  }
+
+  /* Conceptual Model */
+  .conceptual-model {
+    background: var(--gray-50);
+    padding: var(--spacing-xl);
+    border-radius: var(--radius-lg);
+    margin: var(--spacing-3xl) 0;
+  }
+
+  .model-title {
+    font-size: 1.75rem;
+    font-weight: 800;
+    color: var(--primary);
+    text-align: center;
+    margin-bottom: var(--spacing-xl);
+  }
+
+  .level-card {
+    background: var(--secondary);
+    padding: var(--spacing-lg);
+    border-radius: var(--radius-md);
+    margin: var(--spacing-md) auto;
+    max-width: 700px;
+    border-left: 4px solid var(--accent);
+  }
+
+  .level-card h4 {
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: var(--primary);
+    margin-bottom: 0.5rem;
+  }
+
+  .level-card p {
+    color: var(--gray-900);
+    line-height: 1.7;
+  }
+
+  .level-arrow {
+    text-align: center;
+    font-size: 2rem;
+    color: var(--accent);
+    font-weight: 700;
+    margin: var(--spacing-sm) 0;
+  }
+
+  /* Dimensions Grid */
+  .dimensions-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: var(--spacing-xl);
+    margin: var(--spacing-3xl) 0;
+  }
+
+  .dimension-card {
+    background: var(--secondary);
+    padding: var(--spacing-xl);
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--gray-300);
+    position: relative;
+    transition: all var(--transition-base);
+  }
+
+  .dimension-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--accent);
+  }
+
+  .dimension-number {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    font-size: 3rem;
+    font-weight: 900;
+    color: rgba(0, 0, 0, 0.05);
+  }
+
+  .dimension-icon {
+    width: 64px;
+    height: 64px;
+    background: var(--primary);
+    color: var(--secondary);
+    border-radius: var(--radius-md);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: var(--spacing-md);
+  }
+
+  .dimension-card h3 {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--primary);
+    margin-bottom: var(--spacing-sm);
+  }
+
+  .dimension-card h4 {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--primary);
+    margin-top: var(--spacing-md);
+    margin-bottom: 0.5rem;
+  }
+
+  .dimension-card h5 {
+    font-size: 0.9375rem;
+    font-weight: 700;
+    color: var(--accent-secondary);
+    margin-bottom: 0.5rem;
+  }
+
+  .dimension-card > p {
+    color: var(--gray-900);
+    line-height: 1.7;
+    margin-bottom: var(--spacing-md);
+  }
+
+  .dimension-card ul {
+    list-style: none;
+    padding-left: 0;
+  }
+
+  .dimension-card > ul li {
+    padding-left: 1.25rem;
+    position: relative;
+    margin-bottom: 0.5rem;
+    color: var(--gray-900);
+    line-height: 1.6;
+  }
+
+  .dimension-card > ul li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: var(--accent);
+    font-weight: 700;
+  }
+
+  /* Pillars Grid */
+  .pillars-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: var(--spacing-md);
+    margin-top: var(--spacing-lg);
+  }
+
+  .pillar-card {
+    background: var(--gray-50);
+    padding: var(--spacing-md);
+    border-radius: var(--radius-sm);
+    border-left: 4px solid var(--accent);
+  }
+
+  .pillar-card h4 {
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: var(--accent);
+    margin-bottom: 0.5rem;
+  }
+
+  .pillar-card p {
+    color: var(--gray-600);
+    font-size: 0.9375rem;
+    margin-bottom: var(--spacing-sm);
+  }
+
+  .pillar-card ul {
+    list-style: none;
+    padding-left: 0;
+  }
+
+  .pillar-card li {
+    padding-left: 1.25rem;
+    position: relative;
+    margin-bottom: 0.5rem;
+    font-size: 0.875rem;
+    color: var(--gray-900);
+  }
+
+  .pillar-card li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: var(--accent);
+  }
+
+  /* Table */
+  .table-wrapper {
+    overflow-x: auto;
+    margin-top: var(--spacing-md);
+  }
+
+  .comparison-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--secondary);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+  }
+
+  .comparison-table thead {
+    background: var(--primary);
+    color: var(--secondary);
+  }
+
+  .comparison-table th {
+    padding: var(--spacing-md);
+    text-align: left;
+    font-weight: 700;
+    font-size: 0.9375rem;
+  }
+
+  .comparison-table td {
+    padding: var(--spacing-md);
+    border-bottom: 1px solid var(--gray-300);
+    color: var(--gray-900);
+    font-size: 0.9375rem;
+  }
+
+  .comparison-table tbody tr:hover {
+    background: var(--gray-50);
+  }
+
+  /* References Accordion */
+  .references-accordion {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .reference-item {
+    border: 1px solid var(--gray-200);
+    border-radius: var(--radius-sm);
+    overflow: hidden;
+  }
+
+  .reference-item summary {
+    padding: 1rem;
+    cursor: pointer;
+    font-weight: 600;
+    color: var(--primary);
+    background: var(--gray-50);
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .reference-item summary::-webkit-details-marker {
+    display: none;
+  }
+
+  .reference-item summary::after {
+    content: '+';
+    font-size: 1.25rem;
+    color: var(--accent);
+  }
+
+  .reference-item[open] summary::after {
+    content: '-';
+  }
+
+  .reference-item p {
+    padding: 1rem;
+    margin: 0;
+    background: var(--white);
+    border-top: 1px solid var(--gray-200);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: var(--gray-700);
+  }
+
+  /* Responsive */
+  @media (max-width: 968px) {
+    .dimensions-grid,
+    .pillars-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

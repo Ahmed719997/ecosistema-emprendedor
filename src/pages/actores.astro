@@ -1,0 +1,804 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Hero from '../components/Hero.astro';
+import ContentBox from '../components/ContentBox.astro';
+const base = import.meta.env.BASE_URL;
+
+---
+
+<Layout title="Actores del Ecosistema">
+  <Hero 
+    title="Actores del Ecosistema"
+    subtitle="Conoce los 5 stakeholders críticos y su rol en la construcción de ecosistemas de emprendimiento e innovación"
+    image={`${base}actores.jpg`}
+    cta={{
+      primary: { text: 'Explorar Actores', href: '#actores' }
+    }}
+  />
+
+  <section class="section" id="actores">
+    <div class="container">
+      <ContentBox type="highlight" class="observe">
+        <h2 class="section-title">Los 5 Stakeholders Críticos</h2>
+        <p>
+          Según el modelo MIT REAP, un ecosistema de emprendimiento impulsado por innovación requiere la participación activa y coordinada de cinco tipos de actores fundamentales. La clave no está solo en su presencia, sino en la calidad de sus <strong>interacciones y alineamiento (alignment)</strong>.
+        </p>
+      </ContentBox>
+
+      <!-- Emprendedores -->
+      <div class="actor-section observe">
+        <div class="actor-header">
+          <div class="actor-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </div>
+          <div>
+            <h3 class="actor-title">1. Emprendedores</h3>
+            <p class="actor-subtitle">Agentes de cambio que identifican oportunidades y crean empresas</p>
+          </div>
+        </div>
+
+        <ContentBox type="default">
+          <h4>Rol en el Ecosistema</h4>
+          <p>Los emprendedores son el corazón del ecosistema. Identifican oportunidades de mercado, asumen riesgos, movilizan recursos y crean nuevas empresas que generan empleo, innovación y crecimiento económico.</p>
+
+          <h4>Tipos de Emprendedores</h4>
+          <div class="types-grid">
+            <div class="type-item">
+              <h5>Innovation-Driven Entrepreneurs (IDE)</h5>
+              <p>Crean empresas basadas en innovación tecnológica o de modelo de negocio, con potencial de escalamiento rápido y mercados globales.</p>
+            </div>
+            <div class="type-item">
+              <h5>Emprendedores Dinámicos</h5>
+              <p>Empresas nuevas con potencial de convertirse en PyME con proyección de crecimiento, distinguiéndose del emprendimiento de subsistencia.</p>
+            </div>
+            <div class="type-item">
+              <h5>Emprendedores Seriales</h5>
+              <p>Individuos que han creado múltiples empresas, aportando experiencia, redes y mentoría al ecosistema.</p>
+            </div>
+          </div>
+
+          <h4>Necesidades Clave</h4>
+          <ul>
+            <li>Acceso a financiamiento en etapas tempranas (semilla, Serie A)</li>
+            <li>Talento técnico y de gestión</li>
+            <li>Infraestructura (espacios de trabajo, laboratorios)</li>
+            <li>Redes de contactos (clientes, socios, mentores)</li>
+            <li>Marco regulatorio favorable</li>
+          </ul>
+        </ContentBox>
+      </div>
+
+      <!-- Universidades -->
+      <div class="actor-section observe">
+        <div class="actor-header">
+          <div class="actor-icon" style="background: var(--accent-secondary);">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+          </div>
+          <div>
+            <h3 class="actor-title">2. Universidades</h3>
+            <p class="actor-subtitle">Generan conocimiento, talento y transferencia tecnológica</p>
+          </div>
+        </div>
+
+        <ContentBox type="default">
+          <h4>Rol en el Ecosistema</h4>
+          <p>Las universidades son fuente de conocimiento científico-tecnológico, formación de capital humano calificado y, cada vez más, de emprendimientos basados en investigación (spin-offs académicos).</p>
+
+          <h4>Contribuciones al Ecosistema</h4>
+          <div class="contributions-list">
+            <div class="contribution-item">
+              <h5>Investigación y Desarrollo</h5>
+              <p>Generación de conocimiento de frontera que puede ser comercializado mediante patentes, licencias o spin-offs.</p>
+            </div>
+            <div class="contribution-item">
+              <h5>Formación de Talento</h5>
+              <p>Graduados con habilidades técnicas (STEM) y competencias emprendedoras que nutren startups y empresas establecidas.</p>
+            </div>
+            <div class="contribution-item">
+              <h5>Transferencia Tecnológica</h5>
+              <p>Oficinas de Transferencia Tecnológica (OTT) que gestionan propiedad intelectual y facilitan comercialización.</p>
+            </div>
+            <div class="contribution-item">
+              <h5>Infraestructura</h5>
+              <p>Incubadoras, aceleradoras, laboratorios y espacios de co-working que apoyan emprendimientos nacientes.</p>
+            </div>
+          </div>
+
+          <ContentBox type="info">
+            <h5>Universidad Emprendedora</h5>
+            <p>Concepto desarrollado por Henry Etzkowitz que describe universidades que, además de enseñanza e investigación, asumen un rol activo en la comercialización de conocimiento y creación de empresas.</p>
+          </ContentBox>
+
+          <div class="interaction-box">
+            <h5>Mejores Prácticas Internacionales</h5>
+            <ul>
+              <li><strong>MIT:</strong> Modelo de incubación integrada, cultura emprendedora institucional.</li>
+              <li><strong>Stanford:</strong> Proximidad física Silicon Valley, permeabilidad universidad-industria.</li>
+              <li><strong>Cambridge (UK):</strong> Spin-offs de calidad excepcional, red de apoyo especializada.</li>
+              <li><strong>Technion (Israel):</strong> Énfasis en comercialización rápida, cultura de impacto.</li>
+            </ul>
+          </div>
+        </ContentBox>
+      </div>
+
+      <!-- Capital de Riesgo -->
+      <div class="actor-section observe">
+        <div class="actor-header">
+          <div class="actor-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="2" x2="12" y2="22"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+          </div>
+          <div>
+            <h3 class="actor-title">3. Capital de Riesgo</h3>
+            <p class="actor-subtitle">Financiamiento especializado para empresas de alto potencial</p>
+          </div>
+        </div>
+
+        <ContentBox type="default">
+          <h4>Rol en el Ecosistema</h4>
+          <p>El capital de riesgo (Venture Capital) provee financiamiento a startups de alto potencial de crecimiento a cambio de participación accionaria, asumiendo riesgos significativos con expectativa de retornos elevados.</p>
+
+          <h4>Etapas de Financiamiento</h4>
+          <div class="stages-timeline">
+            <div class="stage-item">
+              <div class="stage-label">Pre-Semilla</div>
+              <p>USD 10k - 100k. Validación de idea, prototipo inicial.</p>
+            </div>
+            <div class="stage-item">
+              <div class="stage-label">Semilla</div>
+              <p>USD 100k - 2M. Producto mínimo viable, primeros clientes.</p>
+            </div>
+            <div class="stage-item">
+              <div class="stage-label">Serie A</div>
+              <p>USD 2M - 15M. Escalamiento, expansión de mercado.</p>
+            </div>
+            <div class="stage-item">
+              <div class="stage-label">Serie B+</div>
+              <p>USD 15M+. Crecimiento acelerado, internacionalización.</p>
+            </div>
+          </div>
+
+          <h4>Más Allá del Dinero</h4>
+          <p>Los inversionistas de capital de riesgo aportan:</p>
+          <ul>
+            <li><strong>Expertise:</strong> Experiencia en escalamiento de empresas</li>
+            <li><strong>Redes:</strong> Contactos con clientes, socios, talento</li>
+            <li><strong>Gobernanza:</strong> Participación en directorio, disciplina estratégica</li>
+            <li><strong>Validación:</strong> Señal de calidad para otros inversionistas</li>
+          </ul>
+          <ContentBox type="info">
+            <h5>Desafíos en América Latina</h5>
+            <ul>
+              <li><strong>Escasez de capital growth:</strong> Abundancia relativa en seed/early, escasez en escalamiento.</li>
+              <li><strong>Concentración geográfica:</strong> 80%+ del VC en capitales (Santiago, Buenos Aires, São Paulo, Ciudad de México).</li>
+              <li><strong>Falta de inversionistas ángel locales:</strong> Pocos emprendedores exitosos que reinvierten.</li>
+              <li><strong>Horizontes de inversión cortos:</strong> Menor paciencia que fondos desarrollados.</li>
+              <li><strong>Preferencia sectorial estrecha:</strong> Sesgo hacia fintech, e-commerce vs. deep tech, biotech.</li>
+            </ul>
+          </ContentBox>
+        </ContentBox>
+      </div>
+
+      <!-- Gobierno -->
+      <div class="actor-section observe">
+        <div class="actor-header">
+          <div class="actor-icon" style="background: var(--accent-secondary);">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18Z"/><path d="M6 12H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2"/><path d="M18 9h2a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-2"/><path d="M10 6h4"/><path d="M10 10h4"/><path d="M10 14h4"/><path d="M10 18h4"/></svg>
+          </div>
+          <div>
+            <h3 class="actor-title">4. Gobierno</h3>
+            <p class="actor-subtitle">Marco regulatorio, políticas públicas e infraestructura</p>
+          </div>
+        </div>
+
+        <ContentBox type="default">
+          <h4>Rol en el Ecosistema</h4>
+          <p>El gobierno establece las "reglas del juego", provee bienes públicos, corrige fallas de mercado y articula actores mediante políticas de innovación y emprendimiento.</p>
+
+          <h4>Instrumentos de Política Pública</h4>
+          <div class="instruments-grid">
+            <div class="instrument-item">
+              <h5>Financiamiento Directo</h5>
+              <p>Subsidios, fondos concursables, capital semilla público (ej: CORFO Chile, INNPULSA Colombia)</p>
+            </div>
+            <div class="instrument-item">
+              <h5>Incentivos Fiscales</h5>
+              <p>Créditos tributarios para I+D, exenciones para startups, beneficios para inversionistas ángeles</p>
+            </div>
+            <div class="instrument-item">
+              <h5>Infraestructura</h5>
+              <p>Parques tecnológicos, centros de innovación, laboratorios públicos</p>
+            </div>
+            <div class="instrument-item">
+              <h5>Regulación</h5>
+              <p>Simplificación de trámites, protección de propiedad intelectual, regulación pro-innovación</p>
+            </div>
+            <div class="instrument-item">
+              <h5>Compra Pública</h5>
+              <p>Demanda temprana para innovaciones mediante compras públicas de innovación</p>
+            </div>
+            <div class="instrument-item">
+              <h5>Articulación</h5>
+              <p>Creación de espacios de diálogo, mesas público-privadas, estrategias regionales</p>
+            </div>
+          </div>
+          <ContentBox type="warning">
+            <h5>Fallas de Gobierno Comunes</h5>
+            <ul>
+              <li><strong>Burocracia excesiva:</strong> Trámites largos y complejos desalientan formalización.</li>
+              <li><strong>Inconsistencia temporal:</strong> Programas cambian con cada administración.</li>
+              <li><strong>Asimetría de información:</strong> Desconocimiento de necesidades reales de emprendedores.</li>
+              <li><strong>Competencia entre niveles:</strong> Falta coordinación nacional-regional-local.</li>
+              <li><strong>Métricas inadecuadas:</strong> Énfasis en cantidad vs. calidad/impacto.</li>
+            </ul>
+          </ContentBox>
+        </ContentBox>
+      </div>
+
+      <!-- Grandes Empresas -->
+      <div class="actor-section observe">
+        <div class="actor-header">
+          <div class="actor-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="14" x="2" y="7" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+          </div>
+          <div>
+            <h3 class="actor-title">5. Grandes Empresas</h3>
+            <p class="actor-subtitle">Demanda sofisticada, mentoring y canales de comercialización</p>
+          </div>
+        </div>
+
+        <ContentBox type="default">
+          <h4>Rol en el Ecosistema</h4>
+          <p>Las grandes empresas aportan demanda sofisticada, canales de distribución, expertise sectorial y, cada vez más, inversión corporativa en startups (Corporate Venture Capital).</p>
+
+          <h4>Mecanismos de Vinculación</h4>
+          <div class="mechanisms-list">
+            <div class="mechanism-item">
+              <h5>Open Innovation</h5>
+              <p>Colaboración con startups para co-desarrollar productos, acceder a tecnologías disruptivas o explorar nuevos modelos de negocio.</p>
+            </div>
+            <div class="mechanism-item">
+              <h5>Corporate Venture Capital (CVC)</h5>
+              <p>Fondos de inversión corporativos que invierten en startups alineadas con su estrategia, combinando retorno financiero con objetivos estratégicos.</p>
+            </div>
+            <div class="mechanism-item">
+              <h5>Programas de Aceleración</h5>
+              <p>Aceleradoras corporativas que proveen mentoría, recursos y acceso a clientes a startups seleccionadas.</p>
+            </div>
+            <div class="mechanism-item">
+              <h5>Compras a Startups</h5>
+              <p>Actuar como cliente temprano, validando productos y generando tracción comercial.</p>
+            </div>
+          </div>
+
+          <ContentBox type="info">
+            <h5>Ejemplos en América Latina</h5>
+            <ul>
+              <li><strong>Grupo Nutresa (Colombia):</strong> Programa de Open Innovation con startups foodtech</li>
+              <li><strong>Falabella Ventures:</strong> CVC que invierte en startups retail y e-commerce</li>
+              <li><strong>Cemex Ventures:</strong> Inversión en startups de construcción y tecnología</li>
+            </ul>
+          </ContentBox>
+        </ContentBox>
+      </div>
+
+      <!-- Alignment -->
+      <div class="alignment-section observe">
+        <ContentBox type="highlight">
+          <div class="alignment-content">
+            <div class="alignment-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="16" y="16" width="6" height="6" rx="1"/><rect x="2" y="16" width="6" height="6" rx="1"/><rect x="9" y="2" width="6" height="6" rx="1"/><path d="M5 16v-3a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v3"/><path d="M12 12V8"/></svg>
+            </div>
+            <div>
+              <h2>Alignment: La Clave del Éxito</h2>
+              <p>
+                Más importante que la presencia de estos actores es su <strong>alineamiento</strong>: el nivel de comprensión mutua, confianza y coordinación entre stakeholders. Un ecosistema con alignment alto genera sinergias, reduce fricciones y acelera la innovación.
+              </p>
+            </div>
+          </div>
+
+          <div class="alignment-grid">
+            <div class="alignment-card">
+              <h4>¿Cómo se Construye?</h4>
+              <p>Encuentros regulares multi-stakeholder, organizaciones backbone que faciliten coordinación, narrativas compartidas sobre futuro deseado, proyectos conjuntos concretos.</p>
+            </div>
+            <div class="alignment-card">
+              <h4><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display: inline; vertical-align: middle; margin-right: 5px; color: var(--accent-green);"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg> Señales de Buen Alignment</h4>
+              <ul>
+                <li>Líderes se conocen personalmente</li>
+                <li>Comunicación fluida entre sectores</li>
+                <li>Iniciativas colaborativas frecuentes</li>
+                <li>Visión compartida articulada</li>
+              </ul>
+            </div>
+            <div class="alignment-card">
+              <h4><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display: inline; vertical-align: middle; margin-right: 5px; color: #e74c3c;"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg> Señales de Mal Alignment</h4>
+              <ul>
+                <li>Iniciativas fragmentadas y duplicadas</li>
+                <li>Desconfianza entre sectores</li>
+                <li>Lenguajes incompatibles</li>
+                <li>Competencia disfuncional</li>
+              </ul>
+            </div>
+          </div>
+        </ContentBox>
+      </div>
+
+      <!-- Mapa de Interacciones -->
+      <div class="section observe">
+        <h2 class="section-title text-center">Mapa de Interacciones Clave</h2>
+        <div class="table-wrapper">
+          <table class="interaction-table">
+            <thead>
+              <tr>
+                <th>De / Hacia</th>
+                <th>Emprendedores</th>
+                <th>Universidades</th>
+                <th>Capital Riesgo</th>
+                <th>Gobierno</th>
+                <th>Corporaciones</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th class="row-header entrepreneur">Emprendedores</th>
+                <td class="self">Redes de pares</td>
+                <td class="strong">Spin-offs, I+D</td>
+                <td class="strong">Fundraising</td>
+                <td class="medium">Postulación fondos</td>
+                <td class="strong">Ventas B2B</td>
+              </tr>
+              <tr>
+                <th class="row-header university">Universidades</th>
+                <td class="strong">Incubación, Talento</td>
+                <td class="self">Colaboración</td>
+                <td class="weak">Spin-offs</td>
+                <td class="strong">Fondos I+D</td>
+                <td class="medium">Proyectos I+D</td>
+              </tr>
+              <tr>
+                <th class="row-header capital">Capital Riesgo</th>
+                <td class="strong">Inversión, Mentoring</td>
+                <td class="weak">Scouting</td>
+                <td class="self">Co-inversión</td>
+                <td class="medium">Fondos de fondos</td>
+                <td class="medium">Corporate VC</td>
+              </tr>
+              <tr>
+                <th class="row-header government">Gobierno</th>
+                <td class="strong">Subsidios, Regulación</td>
+                <td class="strong">Infraestructura</td>
+                <td class="medium">Incentivos</td>
+                <td class="self">Coordinación</td>
+                <td class="medium">Regulación</td>
+              </tr>
+              <tr>
+                <th class="row-header corporate">Corporaciones</th>
+                <td class="strong">Compras, CVC</td>
+                <td class="medium">Contratación</td>
+                <td class="weak">LP en fondos</td>
+                <td class="weak">Lobby</td>
+                <td class="self">Alianzas</td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="legend">
+            <span class="legend-item"><span class="dot strong"></span>Fuerte</span>
+            <span class="legend-item"><span class="dot medium"></span>Media</span>
+            <span class="legend-item"><span class="dot weak"></span>Débil</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Otros Actores -->
+      <div class="section observe">
+        <h2 class="section-title">Otros Actores Relevantes</h2>
+        <div class="others-grid">
+          <div class="other-item">
+            <div class="other-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="2"/><path d="M16.24 7.76a6 6 0 0 1 0 8.49m-8.48-.01a6 6 0 0 1 0-8.49m11.31-2.82a10 10 0 0 1 0 14.14m-14.14 0a10 10 0 0 1 0-14.14"/></svg></div>
+            <h4>Medios de Comunicación</h4>
+            <p>Difusión de historias de éxito, educación sobre emprendimiento, celebración de modelos de rol.</p>
+          </div>
+          <div class="other-item">
+            <div class="other-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div>
+            <h4>Asociaciones</h4>
+            <p>Representación gremial, networking, intercambio de aprendizajes, lobby para políticas públicas.</p>
+          </div>
+          <div class="other-item">
+            <div class="other-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></div>
+            <h4>Proveedores de Servicios</h4>
+            <p>Legales, contables, marketing, consultoría estratégica, desarrollo tecnológico especializado.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .section-title {
+    font-size: clamp(1.75rem, 3vw, 2.5rem);
+    font-weight: 800;
+    color: var(--primary);
+    margin-bottom: var(--spacing-md);
+  }
+
+  .text-center { text-align: center; }
+
+  /* Actor Section */
+  .actor-section {
+    margin: var(--spacing-3xl) 0;
+  }
+
+  .actor-header {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-lg);
+  }
+
+  .actor-icon {
+    width: 64px;
+    height: 64px;
+    background: var(--primary);
+    color: var(--secondary);
+    border-radius: var(--radius-md);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  .actor-title {
+    font-size: 1.75rem;
+    font-weight: 800;
+    color: var(--primary);
+    margin-bottom: 0.25rem;
+  }
+
+  .actor-subtitle {
+    font-size: 1rem;
+    color: var(--gray-600);
+  }
+
+  /* Types Grid */
+  .types-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--spacing-md);
+    margin: var(--spacing-md) 0;
+  }
+
+  .type-item {
+    background: var(--gray-50);
+    padding: var(--spacing-md);
+    border-radius: var(--radius-sm);
+    border-left: 2px solid var(--accent);
+  }
+
+  .type-item h5 {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--primary);
+    margin-bottom: 0.5rem;
+  }
+
+  .type-item p {
+    font-size: 0.9375rem;
+    color: var(--gray-900);
+    line-height: 1.6;
+  }
+
+  /* Contributions List */
+  .contributions-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: var(--spacing-md);
+    margin: var(--spacing-md) 0;
+  }
+
+  .contribution-item {
+    background: var(--gray-50);
+    padding: var(--spacing-md);
+    border-radius: var(--radius-sm);
+  }
+
+  .contribution-item h5 {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--primary);
+    margin-bottom: 0.5rem;
+  }
+
+  .contribution-item p {
+    font-size: 0.9375rem;
+    color: var(--gray-900);
+    line-height: 1.6;
+  }
+
+  /* Stages Timeline */
+  .stages-timeline {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: var(--spacing-md);
+    margin: var(--spacing-md) 0;
+  }
+
+  .stage-item {
+    background: var(--gray-50);
+    padding: var(--spacing-md);
+    border-radius: var(--radius-sm);
+    text-align: center;
+  }
+
+  .stage-label {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background: var(--primary);
+    color: var(--secondary);
+    border-radius: var(--radius-full);
+    font-weight: 700;
+    font-size: 0.875rem;
+    margin-bottom: var(--spacing-sm);
+  }
+
+  .stage-item p {
+    font-size: 0.9375rem;
+    color: var(--gray-900);
+    line-height: 1.6;
+  }
+
+  /* Instruments Grid */
+  .instruments-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: var(--spacing-md);
+    margin: var(--spacing-md) 0;
+  }
+
+  .instrument-item {
+    background: var(--gray-50);
+    padding: var(--spacing-md);
+    border-radius: var(--radius-sm);
+    border-left: 2px solid var(--accent-secondary);
+  }
+
+  .instrument-item h5 {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--accent-secondary);
+    margin-bottom: 0.5rem;
+  }
+
+  .instrument-item p {
+    font-size: 0.9375rem;
+    color: var(--gray-900);
+    line-height: 1.6;
+  }
+
+  /* Mechanisms List */
+  .mechanisms-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+    margin: var(--spacing-md) 0;
+  }
+
+  .mechanism-item {
+    background: var(--gray-50);
+    padding: var(--spacing-md);
+    border-radius: var(--radius-sm);
+  }
+
+  .mechanism-item h5 {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--primary);
+    margin-bottom: 0.5rem;
+  }
+
+  .mechanism-item p {
+    font-size: 0.9375rem;
+    color: var(--gray-900);
+    line-height: 1.6;
+  }
+
+  /* Alignment Section */
+  .alignment-section {
+    margin-top: var(--spacing-3xl);
+  }
+
+  .alignment-content {
+    display: flex;
+    gap: var(--spacing-lg);
+    align-items: flex-start;
+    margin-bottom: var(--spacing-lg);
+  }
+
+  .alignment-icon {
+    width: 80px;
+    height: 80px;
+    background: var(--primary);
+    color: var(--secondary);
+    border-radius: var(--radius-md);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  .alignment-content h2 {
+    font-size: 1.75rem;
+    font-weight: 800;
+    color: var(--primary);
+    margin-bottom: var(--spacing-sm);
+  }
+
+  .alignment-content p {
+    color: var(--gray-900);
+    line-height: 1.7;
+    margin-bottom: var(--spacing-sm);
+  }
+
+  .alignment-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--spacing-md);
+  }
+
+  .alignment-card {
+    background: var(--white);
+    padding: var(--spacing-md);
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--gray-200);
+  }
+
+  .alignment-card h4 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--primary);
+    margin-bottom: 0.5rem;
+  }
+
+  .alignment-card ul {
+    padding-left: 1.25rem;
+    font-size: 0.9rem;
+    color: var(--gray-800);
+  }
+
+  /* Interaction Box */
+  .interaction-box {
+    background: var(--white);
+    padding: var(--spacing-md);
+    border-radius: var(--radius-sm);
+    margin-top: var(--spacing-md);
+    border: 1px solid var(--gray-200);
+  }
+
+  .interaction-box h5 {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--primary);
+    margin-bottom: 0.5rem;
+  }
+
+  .interaction-box ul {
+    padding-left: 1.25rem;
+    font-size: 0.9rem;
+    color: var(--gray-800);
+  }
+
+  /* Interaction Table */
+  .table-wrapper {
+    overflow-x: auto;
+    margin-top: var(--spacing-lg);
+  }
+
+  .interaction-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.85rem;
+    background: var(--white);
+  }
+
+  .interaction-table th, .interaction-table td {
+    padding: 0.75rem;
+    border: 1px solid var(--gray-200);
+    text-align: center;
+  }
+
+  .interaction-table th {
+    background: var(--gray-100);
+    color: var(--primary);
+    font-weight: 700;
+  }
+
+  .row-header {
+    text-align: left;
+    font-weight: 700;
+  }
+
+  .row-header.entrepreneur { color: var(--primary); }
+  .row-header.university { color: var(--accent-secondary); }
+  .row-header.capital { color: #d4a017; }
+  .row-header.government { color: var(--accent-secondary); }
+  .row-header.corporate { color: var(--gray-700); }
+
+  .self { background: var(--gray-50); color: var(--gray-400); font-style: italic; }
+  .strong { background: rgba(46, 204, 113, 0.1); font-weight: 600; }
+  .medium { background: rgba(52, 152, 219, 0.1); }
+  .weak { background: rgba(241, 196, 15, 0.1); color: var(--gray-600); }
+
+  .legend {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 1rem;
+    font-size: 0.9rem;
+  }
+
+  .legend-item { display: flex; align-items: center; gap: 0.5rem; }
+  .dot { width: 12px; height: 12px; border-radius: 50%; display: inline-block; }
+  .dot.strong { background: rgba(46, 204, 113, 0.5); }
+  .dot.medium { background: rgba(52, 152, 219, 0.5); }
+  .dot.weak { background: rgba(241, 196, 15, 0.5); }
+
+  /* Others Grid */
+  .others-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--spacing-lg);
+    margin-top: var(--spacing-lg);
+  }
+
+  .other-item {
+    background: var(--gray-50);
+    padding: var(--spacing-lg);
+    border-radius: var(--radius-md);
+    text-align: center;
+    transition: transform 0.3s ease;
+  }
+
+  .other-item:hover {
+    transform: translateY(-5px);
+    background: var(--white);
+    box-shadow: var(--shadow-md);
+  }
+
+  .other-icon {
+    color: var(--accent);
+    margin-bottom: var(--spacing-sm);
+  }
+
+  .other-item h4 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--primary);
+    margin-bottom: 0.5rem;
+  }
+
+  .other-item p {
+    font-size: 0.9rem;
+    color: var(--gray-600);
+  }
+
+  /* Responsive */
+  @media (max-width: 968px) {
+    .types-grid,
+    .contributions-list,
+    .stages-timeline,
+    .instruments-grid,
+    .alignment-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .alignment-content {
+      flex-direction: column;
+    }
+
+    .alignment-icon {
+      width: 64px;
+      height: 64px;
+    }
+  }
+</style>

@@ -1,0 +1,291 @@
+---
+const base = import.meta.env.BASE_URL;
+
+
+const navItems = [
+  { href: '', label: 'Inicio' },
+  { href: 'fundamentos', label: 'Fundamentos' },
+  { href: 'modelos', label: 'Modelos' },
+  { href: 'metodologias', label: 'Metodologías' },
+  { href: 'componentes', label: 'Componentes' },
+  { href: 'casos', label: 'Casos' },
+  { href: 'actores', label: 'Actores' },
+  { href: 'herramientas', label: 'Herramientas' },
+  { href: 'innovacion', label: 'Innovación' },
+  { href: 'recursos', label: 'Recursos' },
+  { href: 'contacto', label: 'Contacto' },
+  { href: '#', label: 'Nosotros' }
+];
+
+const currentPath = Astro.url.pathname;
+---
+<header class="header">
+  <div class="header-container">
+
+    <a href={base} class="logo">
+      <div class="logo-bg">
+        <img src={`${base}logo_base.png`} alt="" />
+      </div>
+    </a>
+
+    <nav class="nav-desktop">
+      {navItems.map((item) => (
+        <a 
+          href={item.href.startsWith('http') ? item.href : `${base}${item.href}`} 
+          class:list={['nav-link', { active: currentPath.includes(item.href) && item.href !== '' }]}
+        >
+          {item.label}
+        </a>
+      ))}
+    </nav>
+
+    <!-- ... botón móvil ... -->
+
+  <nav class="nav-mobile" id="mobileNav">
+    {navItems.map((item) => (
+      <a 
+        href={item.href.startsWith('http') ? item.href : `${base}${item.href}`} 
+        class:list={['nav-link-mobile', { active: currentPath.includes(item.href) && item.href !== '' }]}
+      >
+        {item.label}
+      </a>
+    ))}
+  </nav>
+</header>
+
+
+<style>
+  .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background: rgba(255, 255, 255, 0.98);
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid var(--gray-300);
+    transition: all var(--transition-base);
+  }
+
+  .header.scrolled {
+    box-shadow: var(--shadow-md);
+  }
+
+  .header-container {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 1.25rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  /* Logo */
+  .logo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.75rem;
+    text-decoration: none;
+    transition: var(--transition-base);
+    flex-shrink: 0; /* Ensure logo never shrinks */
+    z-index: 10;
+  }
+
+  .logo:hover {
+    transform: translateY(-2px);
+  }
+
+  .logo-bg {
+    background: transparent;
+    padding: 0;
+    border-radius: var(--radius-sm);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .logo-bg img {
+    height: 50px;
+    width: auto;
+    object-fit: contain;
+  }
+
+  /* Desktop Navigation */
+  .nav-desktop {
+    display: flex;
+    gap: 0.25rem; /* Reduced gap */
+    align-items: center;
+    flex-wrap: nowrap;
+  }
+
+  .nav-link {
+    padding: 0.5rem 0.75rem; /* Reduced padding */
+    font-size: 0.9rem; /* Slightly smaller font */
+    font-weight: 600;
+    color: var(--gray-600);
+    text-decoration: none;
+    border-radius: var(--radius-full);
+    transition: all var(--transition-base);
+    position: relative;
+    white-space: nowrap;
+  }
+
+  .nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0.25rem;
+    left: 50%;
+    transform: translateX(-50%) scaleX(0);
+    width: 60%;
+    height: 2px;
+    background: var(--accent);
+    transition: transform var(--transition-base);
+  }
+
+  .nav-link:hover {
+    color: var(--primary);
+  }
+
+  .nav-link:hover::after {
+    transform: translateX(-50%) scaleX(1);
+  }
+
+  .nav-link.active {
+    color: var(--secondary);
+    background: var(--primary);
+  }
+
+  .nav-link.active::after {
+    display: none;
+  }
+
+  /* Mobile Menu Button */
+  .mobile-menu-btn {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+    color: var(--primary);
+  }
+
+  .close-icon {
+    display: none;
+  }
+
+  .mobile-menu-btn.active .menu-icon {
+    display: none;
+  }
+
+  .mobile-menu-btn.active .close-icon {
+    display: block;
+  }
+
+  /* Mobile Navigation */
+  .nav-mobile {
+    display: none;
+    flex-direction: column;
+    gap: 0;
+    background: var(--secondary);
+    border-top: 1px solid var(--gray-300);
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height var(--transition-base);
+  }
+
+  .nav-mobile.active {
+    max-height: 600px; /* Increased height */
+  }
+
+  .nav-link-mobile {
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--gray-600);
+    text-decoration: none;
+    border-bottom: 1px solid var(--gray-100);
+    transition: all var(--transition-fast);
+  }
+
+  .nav-link-mobile:hover {
+    background: var(--gray-50);
+    color: var(--primary);
+    padding-left: 2.5rem;
+  }
+
+  .nav-link-mobile.active {
+    background: var(--primary);
+    color: var(--secondary);
+  }
+
+  /* Responsive - Hide items progressively */
+  @media (max-width: 1400px) {
+    .nav-link:nth-last-child(1) { display: none; } /* Hide Nosotros */
+  }
+  @media (max-width: 1350px) {
+    .nav-link:nth-last-child(2) { display: none; } /* Hide Contacto */
+  }
+  @media (max-width: 1300px) {
+    .nav-link:nth-last-child(3) { display: none; } /* Hide Recursos */
+  }
+  @media (max-width: 1250px) {
+    .nav-link:nth-last-child(4) { display: none; } /* Hide Innovación */
+  }
+
+  /* Switch to Mobile Menu earlier */
+  @media (max-width: 1200px) {
+    .nav-desktop {
+      display: none;
+    }
+
+    .mobile-menu-btn {
+      display: block;
+    }
+
+    .nav-mobile {
+      display: flex;
+    }
+
+    .header-container {
+      padding: 1rem 1.5rem;
+    }
+  }
+
+  @media (max-width: 640px) {
+    .header-container {
+      padding: 1rem;
+    }
+  }
+</style>
+
+<script>
+  // Scroll effect
+  const header = document.querySelector('.header');
+  
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 50) {
+      header?.classList.add('scrolled');
+    } else {
+      header?.classList.remove('scrolled');
+    }
+  });
+
+  // Mobile menu toggle
+  const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+  const mobileNav = document.getElementById('mobileNav');
+
+  mobileMenuBtn?.addEventListener('click', () => {
+    mobileMenuBtn.classList.toggle('active');
+    mobileNav?.classList.toggle('active');
+  });
+
+  // Close mobile menu when clicking on a link
+  const mobileLinks = mobileNav?.querySelectorAll('.nav-link-mobile');
+  mobileLinks?.forEach(link => {
+    link.addEventListener('click', () => {
+      mobileMenuBtn?.classList.remove('active');
+      mobileNav?.classList.remove('active');
+    });
+  });
+</script>

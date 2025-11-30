@@ -1,0 +1,193 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Hero from '../components/Hero.astro';
+import ContentBox from '../components/ContentBox.astro';
+const base = import.meta.env.BASE_URL;
+
+---
+
+<Layout title="Contacto">
+  <Hero 
+    title="Contacto"
+    subtitle="¿Tienes preguntas sobre ecosistemas de emprendimiento? Estamos aquí para ayudarte"
+    image={`${base}ecosistema.jpg`}
+  />
+
+  <section class="section">
+    <div class="container">
+      <div class="contact-container">
+        <!-- Contact Info -->
+        <div class="info-container observe">
+          <ContentBox type="highlight">
+            <h3 class="info-title">Información de contacto</h3>
+            <p class="info-description">
+              Puedes contactarnos directamente a través de estos medios
+            </p>
+
+            <div class="info-items">
+              <div class="info-item">
+                <div class="info-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                </div>
+                <div class="info-content">
+                  <h4 class="info-label">Email</h4>
+                  <a href="mailto:#" class="info-value">
+                    #@#.cl
+                  </a>
+                </div>
+              </div>
+
+              <div class="info-item">
+                <div class="info-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                </div>
+                <div class="info-content">
+                  <h4 class="info-label">Teléfono</h4>
+                  <a href="tel:+569#" class="info-value">
+                    +569 #
+                  </a>
+                </div>
+              </div>
+
+              <div class="info-item">
+                <div class="info-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+                </div>
+                <div class="info-content">
+                  <h4 class="info-label">Instagram</h4>
+                  <a href="#" target="_blank" rel="noopener noreferrer" class="info-value">
+                    @#
+                  </a>
+                </div>
+              </div>
+
+              <div class="info-item">
+                <div class="info-icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                </div>
+                <div class="info-content">
+                  <h4 class="info-label">Ubicación</h4>
+                  <p class="info-value">
+                    Chile
+                  </p>
+                </div>
+              </div>
+            </div>
+          </ContentBox>
+
+          <ContentBox type="info">
+            <h4 class="additional-title">Horario de atención</h4>
+            <p class="additional-text">
+              Lunes a Viernes: 9:00 - 18:00<br>
+              Sábado y Domingo: Cerrado
+            </p>
+          </ContentBox>
+
+          <ContentBox type="info">
+            <h4 class="additional-title">Tiempo de respuesta</h4>
+            <p class="additional-text">
+              Nos esforzamos por responder todas las consultas dentro de 24-48 horas hábiles
+            </p>
+          </ContentBox>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  /* Contact Grid */
+  /* Contact Container */
+  .contact-container {
+    max-width: 800px;
+    margin: var(--spacing-2xl) auto 0;
+  }
+
+
+
+  /* Info Container */
+  .info-container {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-lg);
+  }
+
+  .info-title {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--primary);
+    margin-bottom: var(--spacing-sm);
+  }
+
+  .info-description {
+    color: var(--gray-600);
+    margin-bottom: var(--spacing-lg);
+    line-height: 1.7;
+  }
+
+  .info-items {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-lg);
+  }
+
+  .info-item {
+    display: flex;
+    gap: var(--spacing-md);
+    align-items: flex-start;
+  }
+
+  .info-icon {
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--primary);
+    color: var(--secondary);
+    border-radius: var(--radius-md);
+    flex-shrink: 0;
+  }
+
+  .info-content {
+    flex: 1;
+  }
+
+  .info-label {
+    font-weight: 700;
+    color: var(--primary);
+    margin-bottom: 0.25rem;
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  .info-value {
+    color: var(--gray-900);
+    font-size: 1.125rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: var(--transition-base);
+  }
+
+  .info-value:hover {
+    color: var(--accent);
+  }
+
+  /* Additional Info */
+  .additional-title {
+    font-weight: 700;
+    color: var(--accent-secondary);
+    margin-bottom: var(--spacing-sm);
+  }
+
+  .additional-text {
+    color: var(--gray-900);
+    line-height: 1.7;
+  }
+
+  /* Responsive */
+
+</style>
+
+

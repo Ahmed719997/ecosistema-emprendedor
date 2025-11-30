@@ -1,0 +1,321 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Hero from '../components/Hero.astro';
+import ContentBox from '../components/ContentBox.astro';
+const base = import.meta.env.BASE_URL;
+
+---
+
+<Layout title="Biblioteca de Recursos">
+  <Hero 
+    title="Biblioteca de Recursos"
+    subtitle="Glosario, referencias bibliográficas, infografías y lecturas recomendadas para profundizar en ecosistemas de emprendimiento"
+    image={`${base}recursos.jpg`}
+    cta={{
+      primary: { text: 'Explorar Recursos', href: '#recursos' }
+    }}
+  />
+
+  <section class="section" id="recursos">
+    <div class="container">
+      
+      <!-- GLOSARIO -->
+      <ContentBox type="highlight" class="observe">
+        <h2 class="section-title">Glosario de Términos Clave</h2>
+        
+        <div class="search-box">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="search-icon"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+          <input type="text" id="searchGlossary" placeholder="Buscar término..." class="search-input" />
+        </div>
+
+        <div class="glossary-grid" id="glossaryGrid">
+          <div class="glossary-item" data-term="alignment">
+            <h4>Alignment (Alineación)</h4>
+            <p>Nivel de comprensión mutua, confianza y coordinación entre stakeholders del ecosistema. Incluye conocimiento de estrategias de otros actores y capacidad de acción colectiva.</p>
+          </div>
+
+          <div class="glossary-item" data-term="backbone">
+            <h4>Backbone Organization</h4>
+            <p>Organización cuya función principal es articular, coordinar y facilitar las interacciones entre los diferentes stakeholders del ecosistema (ej: Ruta N).</p>
+          </div>
+
+          <div class="glossary-item" data-term="cuadruple">
+            <h4>Cuádruple Hélice</h4>
+            <p>Modelo de innovación que añade una cuarta hélice (sociedad civil y usuarios) al modelo de Triple Hélice, reconociendo a ciudadanos como co-creadores.</p>
+          </div>
+
+          <div class="glossary-item" data-term="dealmakers">
+            <h4>Dealmakers</h4>
+            <p>Actores que conectan emprendedores con recursos críticos (inversionistas, clientes, talento). Tienen alta centralidad en redes del ecosistema.</p>
+          </div>
+
+          <div class="glossary-item" data-term="dinamico">
+            <h4>Emprendimiento Dinámico</h4>
+            <p>Emprendimientos con potencial de alto crecimiento (≥20% anual), orientados a innovación y con visión global. Contrasta con subsistencia.</p>
+          </div>
+
+          <div class="glossary-item" data-term="ecap">
+            <h4>E-Cap (Entrepreneurship Capital)</h4>
+            <p>Capacidad emprendedora del territorio según MIT REAP: densidad, calidad, cultura y redes de emprendedores.</p>
+          </div>
+
+          <div class="glossary-item" data-term="geial">
+            <h4>GEIAL (ICSED)</h4>
+            <p>Índice de Condiciones Sistémicas para Emprendimiento Dinámico. Marco de PRODEM-UNGS y BID Lab para medir ecosistemas latinoamericanos.</p>
+          </div>
+
+          <div class="glossary-item" data-term="gem">
+            <h4>GEM (Global Entrepreneurship Monitor)</h4>
+            <p>Estudio comparativo global sobre actividad emprendedora. Genera indicadores como TEA mediante encuestas APS y NES.</p>
+          </div>
+
+          <div class="glossary-item" data-term="icap">
+            <h4>I-Cap (Innovation Capacity)</h4>
+            <p>Capacidad de innovación del territorio según MIT REAP: investigación, talento técnico, infraestructura I+D, financiamiento.</p>
+          </div>
+
+          <div class="glossary-item" data-term="livinglab">
+            <h4>Living Lab</h4>
+            <p>Espacio donde usuarios, empresas, universidades y gobierno co-desarrollan soluciones en contextos reales. Ejemplo de Cuádruple Hélice.</p>
+          </div>
+
+          <div class="glossary-item" data-term="meei">
+            <h4>MEEI</h4>
+            <p>Modelo de Ecosistemas de Emprendimiento e Innovación. Marco oficial de CORFO Chile para medir ecosistemas regionales.</p>
+          </div>
+
+          <div class="glossary-item" data-term="mitreap">
+            <h4>MIT REAP</h4>
+            <p>Regional Entrepreneurship Acceleration Program. Marco del MIT que identifica 5 stakeholders críticos y enfatiza el alignment.</p>
+          </div>
+
+          <div class="glossary-item" data-term="openinnovation">
+            <h4>Open Innovation</h4>
+            <p>Paradigma donde empresas usan ideas internas y externas, y vías internas y externas al mercado (Chesbrough, 2003).</p>
+          </div>
+
+          <div class="glossary-item" data-term="quintuple">
+            <h4>Quíntuple Hélice</h4>
+            <p>Modelo que incorpora el medio ambiente natural como quinta hélice, enfocándose en sostenibilidad y ecología social.</p>
+          </div>
+
+          <div class="glossary-item" data-term="scaleup">
+            <h4>Scale-up</h4>
+            <p>Empresa que ha superado fase inicial y crece aceleradamente (>20% anual en 3 años) con mínimo 10 empleados.</p>
+          </div>
+
+          <div class="glossary-item" data-term="spinoff">
+            <h4>Spin-off (Académico)</h4>
+            <p>Empresa creada para comercializar investigación universitaria, típicamente con investigadores como fundadores.</p>
+          </div>
+
+          <div class="glossary-item" data-term="stakeholder">
+            <h4>Stakeholder</h4>
+            <p>Actor relevante del ecosistema. MIT REAP identifica 5 críticos: emprendedores, universidades, capital, gobierno, corporaciones.</p>
+          </div>
+
+          <div class="glossary-item" data-term="startup">
+            <h4>Startup</h4>
+            <p>Empresa joven diseñada para crecer rápidamente mediante modelo escalable, buscando product-market fit.</p>
+          </div>
+
+          <div class="glossary-item" data-term="tea">
+            <h4>TEA</h4>
+            <p>Total Early-stage Entrepreneurial Activity. Indicador GEM que mide % población adulta en emprendimientos nacientes o nuevos.</p>
+          </div>
+
+          <div class="glossary-item" data-term="triple">
+            <h4>Triple Hélice</h4>
+            <p>Modelo de innovación (Etzkowitz & Leydesdorff) que enfatiza interacciones Universidad-Empresa-Gobierno.</p>
+          </div>
+
+          <div class="glossary-item" data-term="valle">
+            <h4>Valle de la Muerte</h4>
+            <p>Brecha crítica de financiamiento entre desarrollo tecnológico y comercialización viable ($500K-$5M USD).</p>
+          </div>
+
+          <div class="glossary-item" data-term="venturecapital">
+            <h4>Venture Capital</h4>
+            <p>Capital de Riesgo. Financiamiento equity para startups de alto potencial a cambio de participación accionaria.</p>
+          </div>
+        </div>
+      </ContentBox>
+
+      <!-- REFERENCIAS -->
+      <ContentBox type="default" class="observe">
+        <h2 class="section-title">Referencias Bibliográficas (APA 7)</h2>
+        <div class="references-list">
+          <div class="reference-item"><p>Acs, Z. J., Autio, E., & Szerb, L. (2014). National systems of entrepreneurship: Measurement issues and policy implications. <em>Research Policy, 43</em>(3), 476-494.</p></div>
+          <div class="reference-item"><p>Audretsch, D. B., & Belitski, M. (2017). Entrepreneurial ecosystems in cities: Establishing the framework conditions. <em>The Journal of Technology Transfer, 42</em>(5), 1030-1051.</p></div>
+          <div class="reference-item"><p>Bosma, N., & Stam, E. (2012). Local policies for high-employment growth enterprises. In OECD, <em>High-growth enterprises: What governments can do to make a difference</em> (pp. 155-178). OECD Publishing.</p></div>
+          <div class="reference-item"><p>Brown, R., & Mason, C. (2017). Looking inside the spiky bits: A critical review and conceptualisation of entrepreneurial ecosystems. <em>Small Business Economics, 49</em>(1), 11-30.</p></div>
+          <div class="reference-item"><p>Budden, P., & Murray, F. (2019). <em>MIT Regional Entrepreneurship Acceleration Program (REAP): A framework for regional innovation ecosystems</em>. MIT.</p></div>
+          <div class="reference-item"><p>Carayannis, E. G., & Campbell, D. F. (2009). 'Mode 3' and 'Quadruple Helix': Toward a 21st century fractal innovation ecosystem. <em>International Journal of Technology Management, 46</em>(3/4), 201-234.</p></div>
+          <div class="reference-item"><p>Carayannis, E. G., Barth, T. D., & Campbell, D. F. (2012). The Quintuple Helix innovation model: Global warming as a challenge and driver for innovation. <em>Journal of Innovation and Entrepreneurship, 1</em>(1), 1-12.</p></div>
+          <div class="reference-item"><p>Chesbrough, H. W. (2003). <em>Open innovation: The new imperative for creating and profiting from technology</em>. Harvard Business School Press.</p></div>
+          <div class="reference-item"><p>CORFO. (2024). <em>Modelo de Medición de Ecosistemas de Emprendimiento e Innovación - Región de Ñuble</em>. Corporación de Fomento de la Producción.</p></div>
+          <div class="reference-item"><p>Etzkowitz, H., & Leydesdorff, L. (2000). The dynamics of innovation: From national systems and "Mode 2" to a Triple Helix of university-industry-government relations. <em>Research Policy, 29</em>(2), 109-123.</p></div>
+          <div class="reference-item"><p>Feldman, M., & Zoller, T. D. (2012). Dealmakers in place: Social capital connections in regional entrepreneurial economies. <em>Regional Studies, 46</em>(1), 23-37.</p></div>
+          <div class="reference-item"><p>Global Entrepreneurship Monitor. (2022). <em>Reporte Nacional GEM Chile 2022</em>. Universidad del Desarrollo.</p></div>
+          <div class="reference-item"><p>Goñi Pacchioni, E. A., & Reyes, S. (2022). <em>Cómo mapear y medir ecosistemas de emprendimiento innovador: Aplicación de metodologías de análisis de redes al ecosistema de Lima</em>. Banco Interamericano de Desarrollo.</p></div>
+          <div class="reference-item"><p>Hwang, V. W., & Horowitt, G. (2012). <em>The rainforest: The secret to building the next Silicon Valley</em>. Regenwald.</p></div>
+          <div class="reference-item"><p>Isenberg, D. (2010). How to start an entrepreneurial revolution. <em>Harvard Business Review, 88</em>(6), 40-50.</p></div>
+          <div class="reference-item"><p>Isenberg, D. (2011). The entrepreneurship ecosystem strategy as a new paradigm for economic policy: Principles for cultivating entrepreneurship. <em>Babson Entrepreneurship Ecosystem Project</em>. Babson College.</p></div>
+          <div class="reference-item"><p>Kantis, H., Federico, J., & Ibarra García, S. (2020). <em>Índice de Condiciones Sistémicas para el Emprendimiento Dinámico (ICSED): Una herramienta para la acción en América Latina</em>. PRODEM-UNGS & BID Lab.</p></div>
+          <div class="reference-item"><p>Mason, C., & Brown, R. (2014). Entrepreneurial ecosystems and growth oriented entrepreneurship. Background paper prepared for the workshop organised by the OECD LEED Programme and the Dutch Ministry of Economic Affairs on Entrepreneurial Ecosystems and Growth Oriented Entrepreneurship, The Hague, Netherlands.</p></div>
+          <div class="reference-item"><p>Moore, J. F. (1993). Predators and prey: A new ecology of competition. <em>Harvard Business Review, 71</em>(3), 75-86.</p></div>
+          <div class="reference-item"><p>Motoyama, Y., & Knowlton, K. (2017). Examining the connections within the startup ecosystem: A case study of St. Louis. <em>Entrepreneurship Research Journal, 7</em>(1), 1-32.</p></div>
+          <div class="reference-item"><p>OECD. (2014). <em>Entrepreneurial ecosystems and growth-oriented entrepreneurship</em>. OECD Publishing.</p></div>
+          <div class="reference-item"><p>OECD. (2018). <em>Oslo Manual 2018: Guidelines for collecting, reporting and using data on innovation</em> (4th ed.). OECD Publishing.</p></div>
+          <div class="reference-item"><p>Spigel, B. (2017). The relational organization of entrepreneurial ecosystems. <em>Entrepreneurship Theory and Practice, 41</em>(1), 49-72.</p></div>
+          <div class="reference-item"><p>Stam, E. (2015). Entrepreneurial ecosystems and regional policy: A sympathetic critique. <em>European Planning Studies, 23</em>(9), 1759-1769.</p></div>
+          <div class="reference-item"><p>Stangler, D., & Bell-Masterson, J. (2015). <em>Measuring an entrepreneurial ecosystem</em>. Kauffman Foundation Research Series on City, Metro, and Regional Entrepreneurship.</p></div>
+          <div class="reference-item"><p>Von Hippel, E. (2005). <em>Democratizing innovation</em>. MIT Press.</p></div>
+        </div>
+      </ContentBox>
+
+    </div>
+  </section>
+</Layout>
+
+<script>
+  const searchInput = document.getElementById('searchGlossary');
+  const glossaryItems = document.querySelectorAll('.glossary-item');
+
+  if (searchInput) {
+    searchInput.addEventListener('keyup', (e) => {
+      const term = (e.target as HTMLInputElement).value.toLowerCase();
+      
+      glossaryItems.forEach((item) => {
+        const title = item.querySelector('h4')?.textContent?.toLowerCase() || '';
+        const desc = item.querySelector('p')?.textContent?.toLowerCase() || '';
+        const dataTerm = (item as HTMLElement).dataset.term?.toLowerCase() || '';
+        
+        if (title.includes(term) || desc.includes(term) || dataTerm.includes(term)) {
+          (item as HTMLElement).style.display = 'block';
+        } else {
+          (item as HTMLElement).style.display = 'none';
+        }
+      });
+    });
+  }
+</script>
+
+<style>
+  .section-title {
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    font-weight: 800;
+    color: var(--primary);
+    margin-bottom: var(--spacing-md);
+  }
+
+  /* Search Box */
+  .search-box {
+    position: relative;
+    margin-bottom: var(--spacing-lg);
+  }
+
+  .search-icon {
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--gray-400);
+  }
+
+  .search-input {
+    width: 100%;
+    padding: 1rem 1rem 1rem 3rem;
+    border: 2px solid var(--gray-200);
+    border-radius: var(--radius-md);
+    font-size: 1rem;
+    transition: border-color 0.3s;
+  }
+
+  .search-input:focus {
+    outline: none;
+    border-color: var(--primary);
+  }
+
+  /* Glossary */
+  .glossary-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--spacing-md);
+  }
+
+  .glossary-item {
+    background: var(--white);
+    padding: var(--spacing-md);
+    border-radius: var(--radius-sm);
+    border-left: 3px solid var(--accent);
+    box-shadow: var(--shadow-sm);
+  }
+
+  .glossary-item h4 {
+    color: var(--primary);
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+  }
+
+  .glossary-item p {
+    font-size: 0.95rem;
+    color: var(--gray-700);
+    line-height: 1.6;
+  }
+
+  /* References */
+  .references-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .reference-item {
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid var(--gray-200);
+  }
+
+  .reference-item:last-child {
+    border-bottom: none;
+  }
+
+  .reference-item p {
+    font-size: 0.9rem;
+    color: var(--gray-800);
+    line-height: 1.5;
+  }
+
+  /* Credits */
+  .credits-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .credits-section h4 {
+    font-weight: 700;
+    color: var(--primary);
+    margin-bottom: 0.5rem;
+  }
+
+  .credits-section ul {
+    padding-left: 1.2rem;
+    font-size: 0.95rem;
+    color: var(--gray-700);
+  }
+
+  .ago-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--primary);
+    font-weight: 600;
+    text-decoration: none;
+  }
+
+  .ago-logo {
+    height: 24px;
+    width: auto;
+  }
+</style>

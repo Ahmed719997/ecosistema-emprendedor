@@ -1,0 +1,342 @@
+<script>
+  // QUIZ LOGIC
+  function initQuiz() {
+    const options = document.querySelectorAll('.option');
+    const checkBtn = document.getElementById('checkQuizBtn');
+    const resetBtn = document.getElementById('resetQuizBtn');
+    
+    options.forEach((opt) => {
+      opt.addEventListener('click', (e) => {
+        // Corrección: Usamos e.currentTarget en lugar de 'this' y le damos tipo
+        const target = e.currentTarget as HTMLElement;
+        const parent = target.parentElement;
+
+        // Deselect siblings
+        if (parent) {
+          const siblings = parent.querySelectorAll('.option');
+          siblings.forEach(s => s.classList.remove('selected'));
+        }
+        // Select this
+        target.classList.add('selected');
+      });
+    });
+
+    checkBtn?.addEventListener('click', () => {
+      let correct = 0;
+      let total = 0;
+      const questions = document.querySelectorAll('.question');
+      
+      questions.forEach(q => {
+        total++;
+        const selected = q.querySelector('.option.selected');
+        if (selected) {
+          const isCorrect = selected.getAttribute('data-correct') === 'true';
+          if (isCorrect) {
+            correct++;
+            selected.classList.add('correct');
+          } else {
+            selected.classList.add('incorrect');
+            // Show correct one
+            const correctOpt = q.querySelector('.option[data-correct="true"]');
+            if (correctOpt) correctOpt.classList.add('correct');
+          }
+        }
+      });
+
+      const percentage = total > 0 ? (correct / total * 100).toFixed(0) : "0";
+      const scoreDiv = document.getElementById('quizScore');
+      if (scoreDiv) {
+        scoreDiv.style.display = 'block';
+        scoreDiv.innerHTML = `Puntaje: ${correct}/${total} (${percentage}%) - ${Number(percentage) >= 80 ? '¡Excelente! 🎉' : Number(percentage) >= 60 ? '¡Bien hecho! 👍' : 'Sigue aprendiendo 📚'}`;
+      }
+    });
+
+    resetBtn?.addEventListener('click', () => {
+      options.forEach(opt => opt.classList.remove('selected', 'correct', 'incorrect'));
+      const scoreDiv = document.getElementById('quizScore');
+      if (scoreDiv) scoreDiv.style.display = 'none';
+    });
+  }
+
+  // MEMORY GAME LOGIC
+  function initMemory() {
+    const memoryCards = [
+      'MIT REAP', 'MIT REAP',
+      'GEIAL', 'GEIAL',
+      'I-Cap', 'I-Cap',
+      'E-Cap', 'E-Cap',
+      'TEA', 'TEA',
+      'Triple Hélice', 'Triple Hélice',
+      'Backbone', 'Backbone',
+      'Alignment', 'Alignment'
+    ];
+
+    // Corrección: Definir tipo array de elementos HTML
+    let flippedCards: HTMLElement[] = [];
+    let matchedPairs = 0;
+    let moves = 0;
+    const gameBoard = document.getElementById('memoryGame');
+    const resetBtn = document.getElementById('resetMemoryBtn');
+
+    // Corrección: Tipar el array de entrada
+    function shuffle(array: string[]) {
+      return array.sort(() => Math.random() - 0.5);
+    }
+
+    function createBoard() {
+      if (!gameBoard) return;
+      gameBoard.innerHTML = '';
+      const shuffled = shuffle([...memoryCards]);
+      matchedPairs = 0;
+      moves = 0;
+      updateStats();
+
+      shuffled.forEach((cardVal, index) => {
+        const cardEl = document.createElement('div');
+        cardEl.className = 'memory-card';
+        cardEl.textContent = '?';
+        cardEl.dataset.value = cardVal;
+        cardEl.dataset.index = index.toString();
+        cardEl.addEventListener('click', () => flipCard(cardEl));
+        gameBoard.appendChild(cardEl);
+      });
+    }
+
+    function updateStats() {
+      const movesEl = document.getElementById('moves');
+      const pairsEl = document.getElementById('pairs');
+      if (movesEl) movesEl.textContent = moves.toString();
+      if (pairsEl) pairsEl.textContent = matchedPairs.toString();
+    }
+
+    // Corrección: Tipar el parámetro card
+    function flipCard(card: HTMLElement) {
+      if (flippedCards.length >= 2 || card.classList.contains('flipped') || card.classList.contains('matched')) return;
+      
+      card.classList.add('flipped');
+      card.textContent = card.dataset.value || '';
+      flippedCards.push(card);
+
+      if (flippedCards.length === 2) {
+        moves++;
+        updateStats();
+        checkMatch();
+      }
+    }
+
+    function checkMatch() {
+      const [card1, card2] = flippedCards;
+      
+      if (card1.dataset.value === card2.dataset.value) {
+        card1.classList.add('matched');
+        card2.classList.add('matched');
+        matchedPairs++;
+        updateStats();
+        flippedCards = [];
+
+        if (matchedPairs === 8) {
+          setTimeout(() => {
+            alert(`¡Felicitaciones! Completaste el juego en ${moves} movimientos 🎉`);
+          }, 500);
+        }
+      } else {
+        setTimeout(() => {
+          card1.classList.remove('flipped');
+          card2.classList.remove('flipped');
+          card1.textContent = '?';
+          card2.textContent = '?';
+          flippedCards = [];
+        }, 1000);
+      }
+    }
+
+    resetBtn?.addEventListener('click', createBoard);
+    createBoard();
+  }
+
+  // MATCHING GAME LOGIC
+  function initMatching() {
+    let selectedLeft: HTMLElement | null = null;
+    let selectedRight: HTMLElement | null = null;
+    let matchedCount = 0;
+    const feedback = document.getElementById('matchingFeedback');
+    const resetBtn = document.getElementById('resetMatchingBtn');
+
+    const items = document.querySelectorAll('.match-item');
+    items.forEach(item => {
+      item.addEventListener('click', (e) => {
+        // Corrección: Usar e.currentTarget y casting
+        const el = e.currentTarget as HTMLElement;
+        if (el.classList.contains('matched')) return;
+
+        if (el.hasAttribute('data-id')) {
+          // Left side
+          if (selectedLeft) selectedLeft.classList.remove('selected');
+          selectedLeft = el;
+          el.classList.add('selected');
+        } else {
+          // Right side
+          if (selectedRight) selectedRight.classList.remove('selected');
+          selectedRight = el;
+          el.classList.add('selected');
+        }
+
+        if (selectedLeft && selectedRight) {
+          checkMatching();
+        }
+      });
+    });
+
+    function checkMatching() {
+      if (!selectedLeft || !selectedRight || !feedback) return;
+
+      const leftId = selectedLeft.dataset.id;
+      const rightMatch = selectedRight.dataset.match;
+
+      if (leftId === rightMatch) {
+        selectedLeft.classList.add('matched');
+        selectedRight.classList.add('matched');
+        selectedLeft.classList.remove('selected');
+        selectedRight.classList.remove('selected');
+        matchedCount++;
+
+        feedback.className = 'feedback correct';
+        feedback.textContent = '✓ ¡Correcto!';
+
+        if (matchedCount === 5) {
+          setTimeout(() => {
+            feedback.textContent = '🎉 ¡Felicitaciones! Completaste todos los emparejamientos.';
+          }, 500);
+        }
+      } else {
+        feedback.className = 'feedback incorrect';
+        feedback.textContent = '✗ Intenta de nuevo';
+        
+        // Guardamos referencias locales para el timeout
+        const prevLeft = selectedLeft;
+        const prevRight = selectedRight;
+        
+        setTimeout(() => {
+          prevLeft?.classList.remove('selected');
+          prevRight?.classList.remove('selected');
+        }, 1000);
+        
+        selectedLeft = null;
+        selectedRight = null;
+      }
+
+      if (leftId === rightMatch) {
+        selectedLeft = null;
+        selectedRight = null;
+      }
+    }
+
+    resetBtn?.addEventListener('click', () => {
+      items.forEach(item => item.classList.remove('selected', 'matched'));
+      selectedLeft = null;
+      selectedRight = null;
+      matchedCount = 0;
+      if (feedback) feedback.textContent = '';
+    });
+  }
+
+  // SIMULATOR LOGIC
+  function initSimulator() {
+    let budget = 1000000;
+    let investments: string[] = [];
+    const budgetEl = document.getElementById('budget');
+    const feedback = document.getElementById('simulatorFeedback');
+    const resetBtn = document.getElementById('resetSimulatorBtn');
+    const investBtns = document.querySelectorAll('.invest-btn');
+
+    function updateBudget() {
+      if (budgetEl) budgetEl.textContent = '$' + budget.toLocaleString();
+    }
+
+    investBtns.forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        // Corrección: Casting del botón
+        const button = e.currentTarget as HTMLButtonElement;
+        const type = button.getAttribute('data-type');
+        const amount = parseInt(button.getAttribute('data-amount') || '0');
+
+        if (budget >= amount) {
+          budget -= amount;
+          if (type) investments.push(type);
+          updateBudget();
+          
+          if (feedback) {
+            feedback.className = 'feedback correct';
+            feedback.innerHTML = `<strong>Inversión realizada.</strong> Presupuesto restante: $${budget.toLocaleString()}`;
+          }
+
+          // Disable button
+          button.disabled = true;
+          button.textContent = 'Invertido';
+
+          if (budget < 150000) {
+            evaluateEcosystem();
+          }
+        } else {
+          if (feedback) {
+            feedback.className = 'feedback incorrect';
+            feedback.textContent = '⚠️ Presupuesto insuficiente para esta inversión.';
+          }
+        }
+      });
+    });
+
+    function evaluateEcosystem() {
+      if (!feedback) return;
+      let score = 0;
+      let recommendations: string[] = [];
+
+      if (investments.includes('backbone')) score += 30;
+      else recommendations.push('Backbone Organization (crítica para articulación)');
+
+      if (investments.includes('angel')) score += 25;
+      else recommendations.push('Fondo de Inversión Ángel (crítico para financiamiento)');
+
+      if (investments.includes('aceleracion')) score += 20;
+
+      if (investments.includes('formacion')) score += 15;
+
+      if (investments.includes('centro')) score += 10;
+
+      feedback.className = 'feedback';
+      feedback.innerHTML = `
+        <h4 style="margin-bottom: 1rem;">Evaluación de tu Ecosistema</h4>
+        <p><strong>Puntaje: ${score}/100</strong></p>
+        <p style="margin-top: 1rem;">${score >= 70 ? '¡Excelente estrategia! Has priorizado bien.' : score >= 50 ? 'Buena estrategia, pero podrías optimizar.' : 'Revisa tus prioridades según teoría ecosistémica.'}</p>
+        ${recommendations.length > 0 ? `<p style="margin-top: 1rem;"><strong>Recomendaciones:</strong><br>${recommendations.join('<br>')}</p>` : ''}
+      `;
+    }
+
+    resetBtn?.addEventListener('click', () => {
+      budget = 1000000;
+      investments = [];
+      updateBudget();
+      if (feedback) feedback.textContent = '';
+      investBtns.forEach(btn => {
+        const button = btn as HTMLButtonElement;
+        button.disabled = false;
+        button.textContent = 'Invertir';
+      });
+    });
+  }
+
+  // Initialize all
+  document.addEventListener('astro:page-load', () => {
+    initQuiz();
+    initMemory();
+    initMatching();
+    initSimulator();
+  });
+  
+  document.addEventListener('DOMContentLoaded', () => {
+    initQuiz();
+    initMemory();
+    initMatching();
+    initSimulator();
+  });
+</script>

@@ -1,0 +1,824 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Hero from '../components/Hero.astro';
+import ContentBox from '../components/ContentBox.astro';
+const base = import.meta.env.BASE_URL;
+
+---
+
+<Layout title="Modelos de Ecosistemas">
+  <Hero 
+    title="Modelos de Ecosistemas"
+    subtitle="Marcos analíticos globales para diagnosticar, medir y fortalecer ecosistemas de emprendimiento e innovación"
+    image={`${base}modelos.jpg`}
+    cta={{
+      primary: { text: 'Explorar Modelos', href: '#modelos' }
+    }}
+  />
+
+  <section class="section" id="modelos">
+    <div class="container">
+      <!-- MIT REAP -->
+      <div class="model-section observe">
+        <div class="model-header">
+          <div class="model-badge">MIT</div>
+          <div>
+            <h2 class="model-title">MIT REAP</h2>
+            <p class="model-subtitle">Regional Entrepreneurship Acceleration Program</p>
+          </div>
+        </div>
+
+        <p class="model-meta"><strong>Creado por:</strong> Massachusetts Institute of Technology (MIT), 2012</p>
+        <p class="model-meta"><strong>Aplicación:</strong> Más de 70 regiones en 5 continentes, 9 cohortes</p>
+
+        <ContentBox type="default">
+          <h3>Concepto Central</h3>
+          <p>El MIT REAP define los ecosistemas como lugares geográficamente delimitados donde empresas impulsadas por innovación (Innovation-Driven Enterprises) florecen. La innovación es el proceso de llevar ideas desde su concepción hasta el impacto. Enfatiza la importancia del <strong>alignment</strong> entre stakeholders críticos.</p>
+
+          <h4>5 Stakeholders Críticos</h4>
+          <p>Actualización del modelo de Triple Hélice para reflejar las realidades del siglo XXI:</p>
+          <div class="stakeholders-list">
+            <div class="stakeholder-item">
+              <span class="stakeholder-number">1</span>
+              <div>
+                <h5>Emprendedores</h5>
+                <p>Fundadores de startups tecnológicas centrales a la comunidad. Agentes de cambio que identifican oportunidades.</p>
+              </div>
+            </div>
+            <div class="stakeholder-item">
+              <span class="stakeholder-number">2</span>
+              <div>
+                <h5>Universidades</h5>
+                <p>Generación de conocimiento y transferencia tecnológica. Talento y know-how.</p>
+              </div>
+            </div>
+            <div class="stakeholder-item">
+              <span class="stakeholder-number">3</span>
+              <div>
+                <h5>Capital de Riesgo</h5>
+                <p>Inversores con conocimiento profundo regional. Financiamiento especializado para alto potencial.</p>
+              </div>
+            </div>
+            <div class="stakeholder-item">
+              <span class="stakeholder-number">4</span>
+              <div>
+                <h5>Gobierno</h5>
+                <p>Líderes capaces de influir políticas regionales. Marco regulatorio e infraestructura.</p>
+              </div>
+            </div>
+            <div class="stakeholder-item">
+              <span class="stakeholder-number">5</span>
+              <div>
+                <h5>Grandes Empresas</h5>
+                <p>Corporaciones que actúan como clientes, socios y canales de comercialización. Demanda sofisticada.</p>
+              </div>
+            </div>
+          </div>
+
+          <h4>Estructura del Sistema MIT</h4>
+          <div class="mit-structure">
+            <div class="structure-block foundation">
+              <h5>Instituciones Fundacionales (Base)</h5>
+              <p>Instituciones, reglas, prácticas y normas que aseguran que las inversiones puedan ser efectivamente protegidas y aprovechadas. Incluyen estado de derecho, protección de propiedad intelectual, cumplimiento de contratos.</p>
+            </div>
+            
+            <div class="arrow-down">↓</div>
+
+            <h5 class="structure-title">Motores Gemelos</h5>
+            <div class="capacities-grid">
+              <div class="capacity-card">
+                <h5>I-Cap (Innovation Capacity)</h5>
+                <p>Capacidad para desarrollar ideas nuevas-para-el-mundo y llevarlas desde concepción hasta impacto. Generación de conocimiento científico y tecnológico de frontera.</p>
+              </div>
+              <div class="capacity-card">
+                <h5>E-Cap (Entrepreneurship Capacity)</h5>
+                <p>Capacidad y condiciones para formar empresas impulsadas por innovación. Capacidad para comercializar ese conocimiento mediante nuevas empresas.</p>
+              </div>
+            </div>
+
+            <div class="arrow-down">↓</div>
+
+            <div class="structure-block impact">
+              <h5>Ventaja Comparativa + Impacto</h5>
+              <p>Áreas específicas de fortaleza que diferencian el lugar globalmente, generando crecimiento económico inclusivo y progreso social.</p>
+            </div>
+          </div>
+
+          <h4>Cinco Categorías de Inputs (para I-Cap y E-Cap)</h4>
+          <div class="inputs-grid">
+            <div class="input-item">
+              <h5>👨‍💼 Capital Humano</h5>
+              <p>Talento con educación, entrenamiento y experiencia relevante para innovación o emprendimiento.</p>
+            </div>
+            <div class="input-item">
+              <h5>💵 Financiamiento</h5>
+              <p>Capital público y privado que apoya desde orígenes hasta el viaje completo desde idea hasta impacto.</p>
+            </div>
+            <div class="input-item">
+              <h5>🏗️ Infraestructura</h5>
+              <p>Infraestructura física necesaria incluyendo espacio y equipo para descubrimiento, producción y cadenas de suministro.</p>
+            </div>
+            <div class="input-item">
+              <h5>📊 Demanda</h5>
+              <p>Nivel y naturaleza de demanda especializada para productos de las capacidades de innovación y emprendimiento.</p>
+            </div>
+            <div class="input-item">
+              <h5>🎭 Cultura e Incentivos</h5>
+              <p>Modelos de rol celebrados, normas sociales que dan forma a elecciones de carrera e incentivos para comportamientos.</p>
+            </div>
+          </div>
+
+          <h4>Metodología REAP</h4>
+          <ul class="methodology-list">
+            <li>Programa de 2 años con 4 talleres estructurados</li>
+            <li>Análisis profundo del ecosistema entre talleres</li>
+            <li>Definición de Must Win Battles (MWBs) - políticas/programas clave</li>
+            <li>Creación de Backbone Organizations (BBOs) para sostenibilidad</li>
+            <li>Énfasis en <strong>alineación</strong> entre stakeholders como objetivo implícito</li>
+          </ul>
+        </ContentBox>
+
+        <div class="pros-cons-grid">
+          <ContentBox type="highlight">
+            <h4><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display: inline; vertical-align: middle; margin-right: 8px;"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>Fortalezas</h4>
+            <ul>
+              <li>Marco comprehensivo e integrado</li>
+              <li>Reconocimiento de 5 stakeholders vs. 3</li>
+              <li>Énfasis en instituciones fundacionales</li>
+              <li>Distinción I-Cap / E-Cap</li>
+              <li>Probado en 70+ regiones globalmente</li>
+              <li>Enfoque en ventaja comparativa territorial</li>
+              <li>Metodología participativa que genera ownership local</li>
+            </ul>
+          </ContentBox>
+
+          <ContentBox type="info">
+            <h4><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display: inline; vertical-align: middle; margin-right: 8px;"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>Limitaciones</h4>
+            <ul>
+              <li>Requiere compromiso de stakeholders de alto nivel</li>
+              <li>Proceso intensivo de 2 años</li>
+              <li>Énfasis en tech puede no capturar toda diversidad</li>
+              <li>Aplicación global requiere adaptación local</li>
+              <li>Difícil comparabilidad cuantitativa entre regiones</li>
+            </ul>
+          </ContentBox>
+        </div>
+
+        <div class="reference-box">
+          <strong>Referencias:</strong> Budden, P., & Murray, F. (2019). MIT Regional Entrepreneurship Acceleration Program (REAP): A framework for regional innovation ecosystems. MIT. | Morgensztern, J. (2023). Design of a robust qualitative method to assess MIT REAP. Massachusetts Institute of Technology.
+        </div>
+      </div>
+
+      <!-- GEIAL -->
+      <div class="model-section observe">
+        <div class="model-header">
+          <div class="model-badge" style="background: var(--accent-secondary);">GEIAL</div>
+          <div>
+            <h2 class="model-title">GEIAL (ICSED)</h2>
+            <p class="model-subtitle">Índice de Condiciones Sistémicas para el Emprendimiento Dinámico</p>
+          </div>
+        </div>
+
+        <p class="model-meta"><strong>Creado por:</strong> PRODEM-UNGS (Universidad Nacional de General Sarmiento) + BID Lab</p>
+        <p class="model-meta"><strong>Aplicación:</strong> Ciudades latinoamericanas (Medellín, Cali, Guayaquil, Valparaíso, Lima)</p>
+
+        <ContentBox type="default">
+          <h3>Concepto Central</h3>
+          <p>Metodología mixta (cuantitativa-cualitativa) desarrollada por PRODEM-UNGS y BID Lab para medir y comparar ecosistemas de emprendimiento dinámico en ciudades latinoamericanas. Visión sistémica y evolutiva con enfoque territorial explícito.</p>
+
+          <div class="highlight-box">
+            <strong>Emprendimientos Dinámicos (concepto GEIAL):</strong> Empresas nuevas con potencial de convertirse en PyME con proyección de crecimiento luego de superados los primeros años, así como PyMEs jóvenes con proyección de crecimiento. El crecimiento es aspecto clave.
+          </div>
+
+          <h4>3 Ejes Interrelacionados</h4>
+          <div class="axes-grid">
+            <div class="axis-card">
+              <h5>Eje 1: Capital Humano Emprendedor</h5>
+              <p><strong>Cultura local:</strong> Valoración social, eventos, modelos de rol</p>
+              <p><strong>Ámbitos formativos:</strong> Sistema educativo y fuera de él</p>
+              <p><strong>Atracción y retención:</strong> Capacidad de mantener talento</p>
+            </div>
+            <div class="axis-card">
+              <h5>Eje 2: Fuentes de Oportunidades</h5>
+              <p><strong>Consumo local:</strong> Demanda interna regional</p>
+              <p><strong>Empresas locales:</strong> Cadenas de valor, open innovation</p>
+              <p><strong>Plataforma CTI:</strong> Conocimiento científico-tecnológico</p>
+              <p><strong>Demandas extra-locales:</strong> Mercados externos</p>
+            </div>
+            <div class="axis-card">
+              <h5>Eje 3: Factores Viabilizadores</h5>
+              <p><strong>Apoyo institucional:</strong> Incubadoras, aceleradoras</p>
+              <p><strong>Financiamiento:</strong> Todas las etapas del ciclo</p>
+              <p><strong>Capital social y redes:</strong> Locales y extra-locales</p>
+              <p><strong>Gobernanza:</strong> Coordinación y liderazgos</p>
+              <p><strong>Políticas locales:</strong> Marco normativo e incentivos</p>
+            </div>
+          </div>
+
+          <h4>Estructura del Modelo: 11 Dimensiones</h4>
+          <div class="dimensions-grid">
+            <div class="dimension-tag">1. Capital Humano Emprendedor</div>
+            <div class="dimension-tag">2. Cultura Emprendedora</div>
+            <div class="dimension-tag">3. Formación Emprendedora</div>
+            <div class="dimension-tag">4. Condiciones de la Demanda</div>
+            <div class="dimension-tag">5. Empresas y Oportunidades</div>
+            <div class="dimension-tag">6. Plataforma CTI y Oportunidades</div>
+            <div class="dimension-tag">7. Capital Social y Redes</div>
+            <div class="dimension-tag">8. Financiamiento</div>
+            <div class="dimension-tag">9. Apoyo Institucional</div>
+            <div class="dimension-tag">10. Regulaciones y Políticas</div>
+            <div class="dimension-tag">11. Gobernanza y Articulación</div>
+          </div>
+
+          <h4>Metodología Mixta Convergente</h4>
+          <p>Combina datos objetivos con percepciones de actores:</p>
+          <ul class="methodology-list">
+            <li><strong>Datos cuantitativos:</strong> Estadísticas oficiales, registros administrativos, censos</li>
+            <li><strong>Datos cualitativos:</strong> Encuestas a emprendedores, entrevistas a actores clave, grupos focales</li>
+            <li><strong>Triangulación:</strong> Contraste entre fuentes múltiples para validar hallazgos</li>
+          </ul>
+        </ContentBox>
+
+        <div class="pros-cons-grid">
+          <ContentBox type="highlight">
+            <h4><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display: inline; vertical-align: middle; margin-right: 8px;"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>Fortalezas</h4>
+            <ul>
+              <li>Marco teórico robusto (economía evolucionista)</li>
+              <li>Enfoque explícito en emprendimientos dinámicos</li>
+              <li>Perspectiva territorial multinivel</li>
+              <li>Metodología mixta cuanti-cualitativa</li>
+              <li>Aplicación sistemática permite benchmarking</li>
+              <li>Reconocimiento de demandas extra-locales</li>
+              <li>Gobernanza como dimensión específica</li>
+            </ul>
+          </ContentBox>
+
+          <ContentBox type="info">
+            <h4><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display: inline; vertical-align: middle; margin-right: 8px;"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>Limitaciones</h4>
+            <ul>
+              <li>Requiere datos desagregados regionalmente</li>
+              <li>Aplicación completa intensiva en recursos</li>
+              <li>Algunos indicadores pueden no estar disponibles</li>
+              <li>Énfasis en ciudades requiere adaptación para zonas rurales</li>
+            </ul>
+          </ContentBox>
+        </div>
+
+        <div class="reference-box">
+          <strong>Referencias:</strong> Kantis, H., Federico, J., & Ibarra García, S. (2020). Índice de Condiciones Sistémicas para el Emprendimiento Dinámico. PRODEM-UNGS & BID Lab. | GEIAL. (2023). Valparaíso: Diagnóstico del Ecosistema de Emprendimiento e Innovación.
+        </div>
+      </div>
+
+      <!-- MEEI CORFO -->
+      <div class="model-section observe">
+        <div class="model-header">
+          <div class="model-badge" style="background: var(--primary);">CORFO</div>
+          <div>
+            <h2 class="model-title">MEEI CORFO</h2>
+            <p class="model-subtitle">Modelo de Medición de Ecosistemas de Emprendimiento e Innovación</p>
+          </div>
+        </div>
+
+        <p class="model-meta"><strong>Creado por:</strong> CORFO (Corporación de Fomento de la Producción), Chile</p>
+        <p class="model-meta"><strong>Aplicación:</strong> 16 regiones de Chile</p>
+
+        <ContentBox type="default">
+          <h3>Concepto Central</h3>
+          <p>Modelo cuantitativo desarrollado por CORFO Chile para medir y comparar ecosistemas de emprendimiento e innovación a nivel regional. Enfatiza la distinción entre condiciones estructurales y dinámicas del ecosistema.</p>
+
+          <h4>3 Componentes Interrelacionados</h4>
+          <div class="components-grid">
+            <div class="component-card">
+              <div class="component-number">1</div>
+              <h5>Condiciones del Entorno</h5>
+              <p>Factores estructurales y relativamente estables que configuran el contexto territorial. No generan emprendimiento por sí mismos, pero lo habilitan o restringen.</p>
+              <ul>
+                <li>Desarrollo económico general</li>
+                <li>Infraestructura básica</li>
+                <li>Calidad institucional</li>
+                <li>Capital humano disponible</li>
+                <li>Conectividad territorial</li>
+              </ul>
+            </div>
+
+            <div class="component-card">
+              <div class="component-number">2</div>
+              <h5>Condiciones Sistémicas</h5>
+              <p>Conforman el núcleo dinámico del ecosistema. Son elementos endógenos y altamente sensibles a la acción colectiva y políticas territoriales.</p>
+              <ul>
+                <li>Cultura emprendedora</li>
+                <li>Capacidades de innovación</li>
+                <li>Articulación entre actores</li>
+                <li>Financiamiento especializado</li>
+                <li>Apoyo institucional</li>
+                <li>Redes y capital social</li>
+              </ul>
+            </div>
+
+            <div class="component-card">
+              <div class="component-number">3</div>
+              <h5>Actividad Emprendedora</h5>
+              <p>Es el resultado directo y observable del ecosistema. Permite identificar el tipo y calidad del emprendimiento que se está generando en el territorio.</p>
+              <ul>
+                <li>Tasa de creación de empresas</li>
+                <li>Supervivencia empresarial</li>
+                <li>Presencia de startups y scaleups</li>
+                <li>EBCTs</li>
+                <li>Emprendimientos exportadores</li>
+              </ul>
+            </div>
+          </div>
+
+          <h4>Perspectiva Sistémica</h4>
+          <p>El MEEI permite observar el ecosistema desde una perspectiva sistémica, reconociendo interdependencias entre los tres componentes. Es el marco oficial para comparaciones interregionales en Chile.</p>
+        </ContentBox>
+
+        <div class="pros-cons-grid">
+          <ContentBox type="highlight">
+            <h4><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display: inline; vertical-align: middle; margin-right: 8px;"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>Fortalezas</h4>
+            <ul>
+              <li>Marco oficial chileno para comparaciones</li>
+              <li>Distinción clara entre condiciones estructurales y dinámicas</li>
+              <li>Enfoque sistémico con interdependencias</li>
+              <li>Diagnósticos disponibles para todas las regiones</li>
+              <li>Perspectiva territorial explícita</li>
+              <li>Orientación directa a políticas públicas</li>
+            </ul>
+          </ContentBox>
+
+          <ContentBox type="info">
+            <h4><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display: inline; vertical-align: middle; margin-right: 8px;"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>Limitaciones</h4>
+            <ul>
+              <li>Menor desarrollo teórico vs. marcos académicos</li>
+              <li>Énfasis cuantitativo puede subestimar aspectos cualitativos</li>
+              <li>Puede no capturar suficientemente especificidades locales</li>
+              <li>Menor énfasis en dinámicas relacionales entre actores</li>
+            </ul>
+          </ContentBox>
+        </div>
+
+        <div class="reference-box">
+          <strong>Referencias:</strong> CORFO. (2024). Modelo de Medición de Ecosistemas de Emprendimiento e Innovación - Región de Ñuble. | CORFO. (2025). Ecosistema chileno de emprendimiento e innovación.
+        </div>
+      </div>
+
+      <!-- Comparación -->
+      <div class="comparison-section observe">
+        <h2 class="section-title">Tabla Comparativa de Modelos</h2>
+        <div class="comparison-table-wrapper">
+          <table class="comparison-table">
+            <thead>
+              <tr>
+                <th>Modelo</th>
+                <th>Enfoque Principal</th>
+                <th>Dimensiones Clave</th>
+                <th>Aplicación</th>
+                <th>Mejor para...</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>MIT REAP</strong></td>
+                <td>Innovation-driven ecosystems</td>
+                <td>5 stakeholders + 5 inputs (I-Cap/E-Cap)</td>
+                <td>Global (70+ regiones)</td>
+                <td>Articulación multi-actor, ventaja comparativa territorial</td>
+              </tr>
+              <tr>
+                <td><strong>GEIAL</strong></td>
+                <td>Emprendimientos dinámicos</td>
+                <td>11 dimensiones (3 ejes: capital humano, oportunidades, viabilizadores)</td>
+                <td>Latinoamérica</td>
+                <td>Benchmarking ciudades, enfoque territorial multinivel</td>
+              </tr>
+              <tr>
+                <td><strong>MEEI CORFO</strong></td>
+                <td>Diagnóstico regional</td>
+                <td>3 componentes (entorno, sistémicas, actividad)</td>
+                <td>Chile (16 regiones)</td>
+                <td>Políticas públicas, comparación interregional nacional</td>
+              </tr>
+              <tr>
+                <td><strong>Stam</strong></td>
+                <td>Emprendimiento productivo</td>
+                <td>Condiciones marco + sistémicas</td>
+                <td>Europa, global</td>
+                <td>Claridad conceptual, distinción tipos de condiciones</td>
+              </tr>
+              <tr>
+                <td><strong>Isenberg (Babson)</strong></td>
+                <td>6 dominios holísticos</td>
+                <td>Política, finanzas, cultura, apoyos, capital humano, mercados</td>
+                <td>Global</td>
+                <td>Comunicación con stakeholders, marco intuitivo</td>
+              </tr>
+              <tr>
+                <td><strong>GEM</strong></td>
+                <td>Actividad emprendedora poblacional</td>
+                <td>TEA, condiciones del contexto empresarial</td>
+                <td>100+ países</td>
+                <td>Comparaciones internacionales, tendencias temporales</td>
+              </tr>
+              <tr>
+                <td><strong>OCDE</strong></td>
+                <td>Determinantes-Desempeño-Impacto</td>
+                <td>6 determinantes, métricas de desempeño</td>
+                <td>Países OCDE</td>
+                <td>Rigor cuantitativo, comparabilidad internacional</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .model-section {
+    margin-bottom: var(--spacing-3xl);
+  }
+
+  .model-header {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-sm);
+  }
+
+  .model-badge {
+    padding: 0.75rem 1.5rem;
+    background: var(--accent);
+    color: var(--secondary);
+    border-radius: var(--radius-full);
+    font-weight: 800;
+    font-size: 1rem;
+  }
+
+  .model-title {
+    font-size: clamp(1.75rem, 3vw, 2.5rem);
+    font-weight: 800;
+    color: var(--primary);
+    margin-bottom: 0.25rem;
+  }
+
+  .model-subtitle {
+    font-size: 1rem;
+    color: var(--gray-600);
+  }
+
+  .model-meta {
+    font-size: 0.95rem;
+    color: var(--gray-900);
+    margin-bottom: 0.25rem;
+  }
+
+  /* MIT Structure */
+  .mit-structure {
+    background: var(--gray-50);
+    padding: var(--spacing-lg);
+    border-radius: var(--radius-md);
+    margin: var(--spacing-lg) 0;
+    text-align: center;
+  }
+
+  .structure-block {
+    background: var(--white);
+    padding: var(--spacing-md);
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--gray-200);
+  }
+
+  .structure-block h5 {
+    color: var(--primary);
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+  }
+
+  .structure-title {
+    color: var(--primary);
+    font-weight: 700;
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+  }
+
+  .arrow-down {
+    font-size: 2rem;
+    color: var(--primary);
+    margin: 1rem 0;
+  }
+
+  /* Capacities */
+  .capacities-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--spacing-md);
+    margin: var(--spacing-md) 0;
+  }
+
+  .capacity-card {
+    background: var(--white);
+    padding: var(--spacing-md);
+    border-radius: var(--radius-sm);
+    border-left: 4px solid var(--accent);
+    text-align: left;
+    box-shadow: var(--shadow-sm);
+  }
+
+  .capacity-card h5 {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--primary);
+    margin-bottom: 0.5rem;
+  }
+
+  .capacity-card p {
+    font-size: 0.9375rem;
+    color: var(--gray-900);
+  }
+
+  /* Stakeholders */
+  .stakeholders-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--spacing-md);
+    margin-top: var(--spacing-md);
+  }
+
+  .stakeholder-item {
+    display: flex;
+    gap: var(--spacing-md);
+    align-items: flex-start;
+    background: var(--gray-50);
+    padding: var(--spacing-md);
+    border-radius: var(--radius-sm);
+  }
+
+  .stakeholder-number {
+    width: 32px;
+    height: 32px;
+    background: var(--primary);
+    color: var(--secondary);
+    border-radius: var(--radius-full);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    flex-shrink: 0;
+  }
+
+  .stakeholder-item h5 {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--primary);
+    margin-bottom: 0.25rem;
+  }
+
+  .stakeholder-item p {
+    font-size: 0.875rem;
+    color: var(--gray-900);
+  }
+
+  /* Inputs Grid */
+  .inputs-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: var(--spacing-md);
+    margin: var(--spacing-md) 0;
+  }
+
+  .input-item {
+    background: linear-gradient(135deg, rgba(89, 51, 172, 0.05), rgba(124, 95, 196, 0.05));
+    border-left: 4px solid var(--accent-secondary);
+    padding: 1rem;
+    border-radius: var(--radius-sm);
+  }
+
+  .input-item h5 {
+    color: var(--primary);
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    font-size: 0.95rem;
+  }
+
+  .input-item p {
+    font-size: 0.85rem;
+    color: var(--gray-900);
+  }
+
+  /* Methodology List */
+  .methodology-list {
+    margin-left: 1.5rem;
+    margin-top: 1rem;
+  }
+
+  .methodology-list li {
+    margin-bottom: 0.5rem;
+    color: var(--gray-900);
+  }
+
+  /* Highlight Box */
+  .highlight-box {
+    background: rgba(52, 152, 219, 0.1);
+    padding: 1.5rem;
+    border-radius: var(--radius-sm);
+    margin: 1.5rem 0;
+    border-left: 4px solid var(--accent-secondary);
+    color: var(--gray-900);
+  }
+
+  /* Dimensions */
+  .dimensions-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 0.5rem;
+    margin: var(--spacing-md) 0;
+  }
+
+  .dimension-tag {
+    background: var(--accent-secondary);
+    color: var(--secondary);
+    padding: 0.75rem;
+    border-radius: var(--radius-sm);
+    font-weight: 600;
+    text-align: center;
+    font-size: 0.875rem;
+  }
+
+  /* Axes */
+  .axes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--spacing-md);
+    margin: var(--spacing-md) 0;
+  }
+
+  .axis-card {
+    background: var(--gray-50);
+    padding: var(--spacing-md);
+    border-radius: var(--radius-sm);
+    border-top: 4px solid var(--accent-secondary);
+  }
+
+  .axis-card h5 {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--accent-secondary);
+    margin-bottom: 0.5rem;
+  }
+
+  .axis-card p {
+    font-size: 0.9rem;
+    color: var(--gray-900);
+    margin-bottom: 0.5rem;
+  }
+
+  /* Components */
+  .components-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--spacing-lg);
+    margin: var(--spacing-md) 0;
+  }
+
+  .component-card {
+    background: var(--gray-50);
+    padding: var(--spacing-lg);
+    border-radius: var(--radius-sm);
+    border-top: 2px solid var(--primary);
+  }
+
+  .component-number {
+    width: 40px;
+    height: 40px;
+    background: var(--primary);
+    color: var(--secondary);
+    border-radius: var(--radius-full);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+    font-size: 1.25rem;
+    margin-bottom: var(--spacing-sm);
+  }
+
+  .component-card h5 {
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: var(--primary);
+    margin-bottom: 0.5rem;
+  }
+
+  .component-card p {
+    font-size: 0.9375rem;
+    color: var(--gray-900);
+    margin-bottom: var(--spacing-sm);
+  }
+
+  .component-card ul {
+    list-style: none;
+    padding-left: 0;
+  }
+
+  .component-card li {
+    padding-left: 1.25rem;
+    position: relative;
+    margin-bottom: 0.5rem;
+    font-size: 0.875rem;
+    color: var(--gray-900);
+  }
+
+  .component-card li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: var(--primary);
+  }
+
+  /* Pros/Cons Grid */
+  .pros-cons-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--spacing-lg);
+    margin-top: var(--spacing-lg);
+  }
+
+  /* Reference Box */
+  .reference-box {
+    background: var(--gray-50);
+    padding: 1.5rem;
+    border-radius: var(--radius-sm);
+    font-size: 0.9rem;
+    margin-top: 1.5rem;
+    color: var(--gray-900);
+    border-left: 2px solid var(--gray-300);
+  }
+
+  .reference-box strong {
+    color: var(--primary);
+  }
+
+  /* Comparison Table */
+  .comparison-section {
+    background: var(--gray-50);
+    padding: var(--spacing-xl);
+    border-radius: var(--radius-lg);
+    margin-top: var(--spacing-3xl);
+  }
+
+  .section-title {
+    font-size: clamp(1.75rem, 3vw, 2.5rem);
+    font-weight: 800;
+    color: var(--primary);
+    margin-bottom: var(--spacing-lg);
+    text-align: center;
+  }
+
+  .comparison-table-wrapper {
+    overflow-x: auto;
+  }
+
+  .comparison-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--secondary);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+  }
+
+  .comparison-table thead {
+    background: var(--primary);
+    color: var(--secondary);
+  }
+
+  .comparison-table th {
+    padding: var(--spacing-md);
+    text-align: left;
+    font-weight: 700;
+  }
+
+  .comparison-table td {
+    padding: var(--spacing-md);
+    border-bottom: 1px solid var(--gray-300);
+    color: var(--gray-900);
+  }
+
+  .comparison-table tbody tr:hover {
+    background: var(--gray-50);
+  }
+
+  /* Responsive */
+  @media (max-width: 968px) {
+    .capacities-grid,
+    .axes-grid,
+    .components-grid,
+    .pros-cons-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .dimensions-grid,
+    .classification-grid {
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+  }
+</style>

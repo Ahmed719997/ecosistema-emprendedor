@@ -1,0 +1,828 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Hero from '../components/Hero.astro';
+import ContentBox from '../components/ContentBox.astro';
+const base = import.meta.env.BASE_URL;
+
+---
+
+<Layout title="Casos de Estudio">
+  <Hero 
+    title="Casos de Estudio"
+    subtitle="Analiza ecosistemas reales en América Latina: Medellín, Lima, Valparaíso, Ñuble. Aprende de éxitos y desafíos concretos"
+    image={`${base}casos.jpg`}
+    cta={{
+      primary: { text: 'Explorar Casos', href: '#casos' }
+    }}
+  />
+
+  <section class="section" id="casos">
+    <div class="container">
+      
+      <!-- MEDELLÍN -->
+      <div class="case-study observe">
+        <div class="case-header">
+          <div class="case-flag">🇨🇴</div>
+          <div>
+            <h2 class="case-title">Medellín, Colombia</h2>
+            <p class="case-subtitle">De la violencia a la innovación: Transformación del ecosistema (2004-2024)</p>
+          </div>
+        </div>
+
+        <div class="stats-grid">
+          <div class="stat-box">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+            <div class="stat-number">58</div>
+            <div class="stat-label">Índice GEIAL (Top 1 LAC)</div>
+          </div>
+          <div class="stat-box">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            <div class="stat-number">2.5M</div>
+            <div class="stat-label">Habitantes</div>
+          </div>
+          <div class="stat-box">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg>
+            <div class="stat-number">Top 1</div>
+            <div class="stat-label">Ecosistema Colombia</div>
+          </div>
+          <div class="stat-box">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            <div class="stat-number">20 años</div>
+            <div class="stat-label">De transformación</div>
+          </div>
+        </div>
+
+        <ContentBox type="default">
+          <h3>Contexto y Evolución</h3>
+          <p>Medellín representa el caso más emblemático de transformación de ecosistema en América Latina. En los años 90, era considerada la ciudad más violenta del mundo. A través de políticas públicas innovadoras, inversión sostenida en educación e infraestructura, y liderazgo articulado, logró convertirse en referente mundial de innovación social y emprendimiento.</p>
+          
+          <div class="timeline">
+            <div class="timeline-item">
+              <div class="timeline-year">2004</div>
+              <div class="timeline-content">
+                <strong>Plan Estratégico de Medellín</strong>
+                <p>Creación de visión compartida de ciudad con participación de 30,000 ciudadanos. Énfasis en educación, innovación y transformación urbana.</p>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-year">2008</div>
+              <div class="timeline-content">
+                <strong>Creación de Ruta N</strong>
+                <p>Centro de innovación y negocios como organización backbone del ecosistema. Inversión de $40M USD en infraestructura.</p>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-year">2012</div>
+              <div class="timeline-content">
+                <strong>Capital de la Innovación</strong>
+                <p>Reconocimiento internacional (WSJ). Creación del Distrito de Innovación. Atracción de empresas tecnológicas globales.</p>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-year">2016</div>
+              <div class="timeline-content">
+                <strong>Consolidación del Ecosistema</strong>
+                <p>Más de 200 startups activas, 15 aceleradoras e incubadoras, $150M USD en inversión venture capital acumulada.</p>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-year">2020-24</div>
+              <div class="timeline-content">
+                <strong>Madurez y Liderazgo Regional</strong>
+                <p>Índice GEIAL de 58 puntos (el más alto de América Latina). Hub regional de emprendimiento tecnológico e innovación social.</p>
+              </div>
+            </div>
+          </div>
+        </ContentBox>
+
+        <div class="highlights-grid">
+          <ContentBox type="highlight">
+            <h4><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display: inline; vertical-align: middle; margin-right: 8px;"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>Fortalezas Clave</h4>
+            <ul>
+              <li><strong>Gobernanza articulada:</strong> Ruta N como backbone organization efectiva.</li>
+              <li><strong>Inversión pública sostenida:</strong> 2-3% del presupuesto municipal a CTI.</li>
+              <li><strong>Infraestructura:</strong> Distrito de Innovación, Parque E.</li>
+              <li><strong>Cultura:</strong> Narrativa de superación y orgullo ("Medellín Innovadora").</li>
+            </ul>
+          </ContentBox>
+
+          <ContentBox type="warning">
+            <h4><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display: inline; vertical-align: middle; margin-right: 8px;"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>Desafíos Persistentes</h4>
+            <ul>
+              <li><strong>Brecha financiamiento:</strong> Limitado capital para series B+ (growth).</li>
+              <li><strong>Desigualdad territorial:</strong> Concentración en norte de la ciudad.</li>
+              <li><strong>Dependencia pública:</strong> Ecosistema aún requiere subsidio fuerte.</li>
+              <li><strong>Mercado local:</strong> Necesidad de internacionalización temprana.</li>
+            </ul>
+          </ContentBox>
+        </div>
+
+        <ContentBox type="info">
+          <h3>Dimensiones GEIAL - Desempeño Destacado</h3>
+          <div class="table-wrapper">
+            <table class="comparison-table">
+              <thead>
+                <tr>
+                  <th>Dimensión</th>
+                  <th>Puntaje Medellín</th>
+                  <th>Promedio LAC</th>
+                  <th>Observación</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Cultura Emprendedora</td>
+                  <td class="score-high">68</td>
+                  <td>42</td>
+                  <td>Muy superior al promedio</td>
+                </tr>
+                <tr>
+                  <td>Formación</td>
+                  <td class="score-high">65</td>
+                  <td>38</td>
+                  <td>Programas de excelencia</td>
+                </tr>
+                <tr>
+                  <td>Gobernanza</td>
+                  <td class="score-high">70</td>
+                  <td>30</td>
+                  <td>El más alto de LAC</td>
+                </tr>
+                <tr>
+                  <td>Financiamiento</td>
+                  <td class="score-mid">48</td>
+                  <td>32</td>
+                  <td>Espacio de mejora</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </ContentBox>
+
+        <div class="lessons-box">
+          <h4>🎓 Lecciones Transferibles</h4>
+          <ul>
+            <li><strong>Importancia de backbone organizations:</strong> Ruta N demostró que una entidad articuladora es crítica.</li>
+            <li><strong>Inversión sostenida:</strong> Transformación tomó 20 años de inversión consistente.</li>
+            <li><strong>Narrativa movilizadora:</strong> Un relato compartido genera identidad y propósito.</li>
+            <li><strong>Alianzas público-privadas:</strong> EPM (empresa pública) como actor clave inversionista.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- LIMA -->
+      <div class="case-study observe">
+        <div class="case-header">
+          <div class="case-flag">🇵🇪</div>
+          <div>
+            <h2 class="case-title">Lima, Perú</h2>
+            <p class="case-subtitle">Crecimiento acelerado y análisis de redes (2014-2018)</p>
+          </div>
+        </div>
+
+        <div class="stats-grid">
+          <div class="stat-box">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            <div class="stat-number">10M</div>
+            <div class="stat-label">Habitantes</div>
+          </div>
+          <div class="stat-box">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg>
+            <div class="stat-number">350%</div>
+            <div class="stat-label">Crecimiento startups (2014-18)</div>
+          </div>
+          <div class="stat-box">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18Z"/><path d="M6 12H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2"/><path d="M18 9h2a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-2"/><path d="M10 6h4"/><path d="M10 10h4"/><path d="M10 14h4"/><path d="M10 18h4"/></svg>
+            <div class="stat-number">800+</div>
+            <div class="stat-label">Startups activas</div>
+          </div>
+          <div class="stat-box">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+            <div class="stat-number">$250M</div>
+            <div class="stat-label">Inversión VC acumulada</div>
+          </div>
+        </div>
+
+        <ContentBox type="default">
+          <h3>Análisis Metodológico BID (SNA)</h3>
+          <p>Lima fue objeto de un estudio pionero del BID que aplicó metodología de análisis de redes sociales (SNA) para mapear la evolución del ecosistema. Este caso ilustra cómo herramientas cuantitativas revelan dinámicas de maduración.</p>
+          
+          <div class="comparison-grid">
+            <div class="comparison-item">
+              <h4>2014 - Ecosistema Emergente</h4>
+              <ul>
+                <li>180 actores mapeados</li>
+                <li>Densidad de red: 0.12 (baja)</li>
+                <li>Alta centralización (pocos nodos conectores)</li>
+                <li>Sub-comunidades desconectadas</li>
+              </ul>
+            </div>
+            <div class="comparison-item">
+              <h4>2018 - Ecosistema en Maduración</h4>
+              <ul>
+                <li>620 actores mapeados (+244%)</li>
+                <li>Densidad de red: 0.28 (mejor conectividad)</li>
+                <li>Red más distribuida (menor centralización)</li>
+                <li>Emergencia de "dealmakers"</li>
+              </ul>
+            </div>
+          </div>
+        </ContentBox>
+
+        <div class="highlights-grid">
+          <ContentBox type="highlight">
+            <h4><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display: inline; vertical-align: middle; margin-right: 8px;"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>Factores de Aceleración</h4>
+            <ul>
+              <li><strong>StartUp Perú:</strong> $30M USD en subsidios gubernamentales.</li>
+              <li><strong>Crecimiento económico:</strong> Clase media emergente y consumo.</li>
+              <li><strong>Entrada de VC regional:</strong> Fondos de Chile, Colombia y México.</li>
+              <li><strong>Eventos:</strong> De 12 a 60+ eventos anuales (networking).</li>
+            </ul>
+          </ContentBox>
+
+          <ContentBox type="warning">
+            <h4><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display: inline; vertical-align: middle; margin-right: 8px;"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>Desafíos Identificados</h4>
+            <ul>
+              <li><strong>Concentración extrema:</strong> 95% actividad en Lima.</li>
+              <li><strong>Escasez capital growth:</strong> Poco funding para Series B+.</li>
+              <li><strong>Pocos emprendedores seriales:</strong> Falta de reciclaje de talento.</li>
+              <li><strong>Marco regulatorio:</strong> Burocracia compleja.</li>
+            </ul>
+          </ContentBox>
+        </div>
+
+        <ContentBox type="info">
+          <h3>Actores Críticos Identificados</h3>
+          <div class="table-wrapper">
+            <table class="comparison-table">
+              <thead>
+                <tr>
+                  <th>Tipo de Actor</th>
+                  <th>Ejemplos</th>
+                  <th>Rol en el Ecosistema</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>Incubadoras</strong></td>
+                  <td>UTEC Ventures, Wayra, StartUp Perú</td>
+                  <td>Nodos centrales, conectan recursos</td>
+                </tr>
+                <tr>
+                  <td><strong>Fondos VC</strong></td>
+                  <td>Nazca, Angel Ventures</td>
+                  <td>Capital y validación</td>
+                </tr>
+                <tr>
+                  <td><strong>Corporaciones</strong></td>
+                  <td>BCP, Telefónica, Alicorp</td>
+                  <td>Open innovation, CVC</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </ContentBox>
+
+        <div class="lessons-box">
+          <h4>🎓 Lecciones del Caso Lima</h4>
+          <ul>
+            <li><strong>Valor del análisis de redes:</strong> Permite identificar cuellos de botella estructurales.</li>
+            <li><strong>Importancia de eventos:</strong> Aumentan la conectividad de la red de forma mensurable.</li>
+            <li><strong>Rol del gobierno:</strong> StartUp Perú generó el volumen crítico inicial.</li>
+            <li><strong>Crecimiento vs Sostenibilidad:</strong> El crecimiento rápido puede mantener fragilidades estructurales.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- ÑUBLE -->
+      <div class="case-study observe">
+        <div class="case-header">
+          <div class="case-flag">🇨🇱</div>
+          <div>
+            <h2 class="case-title">Región de Ñuble, Chile</h2>
+            <p class="case-subtitle">Ecosistema emergente en región no metropolitana (2024)</p>
+          </div>
+        </div>
+
+        <div class="stats-grid">
+          <div class="stat-box">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            <div class="stat-number">481K</div>
+            <div class="stat-label">Habitantes</div>
+          </div>
+          <div class="stat-box">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <div class="stat-number">30.6%</div>
+            <div class="stat-label">Población rural</div>
+          </div>
+          <div class="stat-box">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg>
+            <div class="stat-number">29.2%</div>
+            <div class="stat-label">Tasa TEA (Alta)</div>
+          </div>
+          <div class="stat-box">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            <div class="stat-number">2018</div>
+            <div class="stat-label">Creación región</div>
+          </div>
+        </div>
+
+        <ContentBox type="default">
+          <h3>Contexto y Diagnóstico MEEI</h3>
+          <p>La Región de Ñuble, creada en 2018, es un caso de ecosistema emergente en territorio no metropolitano. Con economía basada en agricultura, enfrenta desafíos de regiones periféricas pero cuenta con activos estratégicos como su especialización agroalimentaria.</p>
+          
+          <div class="table-wrapper">
+            <table class="comparison-table">
+              <thead>
+                <tr>
+                  <th>Componente MEEI</th>
+                  <th>Ñuble</th>
+                  <th>Promedio Chile</th>
+                  <th>Brecha</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Condiciones del Entorno</td>
+                  <td>4.2</td>
+                  <td>5.8</td>
+                  <td class="score-low">-1.6</td>
+                </tr>
+                <tr>
+                  <td>Condiciones Sistémicas</td>
+                  <td>3.8</td>
+                  <td>5.2</td>
+                  <td class="score-low">-1.4</td>
+                </tr>
+                <tr>
+                  <td>Actividad Emprendedora</td>
+                  <td>5.1</td>
+                  <td>4.9</td>
+                  <td class="score-high">+0.2</td>
+                </tr>
+              </tbody>
+            </table>
+            <p class="table-note">Nota: Ñuble presenta la paradoja de alta actividad (volumen) con bajas condiciones (calidad), indicando predominio de emprendimiento por necesidad.</p>
+          </div>
+        </ContentBox>
+
+        <div class="highlights-grid">
+          <ContentBox type="highlight">
+            <h4><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display: inline; vertical-align: middle; margin-right: 8px;"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>Fortalezas Identificadas</h4>
+            <ul>
+              <li><strong>Especialización productiva:</strong> Clúster agroalimentario (berries, vino).</li>
+              <li><strong>Educación Superior:</strong> U. del Bío-Bío, UdeC, INACAP.</li>
+              <li><strong>Capital Social:</strong> Redes comunitarias activas y confianza.</li>
+              <li><strong>Identidad:</strong> Sentido de pertenencia por nueva región.</li>
+            </ul>
+          </ContentBox>
+
+          <ContentBox type="warning">
+            <h4><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display: inline; vertical-align: middle; margin-right: 8px;"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>Brechas Críticas</h4>
+            <ul>
+              <li><strong>Capacidades I+D:</strong> Gasto casi nulo (0.05% PIB regional).</li>
+              <li><strong>Financiamiento:</strong> Ausencia de capital de riesgo local.</li>
+              <li><strong>Apoyo especializado:</strong> Solo una incubadora activa.</li>
+              <li><strong>Fuga de talento:</strong> Migración a Santiago/Concepción.</li>
+            </ul>
+          </ContentBox>
+        </div>
+
+        <div class="lessons-box">
+          <h4>🎓 Lecciones y Oportunidades</h4>
+          <ul>
+            <li><strong>Volumen no es calidad:</strong> Alta tasa de emprendimiento no basta si es por necesidad.</li>
+            <li><strong>AgTech & FoodTech:</strong> Oportunidad de construir sobre la base agrícola existente.</li>
+            <li><strong>Conectividad extra-local:</strong> Vital tender puentes con ecosistemas más avanzados (Concepción/Santiago).</li>
+            <li><strong>Rol de Universidades:</strong> Deben liderar la I+D ante la ausencia de actores privados fuertes.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- VALPARAÍSO -->
+      <div class="case-study observe">
+        <div class="case-header">
+          <div class="case-flag">🇨🇱</div>
+          <div>
+            <h2 class="case-title">Valparaíso, Chile</h2>
+            <p class="case-subtitle">Hub creativo y tecnológico: Ventajas y contradicciones (2023-2025)</p>
+          </div>
+        </div>
+
+        <div class="stats-grid">
+          <div class="stat-box">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            <div class="stat-number">11.43%</div>
+            <div class="stat-label">Startups chilenas</div>
+          </div>
+          <div class="stat-box">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18Z"/><path d="M6 12H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2"/><path d="M18 9h2a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-2"/><path d="M10 6h4"/><path d="M10 10h4"/><path d="M10 14h4"/><path d="M10 18h4"/></svg>
+            <div class="stat-number">5</div>
+            <div class="stat-label">Universidades principales</div>
+          </div>
+          <div class="stat-box">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg>
+            <div class="stat-number">Top 3</div>
+            <div class="stat-label">Ecosistema Chile</div>
+          </div>
+          <div class="stat-box">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            <div class="stat-number">1M</div>
+            <div class="stat-label">Habitantes (Gran Valpo)</div>
+          </div>
+        </div>
+
+        <ContentBox type="default">
+          <h3>Perfil del Ecosistema</h3>
+          <p>Valparaíso presenta un ecosistema con características distintivas: fuerte identidad cultural, concentración de industrias creativas y tecnológicas, presencia universitaria significativa, pero también contradicciones entre potencial y realización.</p>
+        </ContentBox>
+
+        <div class="highlights-grid">
+          <ContentBox type="highlight">
+            <h4><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display: inline; vertical-align: middle; margin-right: 8px;"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>Activos Estratégicos</h4>
+            <ul>
+              <li><strong>Concentración de talento creativo:</strong> Artistas, diseñadores, desarrolladores atraídos por identidad cultural.</li>
+              <li><strong>UTFSM como ancla tecnológica:</strong> Generación de ingenieros de excelencia y spin-offs.</li>
+              <li><strong>Proximidad a Santiago:</strong> Acceso a recursos manteniendo ventajas de costo y calidad de vida.</li>
+              <li><strong>Patrimonio UNESCO:</strong> Atractivo para turismo, eventos y marca territorial.</li>
+              <li><strong>Puerto de Valparaíso:</strong> Oportunidades en logtech y comercio exterior.</li>
+            </ul>
+          </ContentBox>
+
+          <ContentBox type="warning">
+            <h4><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display: inline; vertical-align: middle; margin-right: 8px;"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>Desafíos y Contradicciones</h4>
+            <ul>
+              <li><strong>Brecha socioeconómica extrema:</strong> Coexistencia de talento tech con pobreza urbana.</li>
+              <li><strong>Infraestructura urbana deteriorada:</strong> Servicios deficientes y congestión.</li>
+              <li><strong>Fuga de talento:</strong> Migración post-graduación a Santiago o extranjero.</li>
+              <li><strong>Financiamiento limitado:</strong> Escasez de VC regional, dependencia de Santiago.</li>
+              <li><strong>Desarticulación:</strong> Iniciativas fragmentadas, falta coordinación.</li>
+            </ul>
+          </ContentBox>
+        </div>
+
+        <ContentBox type="info">
+          <h3>Análisis Sectorial de Startups</h3>
+          <div class="table-wrapper">
+            <table class="comparison-table">
+              <thead>
+                <tr>
+                  <th>Sector</th>
+                  <th>% Startups</th>
+                  <th>Ejemplos</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Industrias Creativas</td>
+                  <td>32%</td>
+                  <td>Gaming, diseño digital, audiovisual</td>
+                </tr>
+                <tr>
+                  <td>Tecnología</td>
+                  <td>28%</td>
+                  <td>Software, desarrollo web, apps</td>
+                </tr>
+                <tr>
+                  <td>Servicios Profesionales</td>
+                  <td>18%</td>
+                  <td>Consultoría, marketing digital</td>
+                </tr>
+                <tr>
+                  <td>Comercio Electrónico</td>
+                  <td>12%</td>
+                  <td>Marketplace, retail online</td>
+                </tr>
+                <tr>
+                  <td>Otros</td>
+                  <td>10%</td>
+                  <td>EdTech, HealthTech, turismo</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </ContentBox>
+
+        <div class="opportunities-box" style="margin-top: 2rem;">
+          <h4 style="color: var(--primary); font-weight: 700; margin-bottom: 1rem;">🚀 Oportunidades Identificadas</h4>
+          <ul style="padding-left: 1.5rem; line-height: 1.8;">
+            <li><strong>Creative Tech Hub:</strong> Consolidar posición en intersección creatividad-tecnología (gaming, VR/AR).</li>
+            <li><strong>Remote Work Destination:</strong> Promover como destino para nómadas digitales.</li>
+            <li><strong>Smart Port:</strong> Modernización tecnológica portuaria, logtech.</li>
+            <li><strong>Turismo innovador:</strong> Soluciones tech para turismo cultural.</li>
+            <li><strong>Activación patrimonial:</strong> Reutilización de edificios históricos como hubs.</li>
+          </ul>
+        </div>
+
+        <div class="lessons-box">
+          <h4>🎓 Lecciones del Caso Valparaíso</h4>
+          <ul>
+            <li><strong>Identidad territorial como activo:</strong> La marca "Valparaíso" atrae talento creativo único.</li>
+            <li><strong>Proximidad es ventaja relativa:</strong> Cercanía a metrópolis permite acceso sin sus costos.</li>
+            <li><strong>Necesidad de inversión pública estratégica:</strong> El potencial requiere inversión deliberada.</li>
+            <li><strong>Riesgo de gentrificación tech:</strong> Ecosistema puede agravar desigualdades si no es inclusivo.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- REFERENCIAS -->
+      <div class="case-study" style="background: var(--gray-50); border-top-color: var(--gray-800);">
+        <h2 class="case-title" style="font-size: 1.5rem; margin-bottom: 1.5rem;">Referencias Bibliográficas (APA 7)</h2>
+        <div class="references-accordion">
+          <details class="reference-item">
+            <summary>CORFO (2024)</summary>
+            <p>CORFO. (2024). <em>Modelo de Medición de Ecosistemas de Emprendimiento e Innovación - Región de Ñuble</em>.</p>
+          </details>
+          <details class="reference-item">
+            <summary>Goñi Pacchioni, E. A., & Reyes, S. (2022)</summary>
+            <p>Goñi Pacchioni, E. A., & Reyes, S. (2022). <em>Cómo mapear y medir ecosistemas de emprendimiento innovador: Aplicación de metodologías de análisis de redes al ecosistema de Lima</em>. Banco Interamericano de Desarrollo.</p>
+          </details>
+          <details class="reference-item">
+            <summary>Kantis, H., Federico, J., & Ibarra García, S. (2020)</summary>
+            <p>Kantis, H., Federico, J., & Ibarra García, S. (2020). <em>Índice de Condiciones Sistémicas para el Emprendimiento Dinámico: Medellín, Lima, Cali, Guayaquil y Valparaíso</em>. PRODEM-UNGS & BID Lab.</p>
+          </details>
+          <details class="reference-item">
+            <summary>Ministerio de Economía, Fomento y Turismo (2023)</summary>
+            <p>Ministerio de Economía, Fomento y Turismo. (2023). <em>Informe de Caracterización Región de Ñuble</em>.</p>
+          </details>
+          <details class="reference-item">
+            <summary>Observatorio Ecosistema Chileno (2025)</summary>
+            <p>Observatorio Ecosistema Chileno. (2025). <em>Medición del Ecosistema de Emprendimiento e Innovación - Región de Valparaíso</em>. CORFO.</p>
+          </details>
+          <details class="reference-item">
+            <summary>Ruta N Medellín (2020)</summary>
+            <p>Ruta N Medellín. (2020). <em>20 años transformando Medellín: Del miedo a la innovación</em>.</p>
+          </details>
+        </div>
+      </div>
+
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .case-study {
+    margin-bottom: var(--spacing-3xl);
+    padding-bottom: var(--spacing-3xl);
+    border-bottom: 1px solid var(--gray-300);
+  }
+
+  .case-study:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+
+  .case-header {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-lg);
+  }
+
+  .case-flag {
+    font-size: 3rem;
+    line-height: 1;
+  }
+
+  .case-title {
+    font-size: clamp(1.75rem, 3vw, 2.5rem);
+    font-weight: 800;
+    color: var(--primary);
+    margin-bottom: 0.25rem;
+  }
+
+  .case-subtitle {
+    font-size: 1.125rem;
+    color: var(--gray-600);
+    line-height: 1.4;
+  }
+
+  /* Stats Grid */
+  .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-xl);
+  }
+
+  .stat-box {
+    background: var(--gray-50);
+    padding: var(--spacing-lg);
+    border-radius: var(--radius-md);
+    text-align: center;
+    border: 1px solid var(--gray-300);
+  }
+
+  .stat-box svg {
+    color: var(--accent);
+    margin-bottom: var(--spacing-sm);
+  }
+
+  .stat-number {
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--primary);
+    line-height: 1;
+    margin-bottom: 0.5rem;
+  }
+
+  .stat-label {
+    font-size: 0.875rem;
+    color: var(--gray-600);
+    line-height: 1.4;
+  }
+
+  /* Timeline */
+  .timeline {
+    position: relative;
+    padding-left: 1.5rem;
+    margin: var(--spacing-lg) 0;
+    border-left: 2px solid var(--gray-300);
+  }
+
+  .timeline-item {
+    position: relative;
+    margin-bottom: var(--spacing-md);
+    padding-left: var(--spacing-md);
+  }
+
+  .timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -1.95rem;
+    top: 0.25rem;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: var(--accent);
+    border: 2px solid var(--white);
+  }
+
+  .timeline-year {
+    font-weight: 700;
+    color: var(--primary);
+    font-size: 0.9rem;
+    margin-bottom: 0.25rem;
+  }
+
+  /* Tables */
+  .table-wrapper {
+    overflow-x: auto;
+    margin-top: var(--spacing-md);
+  }
+
+  .comparison-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--white);
+    font-size: 0.9375rem;
+  }
+
+  .comparison-table th {
+    background: var(--gray-100);
+    padding: 0.75rem;
+    text-align: left;
+    font-weight: 700;
+    color: var(--gray-800);
+  }
+
+  .comparison-table td {
+    padding: 0.75rem;
+    border-bottom: 1px solid var(--gray-200);
+    color: var(--gray-900);
+  }
+
+  .score-high { color: var(--accent-green); font-weight: 700; }
+  .score-mid { color: #d4a017; font-weight: 700; }
+  .score-low { color: #e74c3c; font-weight: 700; }
+
+  .table-note {
+    font-size: 0.85rem;
+    color: var(--gray-600);
+    font-style: italic;
+    margin-top: 0.5rem;
+  }
+
+  /* Comparison Grid */
+  .comparison-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-md);
+    margin-top: var(--spacing-md);
+  }
+
+  .comparison-item {
+    background: var(--white);
+    padding: var(--spacing-md);
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--gray-200);
+  }
+
+  .comparison-item h4 {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--primary);
+    margin-bottom: 0.5rem;
+  }
+
+  .comparison-item ul {
+    padding-left: 1.25rem;
+    margin: 0;
+    font-size: 0.9rem;
+  }
+
+  /* Highlights Grid */
+  .highlights-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--spacing-lg);
+    margin-top: var(--spacing-lg);
+  }
+
+  /* Lessons Box */
+  .lessons-box {
+    background: var(--gray-50);
+    padding: var(--spacing-lg);
+    border-radius: var(--radius-md);
+    margin-top: var(--spacing-lg);
+    border-left: 4px solid var(--primary);
+  }
+
+  .lessons-box h4 {
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: var(--primary);
+    margin-bottom: var(--spacing-md);
+  }
+
+  .lessons-box ul {
+    padding-left: 1.25rem;
+    color: var(--gray-900);
+  }
+
+  .lessons-box li {
+    margin-bottom: 0.5rem;
+  }
+
+  /* References Accordion */
+  .references-accordion {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .reference-item {
+    border: 1px solid var(--gray-200);
+    border-radius: var(--radius-sm);
+    overflow: hidden;
+  }
+
+  .reference-item summary {
+    padding: 1rem;
+    cursor: pointer;
+    font-weight: 600;
+    color: var(--primary);
+    background: var(--white);
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .reference-item summary::-webkit-details-marker {
+    display: none;
+  }
+
+  .reference-item summary::after {
+    content: '+';
+    font-size: 1.25rem;
+    color: var(--accent);
+  }
+
+  .reference-item[open] summary::after {
+    content: '-';
+  }
+
+  .reference-item p {
+    padding: 1rem;
+    margin: 0;
+    background: var(--gray-50);
+    border-top: 1px solid var(--gray-200);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: var(--gray-700);
+  }
+
+  /* Responsive */
+  @media (max-width: 968px) {
+    .stats-grid,
+    .highlights-grid,
+    .comparison-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .case-flag {
+      font-size: 2rem;
+    }
+  }
+</style>

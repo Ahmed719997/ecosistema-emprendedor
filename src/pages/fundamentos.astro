@@ -1,0 +1,785 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Hero from '../components/Hero.astro';
+import ContentBox from '../components/ContentBox.astro';
+const base = import.meta.env.BASE_URL;
+
+---
+
+<Layout title="Fundamentos Teóricos">
+  <Hero 
+    title="Fundamentos Teóricos"
+    subtitle="Comprende qué es un ecosistema de emprendimiento, su evolución conceptual y las teorías que sustentan este enfoque sistémico"
+    image={`${base}talento.jpg`}
+    cta={{
+      primary: { text: 'Explorar Contenido', href: '#contenido' }
+    }}
+  />
+
+  <!-- Definición -->
+  <section class="section" id="contenido">
+    <div class="container">
+      <ContentBox type="highlight" class="observe">
+        <h2 class="section-title">¿Qué es un Ecosistema de Emprendimiento?</h2>
+        <p class="definition-text">
+          Un ecosistema de emprendimiento e innovación es una <strong>configuración sistémica, territorialmente delimitada</strong>, de actores interdependientes —emprendedores, universidades, empresas, gobierno, inversores, organizaciones de apoyo— cuyas <strong>interacciones formales e informales</strong>, facilitadas por condiciones estructurales e institucionales específicas, generan, sustentan y escalan emprendimientos productivos que contribuyen al desarrollo económico y social del territorio.
+        </p>
+      </ContentBox>
+    </div>
+  </section>
+
+  <!-- Evolución Conceptual -->
+  <section class="section-sm">
+    <div class="container">
+      <div class="section-header observe">
+        <h2 class="section-title">Evolución Conceptual</h2>
+        <p class="section-description">
+          El término "ecosistema" aplicado al ámbito empresarial tiene su origen en la analogía con los ecosistemas biológicos, enfatizando la interdependencia, la coevolución y la naturaleza emergente de las relaciones entre actores económicos.
+        </p>
+      </div>
+
+      <div class="timeline observe">
+        <div class="timeline-item">
+          <div class="timeline-year">1993</div>
+          <div class="timeline-content">
+            <h4>James Moore - Primera Analogía Biológica</h4>
+            <p>Los negocios innovadores no pueden ser exitosos en aislamiento. Atraen recursos a su entorno a través de relaciones con inversionistas, proveedores, clientes y distribuidores, generando así un ecosistema.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-year">2010-2011</div>
+          <div class="timeline-content">
+            <h4>Daniel Isenberg - Popularización del Concepto</h4>
+            <p>Define el ecosistema como una mezcla compleja de elementos como liderazgo, cultura y mercados que se intersectan con seis determinantes clave: políticas, finanzas, cultura, infraestructura, recursos humanos y mercados.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-year">2012</div>
+          <div class="timeline-content">
+            <h4>Hwang & Horowitt - Analogía de la Selva</h4>
+            <p>Los ecosistemas se pueden entender como una selva donde la creatividad, los negocios, los descubrimientos científicos y el capital de riesgo se juntan naturalmente, creando una receta única que genera ideas que crecen aceleradamente.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-year">2014</div>
+          <div class="timeline-content">
+            <h4>Mason & Brown - Definición Académica</h4>
+            <p>Una serie de actores interconectados, organizaciones especializadas en emprendimiento, instituciones académicas, centros de investigación y procesos que crean formal e informalmente un entorno de emprendimiento local.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-year">2015</div>
+          <div class="timeline-content">
+            <h4>Erik Stam - Definición Parsimoniosa</h4>
+            <p>Un conjunto de actores y factores interdependientes coordinados de tal manera que permiten el emprendimiento productivo. Enfatiza la interdependencia sistémica y el objetivo último: generar valor económico y social.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-year">2017</div>
+          <div class="timeline-content">
+            <h4>Ben Spigel - Enfoque en Innovación</h4>
+            <p>Entornos de apoyo que fomentan emprendimientos basados en innovación, incluyendo cultura, redes sociales, inversiones, universidades y políticas económicas como elementos críticos.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-year">2019</div>
+          <div class="timeline-content">
+            <h4>MIT REAP - Innovation-Driven Ecosystems</h4>
+            <p>Lugares geográficamente delimitados donde empresas impulsadas por innovación florecen. La innovación es el proceso de llevar ideas desde su concepción hasta el impacto.</p>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Tabla Comparativa de Definiciones -->
+      <ContentBox type="default" class="observe">
+        <h3 class="subsection-title">Definiciones Comparadas de Autores Clave</h3>
+        <div class="table-wrapper">
+          <table class="comparison-table">
+            <thead>
+              <tr>
+                <th>Año</th>
+                <th>Autor</th>
+                <th>Definición</th>
+                <th>Énfasis Principal</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1993</td>
+                <td>James Moore</td>
+                <td>Negocios innovadores atraen recursos a su entorno a través de relaciones, generando un ecosistema.</td>
+                <td>Interdependencia y atracción de recursos</td>
+              </tr>
+              <tr>
+                <td>2011</td>
+                <td>Daniel Isenberg</td>
+                <td>Mezcla compleja de elementos (liderazgo, cultura, mercados) intersectados con seis determinantes clave.</td>
+                <td>Múltiples dominios interconectados</td>
+              </tr>
+              <tr>
+                <td>2012</td>
+                <td>Hwang & Horowitt</td>
+                <td>Selva donde creatividad, negocios y capital se juntan naturalmente para generar crecimiento acelerado.</td>
+                <td>Emergencia natural y crecimiento</td>
+              </tr>
+              <tr>
+                <td>2014</td>
+                <td>Mason & Brown</td>
+                <td>Actores interconectados, organizaciones y procesos que crean un entorno de emprendimiento local.</td>
+                <td>Actores y procesos formales/informales</td>
+              </tr>
+              <tr>
+                <td>2015</td>
+                <td>Erik Stam</td>
+                <td>Actores y factores interdependientes coordinados que permiten el emprendimiento productivo.</td>
+                <td>Coordinación y emprendimiento productivo</td>
+              </tr>
+              <tr>
+                <td>2017</td>
+                <td>Ben Spigel</td>
+                <td>Entornos de apoyo que fomentan emprendimientos basados en innovación.</td>
+                <td>Innovación como eje central</td>
+              </tr>
+              <tr>
+                <td>2019</td>
+                <td>MIT REAP</td>
+                <td>Lugares donde empresas impulsadas por innovación florecen (i-Ecosystems).</td>
+                <td>Delimitación territorial e impacto</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </ContentBox>
+    </div>
+  </section>
+
+  <!-- Características -->
+  <section class="section characteristics-section">
+    <div class="container">
+      <div class="section-header observe">
+        <h2 class="section-title">Características Distintivas</h2>
+      </div>
+
+      <div class="characteristics-grid">
+        <div class="characteristic-card observe">
+          <div class="characteristic-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="16" y="16" width="6" height="6" rx="1"/><rect x="2" y="16" width="6" height="6" rx="1"/><rect x="9" y="2" width="6" height="6" rx="1"/><path d="M5 16v-3a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v3"/><path d="M12 12V8"/></svg>
+          </div>
+          <h4>Naturaleza Sistémica</h4>
+          <p>Múltiples elementos interactúan simultáneamente de formas complejas y no lineales. Generan retroalimentaciones, sinergias y propiedades emergentes que no pueden reducirse a la suma de sus componentes.</p>
+        </div>
+
+        <div class="characteristic-card observe delay-100">
+          <div class="characteristic-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1 4-10z"/></svg>
+          </div>
+          <h4>Delimitación Geográfica</h4>
+          <p>Los ecosistemas son fundamentalmente territoriales. Recursos, capacidades y actores tienden a concentrarse localmente y atraerse mutuamente. El emprendimiento es un fenómeno local aunque opere en mercados globales.</p>
+        </div>
+
+        <div class="characteristic-card observe delay-200">
+          <div class="characteristic-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg>
+          </div>
+          <h4>Dinamismo y Evolución</h4>
+          <p>No son configuraciones estáticas sino sistemas que evolucionan en el tiempo, con trayectorias dependientes de decisiones pasadas (path dependence) y procesos acumulativos que generan círculos virtuosos o viciosos.</p>
+        </div>
+
+        <div class="characteristic-card observe delay-300">
+          <div class="characteristic-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </div>
+          <h4>Ausencia de "Dueño"</h4>
+          <p>El ecosistema crece y carece de propietario único. Esto contrasta con aproximaciones jerárquicas de desarrollo económico y requiere mecanismos de gobernanza distribuida y colaborativa.</p>
+        </div>
+
+        <div class="characteristic-card observe delay-400">
+          <div class="characteristic-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="16" y="16" width="6" height="6" rx="1"/><rect x="2" y="16" width="6" height="6" rx="1"/><rect x="9" y="2" width="6" height="6" rx="1"/><path d="M5 16v-3a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v3"/><path d="M12 12V8"/></svg>
+          </div>
+          <h4>Interdependencia de Actores</h4>
+          <p>Los actores no operan independientemente. Las universidades necesitan emprendedores para comercializar conocimiento, los emprendedores necesitan capital, el capital necesita deal flow, el gobierno necesita impacto económico.</p>
+        </div>
+
+        <div class="characteristic-card observe delay-500">
+          <div class="characteristic-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>
+          </div>
+          <h4>Orientación a Resultados</h4>
+          <p>El objetivo no es generar cualquier tipo de emprendimiento, sino específicamente emprendimiento productivo: aquel que genera valor económico y social mediante innovación, crecimiento y empleo de calidad.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contexto Latinoamericano -->
+  <section class="section">
+    <div class="container">
+      <ContentBox type="default" class="observe">
+        <h2 class="section-title">Contexto Latinoamericano</h2>
+        <p>En América Latina, el concepto de ecosistema emprendedor ha adquirido particular relevancia como mecanismo de desarrollo económico territorial en contextos de alta heterogeneidad regional y desigualdad.</p>
+
+        <ContentBox type="info">
+          <h4>Definición BID/FOMIN (2011)</h4>
+          <p>Una comunidad de negocios, apoyada por un contexto público de leyes y prácticas de negocios formada por una base de organizaciones e individuos interactuantes que producen, asocian ideas de negocios, habilidades, recursos financieros y no financieros que resultan en empresas dinámicas.</p>
+        </ContentBox>
+
+        <h3>Especificidades del Contexto Latinoamericano</h3>
+        <div class="specifics-grid">
+          <div class="specific-item">
+            <h5>🏛️ Rol del Estado</h5>
+            <p>Mayor protagonismo del sector público en impulso inicial de ecosistemas, dada menor madurez de inversión privada en innovación y emprendimiento.</p>
+          </div>
+          <div class="specific-item">
+            <h5>💰 Brecha de Financiamiento</h5>
+            <p>Mercados de capital de riesgo subdesarrollados. Emprendedores dependen fuertemente de ahorros personales, familia/amigos y fondos públicos.</p>
+          </div>
+          <div class="specific-item">
+            <h5>🎓 Desarticulación Universidad-Empresa</h5>
+            <p>Vínculos tradicionalmente débiles entre investigación universitaria y sector productivo, limitando comercialización de conocimiento científico.</p>
+          </div>
+          <div class="specific-item">
+            <h5>📊 Informalidad Empresarial</h5>
+            <p>Alta proporción de emprendimiento por necesidad vs. oportunidad. Ecosistemas deben distinguir entre emprendimiento de subsistencia y dinámico.</p>
+          </div>
+          <div class="specific-item">
+            <h5>🌎 Concentración Metropolitana</h5>
+            <p>Dramática concentración de recursos, talento e infraestructura en capitales nacionales, con regiones intermedias subatendidas.</p>
+          </div>
+          <div class="specific-item">
+            <h5>🔗 Apertura Internacional</h5>
+            <p>Mercados locales frecuentemente pequeños. Emprendimientos dinámicos requieren orientación exportadora e internacionalización temprana.</p>
+          </div>
+        </div>
+      </ContentBox>
+    </div>
+  </section>
+
+  <!-- Diferenciación con Conceptos Relacionados -->
+  <section class="section" style="background: var(--gray-50);">
+    <div class="container">
+      <h2 class="section-title text-center">Diferenciación con Conceptos Relacionados</h2>
+      
+      <div class="concepts-grid">
+        <ContentBox type="default" class="observe">
+          <div class="concept-header">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="18" r="3"/><circle cx="6" cy="6" r="3"/><path d="M13 6h3a2 2 0 0 1 2 2v7"/><path d="M11 18H8a2 2 0 0 1-2-2V9"/></svg>
+            <h3>Ecosistema vs. Sistema de Innovación</h3>
+          </div>
+          <p>Mientras los sistemas de innovación (nacional, regional) enfatizan la generación y difusión de conocimiento tecnológico (oferta), los ecosistemas emprendedores integran más explícitamente la creación de empresas, dinámicas de demanda y cultura emprendedora.</p>
+          <div class="concept-note">
+            <strong>Complementariedad:</strong> Los sistemas de innovación proveen capacidades (I+D), los ecosistemas traducen esas capacidades en nuevas empresas dinámicas.
+          </div>
+        </ContentBox>
+
+        <ContentBox type="default" class="observe">
+          <div class="concept-header">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            <h3>Ecosistema vs. Cluster</h3>
+          </div>
+          <p>Los clusters (Porter) se caracterizan por concentración geográfica de empresas de <strong>sectores relacionados</strong>. Los ecosistemas emprendedores incluyen actores más diversos (no solo empresas) y enfatizan el surgimiento de <strong>nuevas empresas</strong>, no solo la eficiencia de las existentes.</p>
+        </ContentBox>
+
+        <ContentBox type="default" class="observe">
+          <div class="concept-header">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="16" y="16" width="6" height="6" rx="1"/><rect x="2" y="16" width="6" height="6" rx="1"/><rect x="9" y="2" width="6" height="6" rx="1"/><path d="M5 16v-3a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v3"/><path d="M12 12V8"/></svg>
+            <h3>Ecosistema vs. Triple Hélice</h3>
+          </div>
+          <p>La Triple Hélice focaliza en tres actores: universidad-empresa-gobierno. Los ecosistemas reconocen mayor diversidad (inversores, emprendedores como categoría separada, organizaciones intermedias) y enfatizan procesos emergentes vs. articulación formal.</p>
+        </ContentBox>
+      </div>
+    </div>
+  </section>
+
+  <!-- Críticas y Limitaciones -->
+  <section class="section">
+    <div class="container">
+      <ContentBox type="warning" class="observe">
+        <h2 class="section-title">Críticas y Limitaciones del Concepto</h2>
+        <p>Aunque el concepto es intuitivamente atractivo, enfrenta desafíos importantes:</p>
+        
+        <div class="critiques-grid">
+          <div class="critique-item">
+            <h4>⚠️ Riesgo de Aplicación Superficial</h4>
+            <p>La falta de comprensión profunda puede llevar a aplicaciones erróneas ("teatro de la innovación") sin entender las dinámicas sistémicas subyacentes.</p>
+          </div>
+          <div class="critique-item">
+            <h4>📊 Desafíos de Medición</h4>
+            <p>No existe consenso sobre indicadores estándar ni umbrales universales que definan un "ecosistema exitoso".</p>
+          </div>
+          <div class="critique-item">
+            <h4>🔍 Causalidad Confusa</h4>
+            <p>Es difícil distinguir qué elementos causan el éxito del ecosistema y cuáles son simplemente correlaciones o consecuencias.</p>
+          </div>
+          <div class="critique-item">
+            <h4>🎯 Sesgo Tecnológico</h4>
+            <p>Tendencia a equiparar ecosistemas únicamente con startups de software/tech, ignorando otros tipos de emprendimiento dinámico.</p>
+          </div>
+        </div>
+      </ContentBox>
+    </div>
+  </section>
+
+  <!-- Referencias -->
+  <section class="section-sm references-section">
+    <div class="container">
+      <div class="references-container observe">
+        <div class="references-header" onclick="this.parentElement.classList.toggle('expanded')">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+          <h3>Referencias Bibliográficas</h3>
+          <span class="toggle-icon">▼</span>
+        </div>
+        <div class="references-list">
+          <p>Audretsch, D. B., & Belitski, M. (2017). Entrepreneurial ecosystems in cities: Establishing the framework conditions. <em>The Journal of Technology Transfer, 42</em>(5), 1030-1051.</p>
+          <p>Audretsch, D. B., Cunningham, J. A., Kuratko, D. F., Lehmann, E. E., & Menter, M. (2018). Entrepreneurial ecosystems: Economic, technological, and societal impacts. <em>The Journal of Technology Transfer, 44</em>(2), 313-325.</p>
+          <p>BID/FOMIN. (2011). <em>Guía de Emprendimientos Dinámicos</em>. Banco Interamericano de Desarrollo.</p>
+          <p>Brown, R., & Mason, C. (2017). Looking inside the spiky bits: A critical review and conceptualisation of entrepreneurial ecosystems. <em>Small Business Economics, 49</em>(1), 11-30.</p>
+          <p>Budden, P., & Murray, F. (2019). <em>MIT Regional Entrepreneurship Acceleration Program (REAP): A framework for regional innovation ecosystems</em>. MIT.</p>
+          <p>Etzkowitz, H., & Leydesdorff, L. (1995). The Triple Helix: University-industry-government relations. <em>Science and Public Policy, 22</em>(2), 95-106.</p>
+          <p>Hwang, V., & Horowitt, G. (2012). <em>The Rainforest: The secret to building the next Silicon Valley</em>. Regenwald.</p>
+          <p>Isenberg, D. (2010). The big idea: How to start an entrepreneurial revolution. <em>Harvard Business Review, 88</em>(6), 40-50.</p>
+          <p>Isenberg, D. (2011). The entrepreneurship ecosystem strategy as a new paradigm for economic policy: Principles for cultivating entrepreneurship. <em>Babson Entrepreneurship Ecosystem Project</em>.</p>
+          <p>Mason, C., & Brown, R. (2014). Entrepreneurial ecosystems and growth oriented entrepreneurship. <em>OECD LEED Programme</em>.</p>
+          <p>Moore, J. F. (1993). Predators and prey: A new ecology of competition. <em>Harvard Business Review, 71</em>(3), 75-86.</p>
+          <p>Morgensztern, J. (2023). <em>Design of a robust qualitative method to assess MIT REAP</em>. Massachusetts Institute of Technology.</p>
+          <p>Motoyama, Y., & Knowlton, K. (2017). Examining the connections within the startup ecosystem: A case study of St. Louis. <em>Entrepreneurship Research Journal, 7</em>(1).</p>
+          <p>Spigel, B. (2017). The relational organization of entrepreneurial ecosystems. <em>Entrepreneurship Theory and Practice, 41</em>(1), 49-72.</p>
+          <p>Stam, E. (2015). Entrepreneurial ecosystems and regional policy: A sympathetic critique. <em>European Planning Studies, 23</em>(9), 1759-1769.</p>
+          <p>Stam, E., & Spigel, B. (2018). Entrepreneurial ecosystems. In R. Blackburn, D. De Clercq, J. Heinonen, & Z. Wang (Eds.), <em>The SAGE handbook of small business and entrepreneurship</em> (pp. 407-422). SAGE.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section">
+    <div class="container">
+      <div class="cta-content observe">
+        <h2 class="cta-title">¿Listo para profundizar?</h2>
+        <p class="cta-text">
+          Explora los modelos de ecosistemas y casos de estudio reales
+        </p>
+        <div class="cta-buttons">
+          <a href="/modelos" class="btn btn-primary btn-lg">
+            Ver Modelos
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+          </a>
+          <a href="/casos" class="btn btn-outline btn-lg">
+            Casos de Estudio
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  /* Section Header */
+  .section-header {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto var(--spacing-xl);
+  }
+
+  .section-title {
+    font-size: clamp(1.75rem, 3vw, 2.5rem);
+    font-weight: 800;
+    color: var(--primary);
+    margin-bottom: var(--spacing-md);
+  }
+
+  .subsection-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary);
+    margin-bottom: var(--spacing-lg);
+    text-align: center;
+  }
+
+  .section-description {
+    font-size: 1.125rem;
+    color: var(--gray-600);
+    line-height: 1.7;
+  }
+
+  .definition-text {
+    font-size: 1.125rem;
+    line-height: 1.8;
+    color: var(--gray-900);
+  }
+
+  /* Timeline */
+  .timeline {
+    position: relative;
+    padding-left: 2rem;
+    margin-top: var(--spacing-xl);
+    margin-bottom: var(--spacing-3xl);
+  }
+
+  .timeline::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: var(--gray-300);
+  }
+
+  .timeline-item {
+    position: relative;
+    margin-bottom: var(--spacing-lg);
+    padding-left: var(--spacing-lg);
+  }
+
+  .timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -2.5rem;
+    top: 0.5rem;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: var(--accent);
+    border: 2px solid var(--secondary);
+    box-shadow: 0 0 0 2px var(--accent);
+  }
+
+  .timeline-year {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background: var(--primary);
+    color: var(--secondary);
+    border-radius: var(--radius-full);
+    font-weight: 700;
+    font-size: 0.875rem;
+    margin-bottom: var(--spacing-sm);
+  }
+
+  .timeline-content h4 {
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: var(--primary);
+    margin-bottom: var(--spacing-sm);
+  }
+
+  .timeline-content p {
+    color: var(--gray-900);
+    line-height: 1.7;
+  }
+
+  /* Table */
+  .table-wrapper {
+    overflow-x: auto;
+    margin-top: var(--spacing-md);
+  }
+
+  .comparison-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--secondary);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    font-size: 0.9375rem;
+  }
+
+  .comparison-table thead {
+    background: var(--primary);
+    color: var(--secondary);
+  }
+
+  .comparison-table th {
+    padding: var(--spacing-md);
+    text-align: left;
+    font-weight: 700;
+  }
+
+  .comparison-table td {
+    padding: var(--spacing-md);
+    border-bottom: 1px solid var(--gray-300);
+    color: var(--gray-900);
+    vertical-align: top;
+  }
+
+  .comparison-table tbody tr:hover {
+    background: var(--gray-50);
+  }
+
+  /* Characteristics Section */
+  .characteristics-section {
+    background: var(--gray-50);
+  }
+
+  .characteristics-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--spacing-lg);
+    margin-top: var(--spacing-xl);
+  }
+
+  .characteristic-card {
+    background: var(--secondary);
+    padding: var(--spacing-lg);
+    border-radius: var(--radius-md);
+    border: 1px solid var(--gray-300);
+    transition: all var(--transition-base);
+  }
+
+  .characteristic-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--accent);
+  }
+
+  .characteristic-icon {
+    width: 64px;
+    height: 64px;
+    background: var(--primary);
+    color: var(--secondary);
+    border-radius: var(--radius-md);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: var(--spacing-md);
+  }
+
+  .characteristic-card h4 {
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: var(--primary);
+    margin-bottom: var(--spacing-sm);
+  }
+
+  .characteristic-card p {
+    color: var(--gray-900);
+    line-height: 1.7;
+    font-size: 0.9375rem;
+  }
+
+  /* Specifics Grid */
+  .specifics-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--spacing-md);
+    margin-top: var(--spacing-lg);
+  }
+
+  .specific-item {
+    background: var(--gray-50);
+    padding: var(--spacing-md);
+    border-radius: var(--radius-sm);
+    border-left: 2px solid var(--accent);
+  }
+
+  .specific-item h5 {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--primary);
+    margin-bottom: 0.5rem;
+  }
+
+  .specific-item p {
+    font-size: 0.9375rem;
+    color: var(--gray-900);
+    line-height: 1.6;
+  }
+
+  /* Concepts Grid */
+  .concepts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--spacing-lg);
+    margin-top: var(--spacing-lg);
+  }
+
+  .concept-header {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    margin-bottom: var(--spacing-md);
+    color: var(--primary);
+  }
+
+  .concept-header h3 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin: 0;
+  }
+
+  .concept-note {
+    margin-top: var(--spacing-md);
+    padding-top: var(--spacing-sm);
+    border-top: 1px solid var(--gray-200);
+    font-size: 0.9rem;
+    color: var(--gray-600);
+  }
+
+  /* Critiques Grid */
+  .critiques-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--spacing-md);
+    margin-top: var(--spacing-lg);
+  }
+
+  .critique-item {
+    background: rgba(241, 196, 15, 0.05);
+    padding: var(--spacing-md);
+    border-radius: var(--radius-sm);
+    border-left: 3px solid var(--accent-yellow);
+  }
+
+  .critique-item h4 {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #d4a017;
+    margin-bottom: 0.5rem;
+  }
+
+  .critique-item p {
+    font-size: 0.9rem;
+    color: var(--gray-800);
+  }
+
+  /* References */
+  .references-container {
+    background: var(--gray-50);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+  }
+
+  .references-header {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    padding: var(--spacing-md);
+    background: var(--gray-100);
+    cursor: pointer;
+    user-select: none;
+  }
+
+  .references-header h3 {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--gray-700);
+    margin: 0;
+    flex-grow: 1;
+  }
+
+  .toggle-icon {
+    font-size: 0.8rem;
+    transition: transform 0.3s ease;
+  }
+
+  .references-container.expanded .toggle-icon {
+    transform: rotate(180deg);
+  }
+
+  .references-list {
+    padding: var(--spacing-md);
+    display: none;
+    font-size: 0.85rem;
+    color: var(--gray-600);
+  }
+
+  .references-container.expanded .references-list {
+    display: block;
+  }
+
+  .references-list p {
+    margin-bottom: 0.5rem;
+  }
+
+  /* CTA Section */
+  .cta-section {
+    background: var(--primary);
+    color: var(--secondary);
+    padding: var(--spacing-3xl) 0;
+  }
+
+  .cta-content {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .cta-title {
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 800;
+    color: var(--secondary);
+    margin-bottom: var(--spacing-md);
+  }
+
+  .cta-text {
+    font-size: 1.25rem;
+    color: var(--gray-100);
+    margin-bottom: var(--spacing-xl);
+  }
+
+  .cta-buttons {
+    display: flex;
+    gap: var(--spacing-md);
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .cta-section .btn-primary {
+    background: var(--accent);
+  }
+
+  .cta-section .btn-primary:hover {
+    background: var(--accent-secondary);
+  }
+
+  .cta-section .btn-outline {
+    border-color: var(--secondary);
+    color: var(--secondary);
+  }
+
+  .cta-section .btn-outline:hover {
+    background: var(--secondary);
+    color: var(--primary);
+  }
+
+  /* Responsive */
+  @media (max-width: 968px) {
+    .timeline {
+      padding-left: 1.5rem;
+    }
+
+    .timeline-item::before {
+      left: -2rem;
+    }
+
+    .characteristics-grid,
+    .specifics-grid,
+    .concepts-grid,
+    .critiques-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .cta-buttons {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .btn-lg {
+      width: 100%;
+      max-width: 300px;
+    }
+  }
+</style>
+
+<style is:global>
+  /* Remove footer margin on this page to merge with CTA */
+  .footer {
+    margin-top: 0 !important;
+  }
+</style>

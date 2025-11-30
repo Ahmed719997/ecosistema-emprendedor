@@ -1,0 +1,418 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Hero from '../components/Hero.astro';
+
+const base = import.meta.env.BASE_URL;
+
+---
+
+<Layout title="Inicio">
+  <Hero 
+    title="Ecosistemas de Emprendimiento e Innovación"
+    subtitle="Descubre, aprende y profundiza sobre los sistemas que impulsan la innovación y el desarrollo económico territorial"
+    image={`${base}ecosistema.jpg`} 
+    cta={{
+      primary: { text: 'Explorar Contenido', href: '#explorar' }
+    }}
+    stats={[
+      { number: '11', label: 'Dimensiones Clave' },
+      { number: '5', label: 'Stakeholders Críticos' },
+      { number: '35+', label: 'Referencias Académicas' },
+      { number: '∞', label: 'Posibilidades' }
+    ]}
+  />
+
+  <!-- Explorar Section -->
+  <section class="section" id="explorar">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">CONOCIMIENTO</span>
+        <h2 class="section-title">Explora el Ecosistema</h2>
+        <p class="section-description">
+          Un sistema educativo completo basado en investigación académica rigurosa y casos reales de implementación global
+        </p>
+      </div>
+
+      <div class="cards-grid">
+        <!-- 1. Fundamentos -->
+        <a href={`${base}fundamentos`} class="feature-card observe">
+          <div class="card-image">
+            <img src={`${base}talento.jpg`} alt="Fundamentos" class="img-cover" />
+            <div class="card-overlay"></div>
+          </div>
+          <div class="card-content">
+            <div class="card-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            </div>
+            <h3 class="card-title">Fundamentos Teóricos</h3>
+            <p class="card-description">
+              Comprende qué es un ecosistema de emprendimiento y las teorías que sustentan este enfoque sistémico.
+            </p>
+            <div class="card-link">Explorar <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></div>
+          </div>
+        </a>
+
+        <!-- 2. Modelos -->
+        <a href={`${base}modelos`} class="feature-card observe delay-100">
+          <div class="card-image">
+            <img src={`${base}modelos.jpg`} alt="Modelos" class="img-cover" />
+            <div class="card-overlay"></div>
+          </div>
+          <div class="card-content">
+            <div class="card-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M18 17V9"/><path d="M13 17V5"/><path d="M8 17v-3"/></svg>
+            </div>
+            <h3 class="card-title">Modelos de Ecosistemas</h3>
+            <p class="card-description">
+              Explora los principales marcos analíticos: MIT REAP, GEIAL, Babson, World Bank y más.
+            </p>
+            <div class="card-link">Explorar <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></div>
+          </div>
+        </a>
+
+        <!-- 3. Metodologías (NUEVO) -->
+        <a href={`${base}metodologias`} class="feature-card observe delay-200">
+          <div class="card-image">
+            <img src={`${base}metodologias.jpg`} alt="Metodologías" class="img-cover" />
+            <div class="card-overlay"></div>
+          </div>
+          <div class="card-content">
+            <div class="card-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.09a2 2 0 0 1-1-1.74v-.47a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.39a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"/><circle cx="12" cy="12" r="3"/></svg>
+            </div>
+            <h3 class="card-title">Metodologías de Medición</h3>
+            <p class="card-description">
+              Aprende cómo se miden y diagnostican los ecosistemas: indicadores, instrumentos y técnicas.
+            </p>
+            <div class="card-link">Explorar <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></div>
+          </div>
+        </a>
+
+        <!-- 4. Componentes (NUEVO) -->
+        <a href={`${base}componentes`} class="feature-card observe delay-300">
+          <div class="card-image">
+            <img src={`${base}componentes.jpg`} alt="Componentes" class="img-cover" />
+            <div class="card-overlay"></div>
+          </div>
+          <div class="card-content">
+            <div class="card-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M3 9h18"/><path d="M9 21V3"/></svg>
+            </div>
+            <h3 class="card-title">Componentes y Pilares</h3>
+            <p class="card-description">
+              Descubre las 11 dimensiones estructurales: capital humano, financiamiento, cultura, infraestructura, etc.
+            </p>
+            <div class="card-link">Explorar <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></div>
+          </div>
+        </a>
+
+        <!-- 5. Casos -->
+        <a href={`${base}casos`} class="feature-card observe delay-400">
+          <div class="card-image">
+            <img src={`${base}casos.jpg`} alt="Casos" class="img-cover" />
+            <div class="card-overlay"></div>
+          </div>
+          <div class="card-content">
+            <div class="card-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            </div>
+            <h3 class="card-title">Casos de Estudio</h3>
+            <p class="card-description">
+              Analiza ecosistemas reales: Medellín, Lima, Valparaíso, Ñuble. Aprende de éxitos y desafíos.
+            </p>
+            <div class="card-link">Explorar <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></div>
+          </div>
+        </a>
+
+        <!-- 6. Actores -->
+        <a href={`${base}actores`} class="feature-card observe delay-500">
+          <div class="card-image">
+            <img src={`${base}actores.jpg`} alt="Actores" class="img-cover" />
+            <div class="card-overlay"></div>
+          </div>
+          <div class="card-content">
+            <div class="card-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            </div>
+            <h3 class="card-title">Actores del Ecosistema</h3>
+            <p class="card-description">
+              Conoce los 5 stakeholders críticos: emprendedores, universidades, capital, gobierno y empresas.
+            </p>
+            <div class="card-link">Explorar <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></div>
+          </div>
+        </a>
+
+        <!-- 7. Herramientas (NUEVO) -->
+        <a href={`${base}herramientas`} class="feature-card observe delay-600">
+          <div class="card-image">
+            <img src={`${base}herramientas.jpg`} alt="Herramientas" class="img-cover" />
+            <div class="card-overlay"></div>
+          </div>
+          <div class="card-content">
+            <div class="card-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+            </div>
+            <h3 class="card-title">Herramientas Prácticas</h3>
+            <p class="card-description">
+              Accede a checklists, matrices FODA, canvas y guías para aplicar en tu territorio.
+            </p>
+            <div class="card-link">Explorar <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></div>
+          </div>
+        </a>
+
+        <!-- 8. Innovación -->
+        <a href={`${base}innovacion`} class="feature-card observe delay-700">
+          <div class="card-image">
+            <img src={`${base}innovacion.jpg`} alt="Innovación" class="img-cover" />
+            <div class="card-overlay"></div>
+          </div>
+          <div class="card-content">
+            <div class="card-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-1 1.5-2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5"/><path d="M9 18h6"/><path d="M10 22h4"/></svg>
+            </div>
+            <h3 class="card-title">Innovación y Tecnología</h3>
+            <p class="card-description">
+              Profundiza en Triple Hélice, Open Innovation, transferencia tecnológica e I+D+i.
+            </p>
+            <div class="card-link">Explorar <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></div>
+          </div>
+        </a>
+
+
+
+
+
+        <!-- 10. Recursos -->
+        <a href={`${base}recursos`} class="feature-card observe delay-900">
+          <div class="card-image">
+            <img src={`${base}recursos.jpg`} alt="Recursos" class="img-cover" />
+            <div class="card-overlay"></div>
+          </div>
+          <div class="card-content">
+            <div class="card-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+            </div>
+            <h3 class="card-title">Biblioteca de Recursos</h3>
+            <p class="card-description">
+              Glosario, referencias bibliográficas, infografías y lecturas recomendadas.
+            </p>
+            <div class="card-link">Explorar <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+
+</Layout>
+
+<style>
+  /* Section Header */
+  .section-header {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto var(--spacing-3xl);
+  }
+
+  .section-tag {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background: var(--gray-100);
+    color: var(--accent);
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    border-radius: var(--radius-full);
+    margin-bottom: var(--spacing-md);
+  }
+
+  .section-title {
+    font-size: clamp(2rem, 4vw, 3.5rem);
+    font-weight: 800;
+    margin-bottom: var(--spacing-md);
+    color: var(--primary);
+  }
+
+  .section-description {
+    font-size: 1.125rem;
+    color: var(--gray-600);
+    line-height: 1.7;
+  }
+
+  /* Cards Grid */
+  .cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--spacing-lg);
+  }
+
+  .feature-card {
+    position: relative;
+    background: var(--secondary);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    text-decoration: none;
+    color: var(--primary);
+    transition: all var(--transition-base);
+    border: 1px solid var(--gray-300);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .feature-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-xl);
+    border-color: var(--accent);
+  }
+
+  .card-image {
+    position: relative;
+    height: 200px;
+    overflow: hidden;
+    flex-shrink: 0;
+  }
+
+  .card-image img {
+    transition: transform 0.6s ease;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .feature-card:hover .card-image img {
+    transform: scale(1.1);
+  }
+
+  .card-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.3));
+  }
+
+  .card-content {
+    padding: var(--spacing-lg);
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .card-icon {
+    width: 48px;
+    height: 48px;
+    background: var(--primary);
+    color: var(--secondary);
+    border-radius: var(--radius-md);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: var(--spacing-md);
+  }
+
+  .card-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: var(--spacing-sm);
+    color: var(--primary);
+  }
+
+  .card-description {
+    color: var(--gray-600);
+    line-height: 1.6;
+    margin-bottom: var(--spacing-md);
+    font-size: 0.95rem;
+    flex: 1;
+  }
+
+  .card-link {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 600;
+    color: var(--accent);
+    transition: gap var(--transition-base);
+    font-size: 0.9rem;
+  }
+
+  .feature-card:hover .card-link {
+    gap: 1rem;
+  }
+
+  /* About Section */
+  .about-section {
+    background: var(--gray-50);
+    padding: var(--spacing-3xl) 0;
+    margin-top: var(--spacing-3xl);
+  }
+
+  .about-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: var(--spacing-xl);
+  }
+
+  .about-card {
+    background: var(--secondary);
+    padding: var(--spacing-xl);
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--gray-300);
+    transition: all var(--transition-base);
+  }
+
+  .about-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--accent);
+  }
+
+  .about-logo {
+    width: 80px;
+    height: 80px;
+    background: var(--secondary);
+    border-radius: var(--radius-md);
+    padding: 12px;
+    margin-bottom: var(--spacing-md);
+    border: 1px solid var(--gray-300);
+  }
+
+  .about-logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  .about-card h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary);
+    margin-bottom: var(--spacing-sm);
+  }
+
+  .about-card p {
+    color: var(--gray-900);
+    line-height: 1.7;
+    margin-bottom: var(--spacing-md);
+  }
+
+  .about-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--accent);
+    font-weight: 600;
+    transition: gap var(--transition-base);
+  }
+
+  .about-link:hover {
+    gap: 1rem;
+  }
+
+  /* Responsive */
+  @media (max-width: 968px) {
+    .cards-grid,
+    .about-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
